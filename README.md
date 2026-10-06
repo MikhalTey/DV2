@@ -59,7 +59,8 @@ DV2/
   maps/school_hexbins.geojson   equal-area hexagons holding the local sector mix
   scripts/build_data.py       turns data/raw into data/processed
   scripts/build_hexbin.py     turns the school points into the hexagon layer
-  chart-plan.md               what each chart is and how to sketch the page
+  chart-plan.md               what each chart is, the interactions, and how to sketch the page
+  submission-text.md          the Moodle description: domain, why, who, what, how
   test.html                   development harness; not part of the deliverable
 ```
 
@@ -72,6 +73,7 @@ DV2/
 | `state_change.csv` | 8 | Government share in 2020 and 2025 per state, change in percentage points |
 | `state_sector_trend.csv` | 432 | State, year, sector, enrolments and share, 2008 to 2025 |
 | `sa4_change.csv` | 88 | Per SA4: government share 2020 and 2025, change, student counts |
+| `sa4_by_year.csv` | 1,584 | Per SA4 per year 2008-2025: government share, the national share for that year, and student count. Backs the map's year slider and the region detail chart |
 | `remoteness_trend.csv` | 270 | Remoteness area, year, sector, enrolments and share |
 | `grade_change.csv` | 39 | Year level and sector, enrolments 2020 and 2025, percent change |
 | `icsea_change.csv` | 12 | ICSEA band and sector, enrolments 2020 and 2025, percent change |
@@ -83,9 +85,9 @@ Two map files sit alongside these: `au_sa4_states.topo.json` (452 KB, both the 8
 and the 8 state outlines in one topology so they share arcs) and `school_hexbins.geojson`
 (69 KB, 221 equal-area hexagons).
 
-The page downloads about **850 KB** in total, including the chart specifications themselves, well inside the limit. `national_totals.csv`
-and `schools_points.csv` are intermediate files used by the build scripts and are not
-fetched by the page.
+The page downloads about **933 KB** in total, including the chart specifications themselves,
+well inside the limit. `national_totals.csv`, `sa4_change.csv` and `schools_points.csv` are
+intermediate files used by the build scripts and are not fetched by the page.
 
 ### Terms used
 
@@ -147,3 +149,21 @@ mapshaper SA4_2021_AUST_GDA2020.shp   -filter 'SA4_CODE21 !== "ZZZ" && SA4_CODE2
 
 The filter drops the twenty pseudo-regions the ABS includes for people with no usual
 address or who were offshore on census night.
+
+---
+
+## Interaction
+
+Four interactions, each tied to a question the story raises rather than added for its own sake.
+
+- **Year slider** on the region map (`06_map_region_explorer`), 2008 to 2025. The map is driven
+  by `sa4_by_year.csv` filtered to the slider's value, so dragging it shows the government share
+  draining out of the populated coast after 2020.
+- **Click a region** on the same map and a line chart beneath draws that region's own eighteen
+  years against the national line. The selection and the view it drives have to live in one
+  specification, because a Vega-Lite selection parameter cannot reach across separate charts.
+- **Click a sector in the legend** of the indexed trend chart to fade the other two.
+- **A menu** on the new-schools map shows one sector at a time.
+
+Every value on the page is also printed on the chart or readable from an axis, so nothing
+depends on hovering.
