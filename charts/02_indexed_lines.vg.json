@@ -1,11 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Each sector indexed to its own 2008 size, so the three growth paths can be compared on one axis despite very different starting sizes. Clicking a sector in the legend fades the other two, which lets the reader pull one line out of the group without losing the context around it.",
+  "description": "Each sector indexed to its own 2008 size, so the three growth paths can be compared on one axis despite very different starting sizes. Choosing a sector fades the other two, which lets the reader pull one line out of the group without losing the context around it.",
   "title": {
     "text": "Same starting line, very different journeys",
     "subtitle": [
-      "Students in each sector, with 2008 set to 100. Source: ACARA School Profile 2008-2025.",
-      "Click a sector in the legend to pull it out of the group."
+      "Students in each sector, with 2008 set to 100. Source: ACARA School Profile 2008-2025."
     ]
   },
   "width": "container",
@@ -22,6 +21,22 @@
       }
     }
   },
+  "params": [
+    {
+      "name": "sectorPick",
+      "value": "All three",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All three",
+          "Government",
+          "Catholic",
+          "Independent"
+        ],
+        "name": "Highlight:  "
+      }
+    }
+  ],
   "encoding": {
     "x": {
       "field": "year",
@@ -159,24 +174,12 @@
         ],
         "opacity": {
           "condition": {
-            "param": "sectorSel",
+            "test": "sectorPick === 'All three' || datum.sector === sectorPick",
             "value": 1
           },
-          "value": 0.18
+          "value": 0.16
         }
-      },
-      "params": [
-        {
-          "name": "sectorSel",
-          "select": {
-            "type": "point",
-            "fields": [
-              "sector"
-            ]
-          },
-          "bind": "legend"
-        }
-      ]
+      }
     },
     {
       "description": "End dot with a surface ring so it stays readable where lines cross.",
@@ -199,10 +202,10 @@
         },
         "opacity": {
           "condition": {
-            "param": "sectorSel",
+            "test": "sectorPick === 'All three' || datum.sector === sectorPick",
             "value": 1
           },
-          "value": 0.18
+          "value": 0.16
         }
       }
     },
@@ -241,10 +244,10 @@
         },
         "opacity": {
           "condition": {
-            "param": "sectorSel",
+            "test": "sectorPick === 'All three' || datum.sector === sectorPick",
             "value": 1
           },
-          "value": 0.18
+          "value": 0.16
         }
       }
     },
@@ -283,10 +286,10 @@
         },
         "opacity": {
           "condition": {
-            "param": "sectorSel",
+            "test": "sectorPick === 'All three' || datum.sector === sectorPick",
             "value": 1
           },
-          "value": 0.18
+          "value": 0.16
         }
       }
     }

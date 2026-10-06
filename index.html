@@ -115,14 +115,27 @@
     border-top:1px solid var(--rule); margin-top:16px; padding-top:14px;
   }
   .note b{color:var(--ink); font-weight:600}
+  /* A control bar sits directly above the chart it drives, so the prompt and the
+     control the reader needs are never separated by a thousand pixels of map. */
+  .controls{
+    display:flex; flex-wrap:wrap; align-items:center; gap:10px 22px;
+    background:#eef4fb; border:1px solid #cfe0f5; border-radius:4px;
+    padding:11px 15px; margin:0 0 18px;
+  }
   .howto{
-    font-size:12.5px; color:var(--gov); font-weight:600; letter-spacing:.01em;
-    margin:0 0 15px; display:flex; align-items:center; gap:8px;
+    font-size:12.5px; color:#1d5fae; font-weight:600; letter-spacing:.01em;
+    margin:0; display:flex; align-items:center; gap:8px;
   }
   .howto::before{
     content:""; width:7px; height:7px; border-radius:50%;
     background:var(--gov); flex:none;
   }
+  .ctl .vega-bindings{
+    margin:0; padding:0; border:0; gap:16px;
+  }
+  .ctl .vega-bind input[type=range]{width:220px; max-width:48vw}
+  /* Vega renders an empty rail under every chart with no bound control. */
+  .vega-bindings:empty{display:none}
   .pair{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start}
   .pair .chart{margin-bottom:0}
 
@@ -230,7 +243,8 @@
     </div>
 
     <div class="chart feature">
-      <p class="howto">Click a sector in the legend to pull it out of the group</p>
+      <div class="controls"><p class="howto">Highlight one sector to pull it out of the group</p>
+        <div class="ctl" id="ctl-v02"></div></div>
       <div class="vis" id="v02"></div>
       <p class="note">
         Independent schools ended 48% larger than they started. Government schools grew 17% over
@@ -315,7 +329,8 @@
 
   <div class="wrap">
     <div class="chart feature">
-      <p class="howto">Drag the year, then click any region to see its own history</p>
+      <div class="controls"><p class="howto">Drag the year, then click any region on the map</p>
+        <div class="ctl" id="ctl-v06"></div></div>
       <div class="vis" id="v06"></div>
       <p class="note">
         Drag the slider back to 2008 and the coast sits deep blue. Drag it forward and the colour drains out
@@ -344,7 +359,8 @@
     </div>
 
     <div class="chart">
-      <p class="howto">Use the menu under the map to show one sector at a time</p>
+      <div class="controls"><p class="howto">Show one sector at a time</p>
+        <div class="ctl" id="ctl-v07"></div></div>
       <div class="vis" id="v07"></div>
       <p class="note">
         260 schools opened between 2020 and 2025. Governments built 131 of them, but independent bodies
@@ -506,35 +522,46 @@
 </footer>
 
 <script>
+// [target, spec, control-bar target for any bound inputs]
 const CHARTS = [
-  ["#v02","charts/02_indexed_lines.vg.json"],
+  ["#v02","charts/02_indexed_lines.vg.json","#ctl-v02"],
   ["#v01","charts/01_national_area.vg.json"],
   ["#v04","charts/04_grade_diverging.vg.json"],
   ["#v05","charts/05_grade_heatmap.vg.json"],
   ["#v03","charts/03_state_change.vg.json"],
-  ["#v06","charts/06_map_region_explorer.vg.json"],
+  ["#v06","charts/06_map_region_explorer.vg.json","#ctl-v06"],
   ["#v08","charts/08_map_hexbin.vg.json"],
   ["#v09","charts/09_remoteness_dumbbell.vg.json"],
-  ["#v07","charts/07_map_new_schools.vg.json"],
+  ["#v07","charts/07_map_new_schools.vg.json","#ctl-v07"],
   ["#v10","charts/10_icsea_bars.vg.json"],
   ["#v11","charts/11_icsea_density.vg.json"],
   ["#v12","charts/12_state_small_multiples.vg.json"]
 ];
 
+// Bumped whenever a chart specification changes. Browsers cache .json happily,
+// so without this a returning reader can sit on an old spec and never see the
+// current charts or their controls.
+const BUILD = "2026-10-06";
+const v = url => url + "?v=" + BUILD;
+
 (async function () {
-  const theme = await (await fetch("charts/theme.json")).json();
+  const theme = await (await fetch(v("charts/theme.json"))).json();
   const opts = { actions: false, config: theme, renderer: "canvas" };
 
   // All twelve are kicked off together so their data downloads overlap. Every chart
   // renders on load rather than on scroll: the whole page is about 1 MB, and a chart
   // that silently fails to appear is worse than a second of waiting.
-  await Promise.allSettled(CHARTS.map(([el, url]) =>
-    vegaEmbed(el, url, opts).catch(err => {
+  await Promise.allSettled(CHARTS.map(([el, url, ctl]) => {
+    // Bound inputs render into the control bar above the chart rather than into
+    // the default rail underneath it, which on a tall map puts the control most
+    // of a screen away from the sentence telling you to use it.
+    const o = ctl ? {...opts, bind: document.querySelector(ctl)} : opts;
+    return vegaEmbed(el, v(url), o).catch(err => {
       console.error("chart failed:", url, err);
       document.querySelector(el).innerHTML =
         '<p style="font-size:13px;color:#898781;padding:20px 0">This chart could not be loaded.</p>';
-    })
-  ));
+    });
+  }));
 })();
 </script>
 

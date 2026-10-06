@@ -173,9 +173,14 @@ own sake. Four things, each tied to a question the story raises:
 2. **Clicking a region** on that map draws its own trajectory beneath it, against the national
    line. This is the unit's overview-and-detail pattern, and it turns a national story into a
    local one. Richmond - Tweed falls from 67% to 53% while the country moves from 66% to 63%.
-3. **Clicking a sector in the legend** of the indexed chart fades the other two, so a reader can
-   isolate one line without losing the context around it.
+3. **Choosing a sector** on the indexed chart fades the other two, so a reader can isolate one
+   line without losing the context around it.
 4. **A menu** on the new-schools map shows one sector at a time.
+
+Each control sits in a tinted bar directly above the chart it drives, carrying a one-line prompt
+beside it. An early version left the controls in Vega's default position underneath, which on a
+tall map put the slider most of a screen below the sentence telling the reader to use it, and the
+interactivity read as absent.
 
 Values are printed directly on the charts wherever they fit, so no number on the page depends on
 hovering to be read. There is no scrollytelling: the brief asks for presentation rather than
