@@ -1,0 +1,271 @@
+remoteness,order,year,sector,enrolments,share,gov_share
+Major Cities,0,2008,Catholic,445271.0,19.12,63.07
+Major Cities,0,2009,Catholic,451615.0,19.06,63.07
+Major Cities,0,2010,Catholic,458525.0,19.03,63.12
+Major Cities,0,2011,Catholic,465312.0,18.96,63.17
+Major Cities,0,2012,Catholic,473447.0,18.89,63.25
+Major Cities,0,2013,Catholic,484271.0,18.85,63.35
+Major Cities,0,2014,Catholic,490524.0,18.74,63.47
+Major Cities,0,2015,Catholic,497350.0,18.61,63.61
+Major Cities,0,2016,Catholic,501705.0,18.44,63.94
+Major Cities,0,2017,Catholic,502371.0,18.11,64.24
+Major Cities,0,2018,Catholic,502866.0,17.8,64.49
+Major Cities,0,2019,Catholic,505680.0,17.58,64.63
+Major Cities,0,2020,Catholic,513618.0,17.51,64.63
+Major Cities,0,2021,Catholic,521254.0,17.61,64.11
+Major Cities,0,2022,Catholic,526261.0,17.68,63.57
+Major Cities,0,2023,Catholic,533817.0,17.65,63.2
+Major Cities,0,2024,Catholic,542566.0,17.68,62.73
+Major Cities,0,2025,Catholic,550984.0,17.79,62.24
+Major Cities,0,2008,Government,1469110.0,63.07,63.07
+Major Cities,0,2009,Government,1494069.0,63.07,63.07
+Major Cities,0,2010,Government,1521241.0,63.12,63.12
+Major Cities,0,2011,Government,1550392.0,63.17,63.17
+Major Cities,0,2012,Government,1585337.0,63.25,63.25
+Major Cities,0,2013,Government,1627642.0,63.35,63.35
+Major Cities,0,2014,Government,1660964.0,63.47,63.47
+Major Cities,0,2015,Government,1700270.0,63.61,63.61
+Major Cities,0,2016,Government,1739251.0,63.94,63.94
+Major Cities,0,2017,Government,1781901.0,64.24,64.24
+Major Cities,0,2018,Government,1822173.0,64.49,64.49
+Major Cities,0,2019,Government,1859401.0,64.63,64.63
+Major Cities,0,2020,Government,1895314.0,64.63,64.63
+Major Cities,0,2021,Government,1897817.0,64.11,64.11
+Major Cities,0,2022,Government,1892676.0,63.57,63.57
+Major Cities,0,2023,Government,1911835.0,63.2,63.2
+Major Cities,0,2024,Government,1925219.0,62.73,62.73
+Major Cities,0,2025,Government,1927373.0,62.24,62.24
+Major Cities,0,2008,Independent,414995.0,17.82,63.07
+Major Cities,0,2009,Independent,423393.0,17.87,63.07
+Major Cities,0,2010,Independent,430272.0,17.85,63.12
+Major Cities,0,2011,Independent,438754.0,17.88,63.17
+Major Cities,0,2012,Independent,447553.0,17.86,63.25
+Major Cities,0,2013,Independent,457308.0,17.8,63.35
+Major Cities,0,2014,Independent,465375.0,17.78,63.47
+Major Cities,0,2015,Independent,475519.0,17.79,63.61
+Major Cities,0,2016,Independent,479320.0,17.62,63.94
+Major Cities,0,2017,Independent,489643.0,17.65,64.24
+Major Cities,0,2018,Independent,500317.0,17.71,64.49
+Major Cities,0,2019,Independent,511766.0,17.79,64.63
+Major Cities,0,2020,Independent,523720.0,17.86,64.63
+Major Cities,0,2021,Independent,541307.0,18.29,64.11
+Major Cities,0,2022,Independent,558196.0,18.75,63.57
+Major Cities,0,2023,Independent,579630.0,19.16,63.2
+Major Cities,0,2024,Independent,601504.0,19.6,62.73
+Major Cities,0,2025,Independent,618095.0,19.96,62.24
+Inner Regional,1,2008,Catholic,123020.0,19.38,69.79
+Inner Regional,1,2009,Catholic,124782.0,19.56,69.39
+Inner Regional,1,2010,Catholic,126664.0,19.66,69.03
+Inner Regional,1,2011,Catholic,129292.0,19.83,68.71
+Inner Regional,1,2012,Catholic,132172.0,20.17,68.14
+Inner Regional,1,2013,Catholic,134559.0,20.27,67.92
+Inner Regional,1,2014,Catholic,135769.0,20.24,67.88
+Inner Regional,1,2015,Catholic,137009.0,20.3,67.69
+Inner Regional,1,2016,Catholic,137958.0,20.28,67.62
+Inner Regional,1,2017,Catholic,138264.0,20.17,67.6
+Inner Regional,1,2018,Catholic,138059.0,20.03,67.46
+Inner Regional,1,2019,Catholic,139106.0,20.01,67.15
+Inner Regional,1,2020,Catholic,141156.0,20.07,66.74
+Inner Regional,1,2021,Catholic,143032.0,20.32,65.93
+Inner Regional,1,2022,Catholic,145685.0,20.74,64.94
+Inner Regional,1,2023,Catholic,149805.0,21.26,63.84
+Inner Regional,1,2024,Catholic,152658.0,21.57,62.96
+Inner Regional,1,2025,Catholic,154742.0,21.82,62.15
+Inner Regional,1,2008,Government,442997.0,69.79,69.79
+Inner Regional,1,2009,Government,442622.0,69.39,69.39
+Inner Regional,1,2010,Government,444683.0,69.03,69.03
+Inner Regional,1,2011,Government,447909.0,68.71,68.71
+Inner Regional,1,2012,Government,446514.0,68.14,68.14
+Inner Regional,1,2013,Government,450819.0,67.92,67.92
+Inner Regional,1,2014,Government,455352.0,67.88,67.88
+Inner Regional,1,2015,Government,456870.0,67.69,67.69
+Inner Regional,1,2016,Government,459951.0,67.62,67.62
+Inner Regional,1,2017,Government,463425.0,67.6,67.6
+Inner Regional,1,2018,Government,464894.0,67.46,67.46
+Inner Regional,1,2019,Government,466858.0,67.15,67.15
+Inner Regional,1,2020,Government,469422.0,66.74,66.74
+Inner Regional,1,2021,Government,464146.0,65.93,65.93
+Inner Regional,1,2022,Government,456179.0,64.94,64.94
+Inner Regional,1,2023,Government,449909.0,63.84,63.84
+Inner Regional,1,2024,Government,445542.0,62.96,62.96
+Inner Regional,1,2025,Government,440782.0,62.15,62.15
+Inner Regional,1,2008,Independent,68770.0,10.83,69.79
+Inner Regional,1,2009,Independent,70431.0,11.04,69.39
+Inner Regional,1,2010,Independent,72859.0,11.31,69.03
+Inner Regional,1,2011,Independent,74678.0,11.46,68.71
+Inner Regional,1,2012,Independent,76558.0,11.68,68.14
+Inner Regional,1,2013,Independent,78393.0,11.81,67.92
+Inner Regional,1,2014,Independent,79736.0,11.89,67.88
+Inner Regional,1,2015,Independent,81026.0,12.01,67.69
+Inner Regional,1,2016,Independent,82297.0,12.1,67.62
+Inner Regional,1,2017,Independent,83845.0,12.23,67.6
+Inner Regional,1,2018,Independent,86237.0,12.51,67.46
+Inner Regional,1,2019,Independent,89257.0,12.84,67.15
+Inner Regional,1,2020,Independent,92817.0,13.2,66.74
+Inner Regional,1,2021,Independent,96873.0,13.76,65.93
+Inner Regional,1,2022,Independent,100590.0,14.32,64.94
+Inner Regional,1,2023,Independent,104999.0,14.9,63.84
+Inner Regional,1,2024,Independent,109485.0,15.47,62.96
+Inner Regional,1,2025,Independent,113693.0,16.03,62.15
+Outer Regional,2,2008,Catholic,54143.0,17.66,75.86
+Outer Regional,2,2009,Catholic,54821.0,17.87,75.22
+Outer Regional,2,2010,Catholic,55270.0,17.87,74.8
+Outer Regional,2,2011,Catholic,55932.0,17.81,74.75
+Outer Regional,2,2012,Catholic,56854.0,17.98,74.5
+Outer Regional,2,2013,Catholic,57748.0,18.02,74.32
+Outer Regional,2,2014,Catholic,58292.0,18.16,74.23
+Outer Regional,2,2015,Catholic,58589.0,18.19,74.22
+Outer Regional,2,2016,Catholic,58386.0,18.13,74.14
+Outer Regional,2,2017,Catholic,58058.0,18.1,74.25
+Outer Regional,2,2018,Catholic,57684.0,17.94,74.38
+Outer Regional,2,2019,Catholic,57901.0,17.99,74.17
+Outer Regional,2,2020,Catholic,58586.0,18.05,73.9
+Outer Regional,2,2021,Catholic,59128.0,18.12,73.42
+Outer Regional,2,2022,Catholic,59670.0,18.29,72.79
+Outer Regional,2,2023,Catholic,60694.0,18.68,71.86
+Outer Regional,2,2024,Catholic,61756.0,19.01,71.0
+Outer Regional,2,2025,Catholic,62502.0,19.26,70.34
+Outer Regional,2,2008,Government,232628.0,75.86,75.86
+Outer Regional,2,2009,Government,230757.0,75.22,75.22
+Outer Regional,2,2010,Government,231359.0,74.8,74.8
+Outer Regional,2,2011,Government,234763.0,74.75,74.75
+Outer Regional,2,2012,Government,235601.0,74.5,74.5
+Outer Regional,2,2013,Government,238096.0,74.32,74.32
+Outer Regional,2,2014,Government,238275.0,74.23,74.23
+Outer Regional,2,2015,Government,239040.0,74.22,74.22
+Outer Regional,2,2016,Government,238715.0,74.14,74.14
+Outer Regional,2,2017,Government,238188.0,74.25,74.25
+Outer Regional,2,2018,Government,239155.0,74.38,74.38
+Outer Regional,2,2019,Government,238748.0,74.17,74.17
+Outer Regional,2,2020,Government,239817.0,73.9,73.9
+Outer Regional,2,2021,Government,239575.0,73.42,73.42
+Outer Regional,2,2022,Government,237492.0,72.79,72.79
+Outer Regional,2,2023,Government,233479.0,71.86,71.86
+Outer Regional,2,2024,Government,230697.0,71.0,71.0
+Outer Regional,2,2025,Government,228300.0,70.34,70.34
+Outer Regional,2,2008,Independent,19892.0,6.49,75.86
+Outer Regional,2,2009,Independent,21211.0,6.91,75.22
+Outer Regional,2,2010,Independent,22681.0,7.33,74.8
+Outer Regional,2,2011,Independent,23365.0,7.44,74.75
+Outer Regional,2,2012,Independent,23769.0,7.52,74.5
+Outer Regional,2,2013,Independent,24540.0,7.66,74.32
+Outer Regional,2,2014,Independent,24414.0,7.61,74.23
+Outer Regional,2,2015,Independent,24444.0,7.59,74.22
+Outer Regional,2,2016,Independent,24869.0,7.72,74.14
+Outer Regional,2,2017,Independent,24548.0,7.65,74.25
+Outer Regional,2,2018,Independent,24710.0,7.68,74.38
+Outer Regional,2,2019,Independent,25227.0,7.84,74.17
+Outer Regional,2,2020,Independent,26111.0,8.05,73.9
+Outer Regional,2,2021,Independent,27623.0,8.46,73.42
+Outer Regional,2,2022,Independent,29099.0,8.92,72.79
+Outer Regional,2,2023,Independent,30738.0,9.46,71.86
+Outer Regional,2,2024,Independent,32459.0,9.99,71.0
+Outer Regional,2,2025,Independent,33770.0,10.4,70.34
+Remote,3,2008,Catholic,7803.0,16.68,79.37
+Remote,3,2009,Catholic,7804.0,16.82,78.9
+Remote,3,2010,Catholic,8002.0,17.1,78.39
+Remote,3,2011,Catholic,8043.0,17.26,77.9
+Remote,3,2012,Catholic,8127.0,17.16,77.78
+Remote,3,2013,Catholic,8143.0,17.08,77.37
+Remote,3,2014,Catholic,8170.0,17.21,77.18
+Remote,3,2015,Catholic,8144.0,17.15,76.81
+Remote,3,2016,Catholic,7919.0,16.83,77.2
+Remote,3,2017,Catholic,7594.0,16.25,77.67
+Remote,3,2018,Catholic,7502.0,16.25,77.66
+Remote,3,2019,Catholic,7483.0,16.29,77.87
+Remote,3,2020,Catholic,7399.0,16.16,78.43
+Remote,3,2021,Catholic,7443.0,16.32,78.36
+Remote,3,2022,Catholic,7402.0,16.42,78.25
+Remote,3,2023,Catholic,7398.0,16.56,78.13
+Remote,3,2024,Catholic,7723.0,17.26,77.29
+Remote,3,2025,Catholic,7893.0,17.6,77.1
+Remote,3,2008,Government,37137.0,79.37,79.37
+Remote,3,2009,Government,36607.0,78.9,78.9
+Remote,3,2010,Government,36688.0,78.39,78.39
+Remote,3,2011,Government,36296.0,77.9,77.9
+Remote,3,2012,Government,36838.0,77.78,77.78
+Remote,3,2013,Government,36889.0,77.37,77.37
+Remote,3,2014,Government,36641.0,77.18,77.18
+Remote,3,2015,Government,36474.0,76.81,76.81
+Remote,3,2016,Government,36332.0,77.2,77.2
+Remote,3,2017,Government,36287.0,77.67,77.67
+Remote,3,2018,Government,35851.0,77.66,77.66
+Remote,3,2019,Government,35775.0,77.87,77.87
+Remote,3,2020,Government,35918.0,78.43,78.43
+Remote,3,2021,Government,35742.0,78.36,78.36
+Remote,3,2022,Government,35278.0,78.25,78.25
+Remote,3,2023,Government,34910.0,78.13,78.13
+Remote,3,2024,Government,34585.0,77.29,77.29
+Remote,3,2025,Government,34571.0,77.1,77.1
+Remote,3,2008,Independent,1847.0,3.95,79.37
+Remote,3,2009,Independent,1986.0,4.28,78.9
+Remote,3,2010,Independent,2111.0,4.51,78.39
+Remote,3,2011,Independent,2254.0,4.84,77.9
+Remote,3,2012,Independent,2395.0,5.06,77.78
+Remote,3,2013,Independent,2645.0,5.55,77.37
+Remote,3,2014,Independent,2661.0,5.61,77.18
+Remote,3,2015,Independent,2870.0,6.04,76.81
+Remote,3,2016,Independent,2809.0,5.97,77.2
+Remote,3,2017,Independent,2841.0,6.08,77.67
+Remote,3,2018,Independent,2809.0,6.09,77.66
+Remote,3,2019,Independent,2683.0,5.84,77.87
+Remote,3,2020,Independent,2482.0,5.42,78.43
+Remote,3,2021,Independent,2429.0,5.33,78.36
+Remote,3,2022,Independent,2402.0,5.33,78.25
+Remote,3,2023,Independent,2374.0,5.31,78.13
+Remote,3,2024,Independent,2437.0,5.45,77.29
+Remote,3,2025,Independent,2375.0,5.3,77.1
+Very Remote,4,2008,Catholic,2354.0,7.08,89.28
+Very Remote,4,2009,Catholic,2240.0,6.81,89.53
+Very Remote,4,2010,Catholic,2260.0,6.97,89.35
+Very Remote,4,2011,Catholic,2215.0,6.79,89.59
+Very Remote,4,2012,Catholic,2304.0,7.22,89.02
+Very Remote,4,2013,Catholic,2317.0,7.15,88.98
+Very Remote,4,2014,Catholic,2284.0,6.9,89.07
+Very Remote,4,2015,Catholic,2013.0,6.4,88.94
+Very Remote,4,2016,Catholic,2000.0,6.42,89.04
+Very Remote,4,2017,Catholic,1937.0,6.22,89.27
+Very Remote,4,2018,Catholic,1975.0,6.48,88.85
+Very Remote,4,2019,Catholic,1927.0,6.31,89.02
+Very Remote,4,2020,Catholic,1887.0,6.19,89.19
+Very Remote,4,2021,Catholic,2004.0,6.64,88.59
+Very Remote,4,2022,Catholic,1988.0,6.66,88.55
+Very Remote,4,2023,Catholic,1950.0,6.58,88.73
+Very Remote,4,2024,Catholic,1920.0,6.52,88.77
+Very Remote,4,2025,Catholic,1949.0,6.61,88.26
+Very Remote,4,2008,Government,29686.0,89.28,89.28
+Very Remote,4,2009,Government,29445.0,89.53,89.53
+Very Remote,4,2010,Government,28988.0,89.35,89.35
+Very Remote,4,2011,Government,29228.0,89.59,89.59
+Very Remote,4,2012,Government,28391.0,89.02,89.02
+Very Remote,4,2013,Government,28823.0,88.98,88.98
+Very Remote,4,2014,Government,29473.0,89.07,89.07
+Very Remote,4,2015,Government,27955.0,88.94,88.94
+Very Remote,4,2016,Government,27722.0,89.04,89.04
+Very Remote,4,2017,Government,27791.0,89.27,89.27
+Very Remote,4,2018,Government,27091.0,88.85,88.85
+Very Remote,4,2019,Government,27184.0,89.02,89.02
+Very Remote,4,2020,Government,27186.0,89.19,89.19
+Very Remote,4,2021,Government,26739.0,88.59,88.59
+Very Remote,4,2022,Government,26422.0,88.55,88.55
+Very Remote,4,2023,Government,26283.0,88.73,88.73
+Very Remote,4,2024,Government,26160.0,88.77,88.77
+Very Remote,4,2025,Government,26008.0,88.26,88.26
+Very Remote,4,2008,Independent,1211.0,3.64,89.28
+Very Remote,4,2009,Independent,1202.0,3.65,89.53
+Very Remote,4,2010,Independent,1197.0,3.69,89.35
+Very Remote,4,2011,Independent,1182.0,3.62,89.59
+Very Remote,4,2012,Independent,1197.0,3.75,89.02
+Very Remote,4,2013,Independent,1252.0,3.87,88.98
+Very Remote,4,2014,Independent,1334.0,4.03,89.07
+Very Remote,4,2015,Independent,1465.0,4.66,88.94
+Very Remote,4,2016,Independent,1413.0,4.54,89.04
+Very Remote,4,2017,Independent,1402.0,4.5,89.27
+Very Remote,4,2018,Independent,1424.0,4.67,88.85
+Very Remote,4,2019,Independent,1425.0,4.67,89.02
+Very Remote,4,2020,Independent,1408.0,4.62,89.19
+Very Remote,4,2021,Independent,1440.0,4.77,88.59
+Very Remote,4,2022,Independent,1428.0,4.79,88.55
+Very Remote,4,2023,Independent,1388.0,4.69,88.73
+Very Remote,4,2024,Independent,1388.0,4.71,88.77
+Very Remote,4,2025,Independent,1511.0,5.13,88.26

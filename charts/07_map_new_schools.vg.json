@@ -1,0 +1,167 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Proportional symbol map of every school open in 2025 that was not open in 2020, sized by enrolment and coloured by sector. Albers equal-area conic projection.",
+  "title": {
+    "text": "Where the new schools were built",
+    "subtitle": [
+      "The 260 schools operating in 2025 that were not open in 2020. Circle area is the 2025 enrolment.",
+      "Use the menu below to show one sector at a time. Source: ACARA School Profile and School Location."
+    ]
+  },
+  "width": "container",
+  "height": 440,
+  "projection": {
+    "type": "albers",
+    "rotate": [
+      -134,
+      0
+    ],
+    "parallels": [
+      -18,
+      -36
+    ]
+  },
+  "params": [
+    {
+      "name": "sector_pick",
+      "value": "All sectors",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All sectors",
+          "Government",
+          "Catholic",
+          "Independent"
+        ],
+        "name": "Show sector:  "
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "maps/au_sa4_states.topo.json",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f0efec",
+        "stroke": "#fcfcfb",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "data/processed/new_schools_since_2020.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "lat": "number",
+            "lon": "number",
+            "enrolments": "number",
+            "icsea": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "sector_pick === 'All sectors' || datum.sector === sector_pick"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "opacity": 0.72,
+        "stroke": "#fcfcfb",
+        "strokeWidth": 0.6
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "enrolments",
+          "type": "quantitative",
+          "title": "Students, 2025",
+          "scale": {
+            "type": "sqrt",
+            "range": [
+              14,
+              620
+            ]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 468,
+            "legendY": 18,
+            "symbolFillColor": "#b8bdc4",
+            "symbolStrokeColor": "#8a9098",
+            "format": ",.0f"
+          }
+        },
+        "color": {
+          "field": "sector",
+          "type": "nominal",
+          "title": "Sector",
+          "scale": {
+            "domain": [
+              "Government",
+              "Catholic",
+              "Independent"
+            ],
+            "range": [
+              "#2a78d6",
+              "#eb6834",
+              "#1baf7a"
+            ]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 12,
+            "legendY": 330,
+            "symbolType": "circle",
+            "symbolSize": 110
+          }
+        },
+        "tooltip": [
+          {
+            "field": "school",
+            "title": "School"
+          },
+          {
+            "field": "suburb",
+            "title": "Suburb"
+          },
+          {
+            "field": "state",
+            "title": "State"
+          },
+          {
+            "field": "sector",
+            "title": "Sector"
+          },
+          {
+            "field": "school_type",
+            "title": "Type"
+          },
+          {
+            "field": "enrolments",
+            "title": "Students 2025",
+            "format": ",.0f"
+          },
+          {
+            "field": "remoteness",
+            "title": "Remoteness"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Change in the number of government school students in each state and territory between 2020 and 2025, in headcount rather than share. The grey marker shows how the state's whole school population moved over the same period, so the gap between the two is the part that is a sector shift rather than population growth.",
+  "title": {
+    "text": "New South Wales lost a city's worth of government students",
+    "subtitle": [
+      "Change in government school students, 2020 to 2025. The grey diamond shows the change in all",
+      "students in that state, so the distance between the bar and the diamond is the sector shift.",
+      "Source: ACARA School Profile 2008-2025."
+    ]
+  },
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "data/processed/state_change.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "gov_share_2020": "number",
+        "gov_share_2025": "number",
+        "change_pp": "number",
+        "gov_enrolments_2020": "number",
+        "gov_enrolments_2025": "number",
+        "gov_pct_change": "number",
+        "total_pct_change": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.gov_enrolments_2025 - datum.gov_enrolments_2020",
+      "as": "gov_change"
+    },
+    {
+      "calculate": "datum.gov_enrolments_2020 * datum.total_pct_change / 100",
+      "as": "expected_change"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "state",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "gov_change",
+        "op": "min",
+        "order": "ascending"
+      },
+      "axis": {
+        "labelFontSize": 12,
+        "labelFontWeight": 600,
+        "labelColor": "#0b0b0b",
+        "domain": false,
+        "ticks": false,
+        "labelPadding": 8
+      }
+    },
+    "x": {
+      "field": "gov_change",
+      "type": "quantitative",
+      "title": "Change in government school students, 2020 to 2025",
+      "scale": {
+        "domain": [
+          -52000,
+          52000
+        ]
+      },
+      "axis": {
+        "tickCount": 5,
+        "format": "+,.0f"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 18,
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.gov_change < 0",
+            "value": "#e34948"
+          },
+          "value": "#2a78d6"
+        },
+        "tooltip": [
+          {
+            "field": "state_name",
+            "title": "State"
+          },
+          {
+            "field": "gov_enrolments_2020",
+            "title": "Government students 2020",
+            "format": ",.0f"
+          },
+          {
+            "field": "gov_enrolments_2025",
+            "title": "Government students 2025",
+            "format": ",.0f"
+          },
+          {
+            "field": "gov_change",
+            "type": "quantitative",
+            "title": "Change",
+            "format": "+,.0f"
+          },
+          {
+            "field": "gov_pct_change",
+            "title": "Government students, change",
+            "format": "+.1f"
+          },
+          {
+            "field": "total_pct_change",
+            "title": "All students, change",
+            "format": "+.1f"
+          },
+          {
+            "field": "change_pp",
+            "title": "Change in government share (pts)",
+            "format": "+.1f"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Where government enrolments would have landed had they simply tracked the state's overall student growth.",
+      "mark": {
+        "type": "tick",
+        "thickness": 2,
+        "size": 24,
+        "color": "#52514e",
+        "opacity": 0.85
+      },
+      "encoding": {
+        "x": {
+          "field": "expected_change",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "state_name",
+            "title": "State"
+          },
+          {
+            "field": "expected_change",
+            "type": "quantitative",
+            "title": "If government had tracked total growth",
+            "format": "+,.0f"
+          },
+          {
+            "field": "gov_change",
+            "type": "quantitative",
+            "title": "What actually happened",
+            "format": "+,.0f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.gov_change < 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10.5,
+        "fontWeight": 600,
+        "align": "right",
+        "dx": -9
+      },
+      "encoding": {
+        "x": {
+          "field": "gov_change",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "gov_change",
+          "type": "quantitative",
+          "format": "+,.0f"
+        },
+        "color": {
+          "value": "#52514e"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.gov_change >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10.5,
+        "fontWeight": 600,
+        "align": "left",
+        "dx": 9
+      },
+      "encoding": {
+        "x": {
+          "field": "gov_change",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "gov_change",
+          "type": "quantitative",
+          "format": "+,.0f"
+        },
+        "color": {
+          "value": "#52514e"
+        }
+      }
+    },
+    {
+      "description": "Zero line. Uses the inherited data so it adds no extra category to the axis.",
+      "mark": {
+        "type": "rule",
+        "color": "#52514e",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        }
+      }
+    }
+  ]
+}

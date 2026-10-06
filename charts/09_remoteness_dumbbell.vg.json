@@ -1,0 +1,179 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Connected dot plot of the government share of enrolments in 2020 and 2025 across the five ABS remoteness classes. The gap between the two dots is the size of the shift.",
+  "title": {
+    "text": "The further out you go, the less choice there is",
+    "subtitle": [
+      "Share of students in a government school, 2020 and 2025, by how remote the school is.",
+      "The biggest shift is not in the capitals. Sources: ACARA School Profile; ABS remoteness areas."
+    ]
+  },
+  "width": "container",
+  "height": 210,
+  "data": {
+    "url": "data/processed/remoteness_trend.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "order": "number",
+        "year": "number",
+        "enrolments": "number",
+        "share": "number",
+        "gov_share": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.sector === 'Government' && (datum.year === 2020 || datum.year === 2025)"
+    },
+    {
+      "calculate": "format(datum.year, 'd')",
+      "as": "yr"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "remoteness",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "order",
+        "op": "min"
+      },
+      "axis": {
+        "labelFontSize": 11.5,
+        "labelColor": "#0b0b0b",
+        "domain": false,
+        "ticks": false,
+        "labelPadding": 8
+      }
+    },
+    "x": {
+      "field": "gov_share",
+      "type": "quantitative",
+      "title": "Students in a government school (%)",
+      "scale": {
+        "domain": [
+          58,
+          92
+        ]
+      },
+      "axis": {
+        "tickCount": 5
+      }
+    }
+  },
+  "layer": [
+    {
+      "description": "The connecting bar is the change itself.",
+      "mark": {
+        "type": "line",
+        "strokeWidth": 4,
+        "color": "#c3c2b7",
+        "strokeCap": "round",
+        "opacity": 0.8
+      },
+      "encoding": {
+        "detail": {
+          "field": "remoteness"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 150,
+        "stroke": "#fcfcfb",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "yr",
+          "type": "nominal",
+          "title": "Year",
+          "scale": {
+            "domain": [
+              "2020",
+              "2025"
+            ],
+            "range": [
+              "#9ec5f4",
+              "#184f95"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "offset": 6,
+            "symbolType": "circle"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "remoteness",
+            "title": "Remoteness"
+          },
+          {
+            "field": "yr",
+            "title": "Year"
+          },
+          {
+            "field": "gov_share",
+            "title": "Government share (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Label both ends so the numbers never depend on the colour key.",
+      "transform": [
+        {
+          "filter": "datum.yr === '2025'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -13,
+        "fontSize": 10.5,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {
+          "field": "gov_share",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "value": "#52514e"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.yr === '2020'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 13,
+        "fontSize": 10.5
+      },
+      "encoding": {
+        "text": {
+          "field": "gov_share",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "value": "#898781"
+        }
+      }
+    }
+  ]
+}

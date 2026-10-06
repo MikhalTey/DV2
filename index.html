@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Quiet Exit from Australia's Government Schools</title>
+<meta name="description" content="Government school enrolments in Australia peaked in 2020 and have fallen every year since, while the school system as a whole kept growing. Where it is happening, and who is leaving.">
+<meta name="author" content="Mikhalangelo">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.2"></script>
+
+<style>
+  :root{
+    --page:#f9f9f7;
+    --surface:#fcfcfb;
+    --ink:#0b0b0b;
+    --ink-2:#52514e;
+    --ink-3:#898781;
+    --rule:#e1e0d9;
+    --gov:#2a78d6;
+    --cath:#eb6834;
+    --indep:#1baf7a;
+    --fall:#b3332f;
+    --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans:Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --wrap:1060px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--page); color:var(--ink);
+    font-family:var(--sans); font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 24px}
+
+  /* ---------- masthead ---------- */
+  header.hero{padding:72px 0 0}
+  .kicker{
+    font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--fall); margin:0 0 20px;
+  }
+  h1{
+    font-family:var(--serif); font-weight:700; font-size:clamp(34px,5.6vw,60px);
+    line-height:1.06; letter-spacing:-.018em; margin:0 0 22px; max-width:17ch;
+  }
+  .standfirst{
+    font-family:var(--serif); font-size:clamp(18px,2.1vw,22px); line-height:1.5;
+    color:var(--ink-2); max-width:62ch; margin:0 0 30px;
+  }
+  .byline{
+    font-size:13px; color:var(--ink-3); border-top:1px solid var(--rule);
+    padding-top:14px; margin-bottom:8px;
+  }
+  .byline strong{color:var(--ink-2); font-weight:600}
+
+  /* ---------- key numbers ---------- */
+  .stats{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--rule); border:1px solid var(--rule);
+    margin:44px 0 12px;
+  }
+  .stat{background:var(--surface); padding:20px 18px}
+  .stat .n{
+    font-family:var(--serif); font-size:clamp(28px,3.6vw,40px); font-weight:700;
+    line-height:1; letter-spacing:-.02em; display:block; margin-bottom:8px;
+  }
+  .stat .n.down{color:var(--fall)}
+  .stat .n.up{color:var(--indep)}
+  .stat .l{font-size:12.5px; line-height:1.4; color:var(--ink-2)}
+
+  /* ---------- sections ---------- */
+  section{padding:64px 0 0}
+  .sec-head{max-width:64ch; margin-bottom:34px}
+  .sec-num{
+    font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--ink-3); display:block; margin-bottom:12px;
+  }
+  h2{
+    font-family:var(--serif); font-weight:700; font-size:clamp(25px,3.3vw,34px);
+    line-height:1.18; letter-spacing:-.012em; margin:0 0 14px;
+  }
+  .sec-head p{margin:0 0 12px; color:var(--ink-2); font-size:16.5px}
+  .sec-head p:last-child{margin-bottom:0}
+
+  /* ---------- chart frames ---------- */
+  .chart{
+    background:var(--surface); border:1px solid var(--rule);
+    padding:22px 22px 18px; margin:0 0 26px;
+  }
+  .chart.tall{padding-bottom:12px}
+  .vis{width:100%; overflow-x:auto}
+  .note{
+    font-size:13.5px; line-height:1.55; color:var(--ink-2);
+    border-top:1px solid var(--rule); margin-top:16px; padding-top:14px;
+  }
+  .note b{color:var(--ink); font-weight:600}
+  .pair{display:grid; grid-template-columns:1fr 1fr; gap:26px}
+  .pair .chart{margin-bottom:0}
+
+  /* ---------- pull quote ---------- */
+  .pull{
+    font-family:var(--serif); font-size:clamp(20px,2.6vw,27px); line-height:1.35;
+    color:var(--ink); border-left:3px solid var(--fall);
+    padding:6px 0 6px 22px; margin:38px 0; max-width:48ch; font-weight:600;
+  }
+
+  /* ---------- legend key inline ---------- */
+  .key{display:flex; flex-wrap:wrap; gap:18px; font-size:13px; color:var(--ink-2); margin:0 0 28px}
+  .key span{display:flex; align-items:center; gap:7px}
+  .key i{width:11px; height:11px; border-radius:2px; display:block}
+
+  /* ---------- footer ---------- */
+  footer{
+    margin-top:80px; border-top:1px solid var(--rule);
+    background:var(--surface); padding:46px 0 70px;
+  }
+  footer h3{
+    font-family:var(--serif); font-size:19px; font-weight:600; margin:0 0 12px;
+  }
+  footer h3:not(:first-child){margin-top:34px}
+  footer p, footer li{font-size:13.5px; line-height:1.65; color:var(--ink-2)}
+  footer ul{margin:0; padding-left:18px}
+  footer li{margin-bottom:8px}
+  footer a{color:var(--gov); text-decoration:none; border-bottom:1px solid rgba(42,120,214,.3)}
+  footer a:hover{border-bottom-color:var(--gov)}
+  .cols{display:grid; grid-template-columns:1fr 1fr; gap:44px}
+  .defs dt{font-weight:600; color:var(--ink); font-size:13.5px; margin-top:10px}
+  .defs dd{margin:2px 0 0; font-size:13.5px; color:var(--ink-2)}
+
+  /* vega tweaks */
+  .vega-bindings{
+    font-family:var(--sans); font-size:13px; color:var(--ink-2);
+    margin-top:10px; padding-top:12px; border-top:1px solid var(--rule);
+  }
+  .vega-bind select{
+    font-family:var(--sans); font-size:13px; padding:4px 8px;
+    border:1px solid var(--rule); background:var(--surface); color:var(--ink);
+    border-radius:3px; margin-left:4px;
+  }
+  .vega-embed{width:100%}
+  .vega-embed summary{display:none}
+
+  @media (max-width:860px){
+    .pair{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .cols{grid-template-columns:1fr; gap:0}
+    header.hero{padding-top:44px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Australian school enrolments, 2008 to 2025</p>
+    <h1>The quiet exit from government schools</h1>
+    <p class="standfirst">
+      Australia's school system has never stopped growing. It now teaches 4.2 million children,
+      about 750,000 more than in 2008. But in 2020 something changed that the headline number hides:
+      government school enrolments stopped growing, and they have fallen every year since.
+    </p>
+    <p class="byline">
+      By <strong>Mikhalangelo</strong> &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp;
+      Data from the Australian Curriculum, Assessment and Reporting Authority and the Australian Bureau of Statistics
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="n">2020</span>
+        <span class="l">The year government school enrolments peaked, at 2.67 million</span>
+      </div>
+      <div class="stat">
+        <span class="n down">&minus;3.0</span>
+        <span class="l">Percentage points off the government share of students since then, from 66.0 to 63.2</span>
+      </div>
+      <div class="stat">
+        <span class="n up">+18.5%</span>
+        <span class="l">Growth in independent school students over the same five years</span>
+      </div>
+      <div class="stat">
+        <span class="n">83 of 88</span>
+        <span class="l">Regions of Australia where the government share fell. The five that rose are all inner-city</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ 1 ============================ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">Part one &nbsp;/&nbsp; What happened</span>
+      <h2>A twelve-year flat line, then a break</h2>
+      <p>
+        Australian schools are run in three sectors. <b>Government</b> schools are run by the states and
+        territories. <b>Catholic</b> and <b>independent</b> schools charge fees and together make up the
+        non-government sector. For more than a decade the split between them barely moved.
+      </p>
+      <p>
+        Stacked up, the three sectors look like a steady, growing system. The total climbs every single year.
+        Nothing about the shape of it suggests a turning point.
+      </p>
+    </div>
+
+    <div class="key">
+      <span><i style="background:#2a78d6"></i> Government</span>
+      <span><i style="background:#eb6834"></i> Catholic</span>
+      <span><i style="background:#1baf7a"></i> Independent</span>
+    </div>
+
+    <div class="chart"><div class="vis" id="v01"></div>
+      <p class="note">
+        The system gained about 158,000 students between 2020 and 2025. Stacked totals hide what happened
+        underneath, because a band can keep its place while shrinking relative to the whole.
+      </p>
+    </div>
+
+    <p class="pull">Start each sector at the same place, and the three lines separate immediately.</p>
+
+    <div class="chart"><div class="vis" id="v02"></div>
+      <p class="note">
+        Indexing removes the size difference. Every sector starts at 100 in 2008, so the lines show growth
+        rates rather than headcounts. Independent schools ended 48% larger than they started. Government
+        schools grew 17% over seventeen years, and <b>all of that growth happened before 2020</b>. Since then
+        the line has bent downwards.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 2 ============================ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">Part two &nbsp;/&nbsp; The obvious objection</span>
+      <h2>Is this just fewer children being born?</h2>
+      <p>
+        Australia's birth rate fell through the 2010s, so smaller groups of children are now arriving at
+        school. That should shrink the youngest year levels no matter which sector you look at. If the
+        government sector's decline were only demographics, every sector would be losing its youngest
+        students together.
+      </p>
+      <p>That is not what the data shows.</p>
+    </div>
+
+    <div class="chart"><div class="vis" id="v04"></div>
+      <p class="note">
+        Government schools lost 8% of their Year 1 students and gained 12% of their Year 12 students. That
+        pattern is exactly what a shrinking birth cohort moving up through a system looks like. But the other
+        two sectors grew at <b>every single year level, including the youngest ones</b>. The children are
+        fewer, and a smaller share of them are being enrolled in government schools.
+      </p>
+    </div>
+
+    <div class="chart"><div class="vis" id="v05"></div>
+      <p class="note">
+        The same numbers as a grid. All of the losses sit in one block: the government row, from Foundation
+        through Year 4, plus Years 7 and 8 where families often move schools anyway.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 3 ============================ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">Part three &nbsp;/&nbsp; Where</span>
+      <h2>Not a capital city story</h2>
+      <p>
+        A national average can hide a lot. The shift could be concentrated in one state, or in the big cities
+        where families have the most schools to choose between. Zooming in from states, to regions, to
+        individual localities shows something less expected.
+      </p>
+    </div>
+
+    <div class="chart"><div class="vis" id="v03"></div>
+      <p class="note">
+        Counted in students rather than percentages, New South Wales lost 36,470 government students in five
+        years while its total student population grew. Victoria and Western Australia went the other way.
+        The grey marker shows where each government system would have landed if it had simply grown at the
+        same rate as its state's whole student population.
+      </p>
+    </div>
+
+    <div class="chart tall"><div class="vis" id="v06"></div>
+      <p class="note">
+        Broken into the 88 regions the Bureau of Statistics uses, the deepest falls are in places like
+        Richmond&nbsp;&ndash;&nbsp;Tweed on the New South Wales north coast (down 8.1 points), Mackay in
+        Queensland, the Murray, and the Hunter Valley. These are regional and outer-suburban areas. Of the
+        88 regions, 83 fell, and the only five that went the other way are all inner-city: inner Perth,
+        inner-east and south-east Melbourne, southern Brisbane and Hobart's south east.
+      </p>
+    </div>
+
+    <div class="chart tall"><div class="vis" id="v08"></div>
+      <p class="note">
+        Regions are wildly different sizes, so a region map flatters the empty inland. Splitting the country
+        into equal-sized cells instead shows the underlying pattern plainly: deep blue almost everywhere a
+        long way from a city, where a government school is often the only school, and much paler along the
+        populated coast where families have a choice to make.
+      </p>
+    </div>
+
+    <div class="chart tall"><div class="vis" id="v07"></div>
+      <p class="note">
+        260 schools opened between 2020 and 2025. Governments built 131 of them, but independent bodies
+        built 104 and they cluster on the growth fringes of Melbourne, Sydney, Brisbane and Perth, and along
+        the same regional coast where the government share fell fastest.
+      </p>
+    </div>
+
+    <div class="chart"><div class="vis" id="v09"></div>
+      <p class="note">
+        Grouping by remoteness makes the point directly. Very remote Australia is 88% government and barely
+        moved, because there is usually nothing else within reach. The sharpest fall was <b>not</b> in the
+        major cities but in inner regional Australia, down 4.6 points in five years.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 4 ============================ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">Part four &nbsp;/&nbsp; Who</span>
+      <h2>The middle gets thinner</h2>
+      <p>
+        ACARA scores every school community on an index called ICSEA, built from parents' occupations and
+        education and the school's location. The national average is set at 1000. A higher score means a more
+        advantaged community. Sorting schools by that score shows which families moved.
+      </p>
+    </div>
+
+    <div class="chart"><div class="vis" id="v10"></div>
+      <p class="note">
+        Government schools grew at both ends of the range and lost heavily through the middle, about 91,000
+        students across the two middle bands. These are ordinary suburbs and regional towns where a Catholic
+        or low-fee independent school is a realistic option and the fees are within reach.
+      </p>
+    </div>
+
+    <div class="chart"><div class="vis" id="v11"></div>
+      <p class="note">
+        The three sectors sit in different places to begin with. The typical government school scores 984,
+        the typical Catholic school 1046, the typical independent school 1067. Government schools also cover
+        far more of the disadvantaged end, which is the part of the system that is still growing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 5 ============================ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">Part five &nbsp;/&nbsp; One last check</span>
+      <h2>Eight jurisdictions, one turning point</h2>
+      <p>
+        A national average can be dragged around by one large state. Splitting the trend eight ways is the
+        simplest test of whether 2020 was a real break or an artefact of adding New South Wales and Victoria
+        together.
+      </p>
+    </div>
+
+    <div class="chart"><div class="vis" id="v12"></div>
+      <p class="note">
+        Every panel bends downward after 2020, including the Australian Capital Territory, which had been
+        moving the other way for a decade. The size of the turn varies a lot. The direction does not.
+      </p>
+    </div>
+
+    <p class="pull">
+      A system can grow and hollow out at the same time. Australia's has been doing both since 2020.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>Where the data comes from</h3>
+        <ul>
+          <li>
+            <a href="https://acara.edu.au/contact-us/acara-data-access">ACARA Data Access Program</a>,
+            Australian Curriculum, Assessment and Reporting Authority. School Profile 2008&ndash;2025,
+            School Location 2025, and Enrolments by Grade 2008&ndash;2025. Covers 11,039 schools, and
+            every enrolment, ICSEA score and set of coordinates on this page comes from these files.
+          </li>
+          <li>
+            <a href="https://www.abs.gov.au/statistics/people/education/schools/latest-release">Schools, 2025</a>,
+            Australian Bureau of Statistics, released 5 March 2026. Used to cross-check the national and
+            state totals against the official school census.
+          </li>
+          <li>
+            <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files">Australian Statistical Geography Standard, Edition 3</a>,
+            Australian Bureau of Statistics. Region and state boundaries, simplified for the web.
+          </li>
+        </ul>
+        <p>
+          All three are published under Creative Commons Attribution 4.0. The Vega-Lite specification for
+          every chart and map on this page, the scripts that build the data, and the source files exactly as
+          downloaded are in the same repository as this page.
+        </p>
+
+        <h3>How it was made</h3>
+        <p>
+          Charts and maps are built with Vega-Lite 5. The three maps use an Albers equal-area conic
+          projection centred on Australia, chosen because the question is about how many students live
+          somewhere, so distorting area would distort the answer.
+        </p>
+        <p>
+          Geography comes from the 2025 school location file and is matched back to earlier years using each
+          school's ACARA identifier, which covers 99.3% of 2020 enrolments. The Other Territories
+          (Christmas Island, the Cocos Islands, Norfolk Island and Jervis Bay) hold well under 0.1% of
+          Australian students and are scattered across two oceans, so they are left off the maps.
+          ICSEA bands use fixed cut points rather than quartiles, so 2020 and 2025 are measured the same way.
+        </p>
+        <p>
+          Generative AI (Claude) was used to help write and debug the chart specifications and to edit the
+          text on this page. All figures were computed directly from the source files listed above.
+        </p>
+      </div>
+
+      <div>
+        <h3>Words used on this page</h3>
+        <dl class="defs">
+          <dt>Sector</dt>
+          <dd>Government, Catholic or independent. The last two together are the non-government sector.</dd>
+
+          <dt>Government share</dt>
+          <dd>Government students divided by all students in that place or year, as a percentage.</dd>
+
+          <dt>Percentage point</dt>
+          <dd>The gap between two percentages. Moving from 66% to 63% is a fall of three percentage points,
+              not a fall of three percent.</dd>
+
+          <dt>ICSEA</dt>
+          <dd>ACARA's Index of Community Socio-Educational Advantage. Built from parents' occupation and
+              education plus the school's location. The national average is set to 1000; higher means more
+              advantaged.</dd>
+
+          <dt>Region</dt>
+          <dd>An ABS Statistical Area Level 4. There are 88 covering Australia, each holding roughly 100,000
+              to 500,000 people. Used here because state borders are too coarse to show where the change is.</dd>
+
+          <dt>Remoteness</dt>
+          <dd>The ABS classification of how far a place is from services, running from Major Cities through
+              Inner Regional, Outer Regional and Remote to Very Remote.</dd>
+
+          <dt>Foundation</dt>
+          <dd>The first year of school, called Prep, Kindergarten, Reception or Pre-Year 1 depending on the
+              state.</dd>
+        </dl>
+
+        <h3>What this page does not show</h3>
+        <p>
+          These numbers describe enrolments, not reasons. They cannot say why families moved, whether fees,
+          class sizes, religion, a new school opening nearby or something else drove the decision. They also
+          stop at 2025, the most recent school census published.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const CHARTS = [
+  ["#v01","charts/01_national_area.vg.json"],
+  ["#v02","charts/02_indexed_lines.vg.json"],
+  ["#v03","charts/03_state_change.vg.json"],
+  ["#v04","charts/04_grade_diverging.vg.json"],
+  ["#v05","charts/05_grade_heatmap.vg.json"],
+  ["#v06","charts/06_map_sa4_change.vg.json"],
+  ["#v07","charts/07_map_new_schools.vg.json"],
+  ["#v08","charts/08_map_hexbin.vg.json"],
+  ["#v09","charts/09_remoteness_dumbbell.vg.json"],
+  ["#v10","charts/10_icsea_bars.vg.json"],
+  ["#v11","charts/11_icsea_density.vg.json"],
+  ["#v12","charts/12_state_small_multiples.vg.json"]
+];
+
+(async function () {
+  const theme = await (await fetch("charts/theme.json")).json();
+  const opts = { actions: false, config: theme, renderer: "canvas" };
+
+  // All twelve are kicked off together so their data downloads overlap. Every chart
+  // is rendered on load rather than on scroll: the whole page is only about 1.5 MB,
+  // and a chart that silently fails to appear is worse than a second of waiting.
+  await Promise.allSettled(CHARTS.map(([el, url]) =>
+    vegaEmbed(el, url, opts).catch(err => {
+      console.error("chart failed:", url, err);
+      document.querySelector(el).innerHTML =
+        '<p style="font-size:13px;color:#898781;padding:20px 0">This chart could not be loaded.</p>';
+    })
+  ));
+})();
+</script>
+
+</body>
+</html>

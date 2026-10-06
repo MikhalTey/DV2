@@ -1,0 +1,212 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Ridgeline plot of the ICSEA distribution of every Australian school in 2025, one band per sector. Shows how far apart the three sectors sit and how long the independent sector's upper tail runs. The per-sector median is attached to each row before the density is estimated, so it survives into the facet and marks the right band.",
+  "title": {
+    "text": "The three sectors draw from different places",
+    "subtitle": [
+      "Every school in 2025, spread across the ICSEA range. Taller means more schools at that score.",
+      "The vertical line marks each sector's middle school. Source: ACARA School Profile 2025."
+    ]
+  },
+  "data": {
+    "url": "data/processed/icsea_distribution.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "icsea": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.icsea >= 700 && datum.icsea <= 1250"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "median",
+          "field": "icsea",
+          "as": "median_icsea"
+        }
+      ],
+      "groupby": [
+        "sector"
+      ]
+    },
+    {
+      "density": "icsea",
+      "groupby": [
+        "sector",
+        "median_icsea"
+      ],
+      "extent": [
+        700,
+        1250
+      ],
+      "steps": 180,
+      "as": [
+        "score",
+        "density"
+      ]
+    }
+  ],
+  "facet": {
+    "row": {
+      "field": "sector",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Government",
+        "Catholic",
+        "Independent"
+      ],
+      "header": {
+        "labelAngle": 0,
+        "labelAlign": "left",
+        "labelAnchor": "start",
+        "labelFontSize": 11.5,
+        "labelFontWeight": 600,
+        "labelColor": "#0b0b0b",
+        "labelPadding": 2,
+        "labelOrient": "top"
+      }
+    }
+  },
+  "spacing": 8,
+  "spec": {
+    "width": "container",
+    "height": 66,
+    "layer": [
+      {
+        "mark": {
+          "type": "area",
+          "line": {
+            "strokeWidth": 2
+          },
+          "fillOpacity": 0.25,
+          "interpolate": "monotone"
+        },
+        "encoding": {
+          "x": {
+            "field": "score",
+            "type": "quantitative",
+            "title": "ICSEA score  (1000 = the national average)",
+            "scale": {
+              "domain": [
+                700,
+                1250
+              ],
+              "zero": false
+            },
+            "axis": {
+              "tickCount": 6,
+              "format": "d",
+              "grid": false
+            }
+          },
+          "y": {
+            "field": "density",
+            "type": "quantitative",
+            "title": null,
+            "axis": null
+          },
+          "color": {
+            "field": "sector",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "Government",
+                "Catholic",
+                "Independent"
+              ],
+              "range": [
+                "#2a78d6",
+                "#eb6834",
+                "#1baf7a"
+              ]
+            },
+            "legend": null
+          },
+          "tooltip": [
+            {
+              "field": "sector",
+              "title": "Sector"
+            },
+            {
+              "field": "score",
+              "title": "ICSEA score",
+              "format": ".0f"
+            },
+            {
+              "field": "median_icsea",
+              "title": "Sector median",
+              "format": ".0f"
+            }
+          ]
+        }
+      },
+      {
+        "description": "One rule per sector at its median, collapsed so it is drawn once rather than once per density step.",
+        "transform": [
+          {
+            "aggregate": [
+              {
+                "op": "min",
+                "field": "median_icsea",
+                "as": "median"
+              }
+            ]
+          }
+        ],
+        "mark": {
+          "type": "rule",
+          "strokeWidth": 1.5,
+          "color": "#0b0b0b",
+          "opacity": 0.5
+        },
+        "encoding": {
+          "x": {
+            "field": "median",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "transform": [
+          {
+            "aggregate": [
+              {
+                "op": "min",
+                "field": "median_icsea",
+                "as": "median"
+              }
+            ]
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": 5,
+          "dy": -25,
+          "fontSize": 10.5,
+          "fontWeight": 600
+        },
+        "encoding": {
+          "x": {
+            "field": "median",
+            "type": "quantitative"
+          },
+          "text": {
+            "field": "median",
+            "type": "quantitative",
+            "format": "d"
+          },
+          "color": {
+            "value": "#52514e"
+          }
+        }
+      }
+    ]
+  },
+  "padding": 0
+}

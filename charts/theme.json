@@ -1,0 +1,57 @@
+{
+  "background": "#fcfcfb",
+  "font": "system-ui, -apple-system, Segoe UI, Roboto, Helvetica, sans-serif",
+  "view": { "stroke": null },
+  "padding": 4,
+  "axis": {
+    "labelColor": "#898781",
+    "titleColor": "#52514e",
+    "labelFontSize": 11,
+    "titleFontSize": 11,
+    "titleFontWeight": 500,
+    "gridColor": "#e1e0d9",
+    "gridWidth": 1,
+    "gridDash": [],
+    "domainColor": "#c3c2b7",
+    "tickColor": "#c3c2b7",
+    "labelPadding": 6,
+    "titlePadding": 10,
+    "labelOverlap": "greedy"
+  },
+  "legend": {
+    "labelColor": "#52514e",
+    "titleColor": "#52514e",
+    "labelFontSize": 11,
+    "titleFontSize": 11,
+    "titleFontWeight": 500,
+    "symbolType": "square",
+    "symbolSize": 90,
+    "rowPadding": 4
+  },
+  "title": {
+    "color": "#0b0b0b",
+    "fontSize": 16,
+    "fontWeight": 600,
+    "anchor": "start",
+    "subtitleColor": "#52514e",
+    "subtitleFontSize": 11.5,
+    "subtitleFontWeight": 400,
+    "subtitleLineHeight": 15,
+    "offset": 10
+  },
+  "header": {
+    "labelColor": "#0b0b0b",
+    "labelFontSize": 12,
+    "labelFontWeight": 600,
+    "titleColor": "#52514e",
+    "titleFontSize": 11
+  },
+  "range": {
+    "category": ["#2a78d6", "#eb6834", "#1baf7a"]
+  },
+  "text": { "color": "#52514e", "fontSize": 11 },
+  "rule": { "color": "#c3c2b7" },
+  "line": { "strokeWidth": 2, "strokeCap": "round", "strokeJoin": "round" },
+  "point": { "size": 80 },
+  "bar": { "cornerRadiusEnd": 3 }
+}

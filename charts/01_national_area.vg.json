@@ -1,0 +1,173 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Stacked area of Australian school enrolments by sector, 2008 to 2025.",
+  "title": {
+    "text": "The school system never stopped growing",
+    "subtitle": "Students enrolled in Australian schools, by sector. Source: ACARA School Profile 2008-2025.",
+    "subtitlePadding": 4
+  },
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "data/processed/national_sector_trend.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "enrolments": "number",
+        "share": "number",
+        "indexed": "number"
+      }
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "format": "d",
+        "tickCount": 7,
+        "grid": false
+      },
+      "scale": {
+        "domain": [
+          2008,
+          2025
+        ],
+        "nice": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "line": {
+          "color": "#fcfcfb",
+          "strokeWidth": 2
+        },
+        "opacity": 0.88
+      },
+      "encoding": {
+        "y": {
+          "field": "enrolments",
+          "type": "quantitative",
+          "stack": "zero",
+          "title": "Students",
+          "axis": {
+            "format": "~s",
+            "tickCount": 5
+          }
+        },
+        "color": {
+          "field": "sector",
+          "type": "nominal",
+          "title": "Sector",
+          "scale": {
+            "domain": [
+              "Government",
+              "Catholic",
+              "Independent"
+            ],
+            "range": [
+              "#2a78d6",
+              "#eb6834",
+              "#1baf7a"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "offset": 6
+          }
+        },
+        "order": {
+          "field": "stack_order",
+          "type": "quantitative",
+          "sort": "ascending"
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "title": "Year",
+            "format": "d"
+          },
+          {
+            "field": "sector",
+            "title": "Sector"
+          },
+          {
+            "field": "enrolments",
+            "title": "Students",
+            "format": ",.0f"
+          },
+          {
+            "field": "share",
+            "title": "Share of all students",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Marks 2020, the year the government sector stopped growing.",
+      "data": {
+        "values": [
+          {
+            "year": 2020
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#0b0b0b",
+        "strokeWidth": 1,
+        "opacity": 0.45
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "year": 2020,
+            "label": "2020"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -4,
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#0b0b0b"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 0
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "datum.sector === 'Government' ? 0 : datum.sector === 'Catholic' ? 1 : 2",
+      "as": "stack_order"
+    }
+  ]
+}

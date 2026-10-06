@@ -1,0 +1,147 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "The same year-level change data as a heatmap, which makes the solid block of government losses in the youngest year levels easy to see in one glance.",
+  "title": {
+    "text": "The losses sit in one corner",
+    "subtitle": "Change in enrolments, 2020 to 2025. Red is a fall, blue is a rise. Source: ACARA Enrolments by Grade."
+  },
+  "width": "container",
+  "height": 150,
+  "data": {
+    "url": "data/processed/grade_change.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "grade_order": "number",
+        "enrolments_2020": "number",
+        "enrolments_2025": "number",
+        "pct_change": "number"
+      }
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "grade",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "grade_order",
+        "op": "min"
+      },
+      "axis": {
+        "labelAngle": -40,
+        "labelFontSize": 10.5,
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "y": {
+      "field": "sector",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Government",
+        "Catholic",
+        "Independent"
+      ],
+      "axis": {
+        "labelFontSize": 11.5,
+        "labelFontWeight": 600,
+        "labelColor": "#0b0b0b",
+        "domain": false,
+        "ticks": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 2,
+        "stroke": "#fcfcfb",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "pct_change",
+          "type": "quantitative",
+          "title": "Change in students (%)",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              -6,
+              -3,
+              -1,
+              1,
+              3,
+              6
+            ],
+            "range": [
+              "#9c2c2b",
+              "#e34948",
+              "#f0a9a8",
+              "#f0efec",
+              "#b7d3f6",
+              "#5598e7",
+              "#184f95"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "offset": 6,
+            "symbolType": "square",
+            "symbolSize": 110
+          }
+        },
+        "tooltip": [
+          {
+            "field": "sector",
+            "title": "Sector"
+          },
+          {
+            "field": "grade",
+            "title": "Year level"
+          },
+          {
+            "field": "enrolments_2020",
+            "title": "Students 2020",
+            "format": ",.0f"
+          },
+          {
+            "field": "enrolments_2025",
+            "title": "Students 2025",
+            "format": ",.0f"
+          },
+          {
+            "field": "pct_change",
+            "title": "Change",
+            "format": "+.1f"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Every cell carries its number, so the colour scale never has to be decoded.",
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {
+          "field": "pct_change",
+          "type": "quantitative",
+          "format": "+.0f"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.pct_change < -6 || datum.pct_change >= 6",
+            "value": "#ffffff"
+          },
+          "value": "#52514e"
+        }
+      }
+    }
+  ]
+}

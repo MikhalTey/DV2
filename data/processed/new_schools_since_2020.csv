@@ -1,0 +1,261 @@
+school,suburb,state,sector,school_type,lat,lon,enrolments,icsea,remoteness,sa4_name
+Northbourne Public School,Marsden Park,NSW,Government,Primary,-33.6891,150.8187,1711.0,1095.0,Major Cities,Sydney - Blacktown
+Cranbourne West Secondary College,Cranbourne West,VIC,Government,Secondary,-38.1071,145.2482,1624.0,985.0,Major Cities,Melbourne - South East
+Randwick High School,Randwick,NSW,Government,Secondary,-33.9234,151.2393,1461.0,1071.0,Major Cities,Sydney - Eastern Suburbs
+Riverbanks College B-12,Angle Vale,SA,Government,Combined,-34.6352,138.6632,1393.0,955.0,Major Cities,Adelaide - North
+Strathtulloh Primary School,Strathtulloh,VIC,Government,Primary,-37.7158,144.5903,1350.0,1024.0,Major Cities,Melbourne - West
+Aintree Primary School,Aintree,VIC,Government,Primary,-37.7234,144.6669,1323.0,1058.0,Major Cities,Melbourne - West
+Barramurra Public School,Oran Park,NSW,Government,Primary,-34.0132,150.752,1182.0,1044.0,Major Cities,Sydney - South West
+Clyde Secondary College,Clyde,VIC,Government,Secondary,-38.128,145.339,1096.0,1013.0,Major Cities,Melbourne - South East
+Gaayip-Yagila Primary School,Mickleham,VIC,Government,Primary,-37.5288,144.9089,1014.0,1021.0,Major Cities,Melbourne - North West
+Whyalla Secondary College,Whyalla Norrie,SA,Government,Secondary,-33.0264,137.5334,1004.0,900.0,Outer Regional,South Australia - Outback
+Brabham Primary School,Brabham,WA,Government,Primary,-31.8221,115.9722,978.0,1032.0,Major Cities,Perth - North East
+Mastery Schools Australia,Springfield Central,QLD,Independent,Combined,-27.6819,152.9063,960.0,1005.0,Major Cities,Ipswich
+Gilgai Plains Primary School,Kalkallo,VIC,Government,Primary,-37.5331,144.9584,953.0,1039.0,Major Cities,Melbourne - North West
+Edmondson Park Public School,Edmondson Park,NSW,Government,Primary,-33.9656,150.853,897.0,1077.0,Major Cities,Sydney - South West
+Bemin Secondary College,Truganina,VIC,Government,Secondary,-37.8287,144.708,886.0,1015.0,Major Cities,Melbourne - West
+Catherine McAuley Catholic College,Medowie,NSW,Catholic,Secondary,-32.7632,151.8644,884.0,1019.0,Inner Regional,Hunter Valley exc Newcastle
+Galungara Public School,Schofields,NSW,Government,Primary,-33.7007,150.8809,882.0,1106.0,Major Cities,Sydney - Blacktown
+Riva Primary School,Piara Waters,WA,Government,Primary,-32.1391,115.9267,854.0,1066.0,Major Cities,Perth - South East
+Hobart City High School,New Town,TAS,Government,Secondary,-42.8552,147.3004,844.0,987.0,Inner Regional,Hobart
+Aldinga Payinthi College,Aldinga,SA,Government,Combined,-35.2677,138.4701,831.0,954.0,Major Cities,Adelaide - South
+Denham Court Public School,Denham Court,NSW,Government,Primary,-33.9817,150.8155,826.0,1068.0,Major Cities,Sydney - Outer South West
+Karwan Primary School,Tarneit,VIC,Government,Primary,-37.8531,144.6455,823.0,1067.0,Major Cities,Melbourne - West
+Edgars Creek Primary School,Wollert,VIC,Government,Primary,-37.6092,145.0044,812.0,1025.0,Major Cities,Melbourne - North East
+North Harrisdale Primary School,Harrisdale,WA,Government,Primary,-32.1158,115.9385,805.0,1077.0,Major Cities,Perth - South East
+Googong Public School,Googong,NSW,Government,Primary,-35.4221,149.2389,782.0,1078.0,Major Cities,Capital Region
+Everleigh State School,Greenbank,QLD,Government,Primary,-27.7403,152.994,781.0,997.0,Major Cities,Logan - Beaudesert
+Ngarri Primary School,Manor Lakes,VIC,Government,Primary,-37.8669,144.5849,779.0,1055.0,Major Cities,Melbourne - West
+Shorehaven Primary School,Alkimos,WA,Government,Primary,-31.603,115.6748,778.0,998.0,Major Cities,Perth - North West
+Melonba Public School,Melonba,NSW,Government,Primary,-33.6996,150.8034,776.0,1098.0,Major Cities,Sydney - Blacktown
+Thornhill Park Primary School,Thornhill Park,VIC,Government,Primary,-37.7142,144.6275,768.0,1019.0,Major Cities,Melbourne - West
+Clyde Creek Primary School,Clyde,VIC,Government,Primary,-38.1222,145.3321,761.0,1031.0,Major Cities,Melbourne - South East
+Marsden Park Anglican College,Marsden Park,NSW,Independent,Combined,-33.6908,150.8469,733.0,1109.0,Major Cities,Sydney - Blacktown
+Riverbend Primary School,Wyndham Vale,VIC,Government,Primary,-37.8772,144.6275,731.0,1034.0,Major Cities,Melbourne - West
+Mickleham Secondary College,Mickleham,VIC,Government,Secondary,-37.5275,144.902,730.0,986.0,Major Cities,Melbourne - North West
+Evelyn Scott School,Denman Prospect,ACT,Government,Combined,-35.3064,149.0267,717.0,1107.0,Major Cities,Australian Capital Territory
+Yubup Primary School,Mickleham,VIC,Government,Primary,-37.543,144.8936,710.0,1009.0,Major Cities,Melbourne - North West
+Melonba High School,Melonba,NSW,Government,Secondary,-33.6997,150.802,704.0,1073.0,Major Cities,Sydney - Blacktown
+Nirimba State Primary School,Nirimba,QLD,Government,Primary,-26.823,153.055,665.0,1023.0,Major Cities,Sunshine Coast
+Warreen Primary School,Truganina,VIC,Government,Primary,-37.8154,144.7153,650.0,1048.0,Major Cities,Melbourne - West
+Gregory Hills Public School,Gregory Hills,NSW,Government,Primary,-34.0258,150.7812,647.0,1028.0,Major Cities,Sydney - South West
+Corymbia State School,Park Ridge,QLD,Government,Primary,-27.7043,153.0837,636.0,993.0,Major Cities,Logan - Beaudesert
+Newman Catholic College,Smithfield,QLD,Catholic,Secondary,-16.8182,145.6923,625.0,1046.0,Outer Regional,Cairns
+Docklands Primary School,Docklands,VIC,Government,Primary,-37.8124,144.9418,616.0,1133.0,Major Cities,Melbourne - Inner
+Edenbrook Secondary College,Pakenham,VIC,Government,Secondary,-38.0798,145.4435,614.0,1002.0,Major Cities,Melbourne - South East
+Griffith High School,Griffith,NSW,Government,Secondary,-34.2922,146.0396,608.0,899.0,Outer Regional,Riverina
+Catherine McAuley College,Mackay,QLD,Catholic,Secondary,-21.1619,149.1594,606.0,1026.0,Inner Regional,Mackay - Isaac - Whitsunday
+Wollert Primary School,Wollert,VIC,Government,Primary,-37.6118,145.0278,601.0,1012.0,Major Cities,Melbourne - North East
+Australian Islamic College (Forrestdale),Forrestdale,WA,Independent,Combined,-32.1702,115.9242,599.0,1042.0,Major Cities,Perth - South East
+Deanside Primary School,Deanside,VIC,Government,Primary,-37.7218,144.698,590.0,1044.0,Major Cities,Melbourne - West
+Wellard Village Primary School,Wellard,WA,Government,Primary,-32.2697,115.8212,588.0,999.0,Major Cities,Perth - South West
+"Indie School, Logan",Browns Plains,QLD,Independent,Secondary,-27.6639,153.0432,586.0,955.0,Major Cities,Logan - Beaudesert
+Morialta Secondary College,Rostrevor,SA,Government,Secondary,-34.9006,138.6764,570.0,1075.0,Major Cities,Adelaide - Central and Hills
+Australian Islamic College (Henley Brook),Henley Brook,WA,Independent,Combined,-31.8055,115.9785,565.0,1046.0,Major Cities,Perth - North East
+Ripley Central State School,Ripley,QLD,Government,Primary,-27.6726,152.7823,565.0,1005.0,Major Cities,Ipswich
+Treeby Primary School,Treeby,WA,Government,Primary,-32.118,115.8815,559.0,1083.0,Major Cities,Perth - South West
+Garrang Wilam Primary School,Truganina,VIC,Government,Primary,-37.8278,144.7249,559.0,1061.0,Major Cities,Melbourne - West
+Piara Waters Senior High School,Piara Waters,WA,Government,Secondary,-32.1254,115.9091,558.0,1065.0,Major Cities,Perth - South East
+Greenvale Secondary College,Greenvale,VIC,Government,Secondary,-37.6512,144.8909,540.0,997.0,Major Cities,Melbourne - North West
+SEDA College WA,Wembley,WA,Independent,Secondary,-31.9442,115.807,531.0,1014.0,Major Cities,Perth - Inner
+Topirum Primary School,Clyde North,VIC,Government,Primary,-38.1069,145.3577,505.0,1034.0,Major Cities,Melbourne - South East
+Donnybrook Primary School,Donnybrook,VIC,Government,Primary,-37.537,144.9976,502.0,1036.0,Major Cities,Melbourne - North East
+South Rock State School,Yarrabilba,QLD,Government,Primary,-27.8273,153.134,496.0,957.0,Inner Regional,Logan - Beaudesert
+Leppington Anglican College,Leppington,NSW,Independent,Combined,-33.9725,150.8064,485.0,1101.0,Major Cities,Sydney - South West
+Nearnung Primary School,Tarneit,VIC,Government,Primary,-37.8254,144.6809,485.0,1045.0,Major Cities,Melbourne - West
+St Lawrence of Brindisi Catholic Primary School,Weir Views,VIC,Catholic,Primary,-37.7325,144.5726,473.0,1024.0,Major Cities,Melbourne - West
+Centre for Higher Education Studies,South Yarra,VIC,Government,Secondary,-37.8361,144.996,468.0,1079.0,Major Cities,Melbourne - Inner
+Quarters Primary School,Cranbourne West,VIC,Government,Primary,-38.0947,145.249,466.0,1003.0,Major Cities,Melbourne - South East
+Wade High School,Griffith,NSW,Government,Secondary,-34.2823,146.0707,461.0,918.0,Outer Regional,Riverina
+Yanchep Rise Primary School,Yanchep,WA,Government,Primary,-31.5388,115.6475,459.0,951.0,Major Cities,Perth - North West
+Eynesbury Primary School,Eynesbury,VIC,Government,Primary,-37.7906,144.5484,458.0,1008.0,Major Cities,Melbourne - West
+Holy Spirit College,Fitzgibbon,QLD,Catholic,Secondary,-27.3477,153.0334,455.0,1077.0,Major Cities,Brisbane - North
+Brinbeal Secondary College,Tarneit,VIC,Government,Secondary,-37.8547,144.6419,454.0,1039.0,Major Cities,Melbourne - West
+Sophia College,Plainland,QLD,Catholic,Secondary,-27.5549,152.4239,450.0,999.0,Inner Regional,Ipswich
+Wimba Primary School,Tarneit,VIC,Government,Primary,-37.8242,144.6691,446.0,1053.0,Major Cities,Melbourne - West
+Walcom Ngarrwa Secondary College,Werribee,VIC,Government,Secondary,-37.907,144.6051,437.0,989.0,Major Cities,Melbourne - West
+Burns Beach Primary School,Burns Beach,WA,Government,Primary,-31.7261,115.73,425.0,1074.0,Major Cities,Perth - North West
+Port Melbourne Secondary College,Port Melbourne,VIC,Government,Secondary,-37.8324,144.9322,416.0,1101.0,Major Cities,Melbourne - Inner
+Nangamay Public School,Glenmore Park,NSW,Government,Primary,-33.803,150.6816,413.0,1050.0,Major Cities,Sydney - Outer West and Blue Mountains
+Binap Primary School,Brookfield,VIC,Government,Primary,-37.702,144.5459,406.0,972.0,Major Cities,Melbourne - West
+Dayton Primary School,Dayton,WA,Government,Primary,-31.8484,115.9743,404.0,1041.0,Major Cities,Perth - North East
+St Joseph's Catholic Primary School,Werribee,VIC,Catholic,Primary,-37.9038,144.6105,402.0,1085.0,Major Cities,Melbourne - West
+Estella Public School,Wagga Wagga,NSW,Government,Primary,-35.0675,147.3529,402.0,1019.0,Inner Regional,Riverina
+Holy Cross Catholic Primary School,Mickleham,VIC,Catholic,Primary,-37.5304,144.906,401.0,1040.0,Major Cities,Melbourne - North West
+Yarrabing Secondary College,Aintree,VIC,Government,Secondary,-37.7118,144.6648,398.0,1018.0,Major Cities,Melbourne - West
+San Damiano College,Yarrabilba,QLD,Catholic,Secondary,-27.8095,153.1171,396.0,1002.0,Major Cities,Logan - Beaudesert
+All Saints Anglican School,Shepparton North,VIC,Independent,Combined,-36.3409,145.4152,393.0,1088.0,Inner Regional,Shepparton
+Laa Yulta Primary School,Mambourin,VIC,Government,Primary,-37.8854,144.5958,393.0,1040.0,Major Cities,Melbourne - West
+Lollypop Creek Primary School,Werribee,VIC,Government,Primary,-37.91,144.6128,390.0,1034.0,Major Cities,Melbourne - West
+Wollert Secondary College,Wollert,VIC,Government,Secondary,-37.6117,145.0247,389.0,1005.0,Major Cities,Melbourne - North East
+Ngarala Public School,Epping,NSW,Government,Primary,-33.7811,151.0692,380.0,1118.0,Major Cities,Sydney - Ryde
+Palmview State Secondary College,Palmview,QLD,Government,Secondary,-26.7394,153.069,379.0,1021.0,Major Cities,Sunshine Coast
+Barrawang Primary School,Wollert,VIC,Government,Primary,-37.5985,144.9936,375.0,1053.0,Major Cities,Melbourne - North East
+Willowbank Primary School,Gisborne,VIC,Government,Primary,-37.5117,144.6085,373.0,1056.0,Inner Regional,Melbourne - North West
+Indie School Western Australia,Midland,WA,Independent,Secondary,-31.8934,116.0035,362.0,942.0,Major Cities,Perth - North East
+Keelonith Primary School,Greenvale,VIC,Government,Primary,-37.6224,144.8789,361.0,1032.0,Major Cities,Melbourne - North West
+Bellbird Park State School,Bellbird Park,QLD,Government,Primary,-27.6371,152.8782,361.0,983.0,Major Cities,Ipswich
+Mernda Hills Christian College,Mernda,VIC,Independent,Combined,-37.5986,145.0744,359.0,1119.0,Major Cities,Melbourne - North East
+Orchard Park Primary School,Officer,VIC,Government,Primary,-38.0549,145.3947,359.0,1023.0,Major Cities,Melbourne - South East
+Henley Brook Primary School,Henley Brook,WA,Government,Primary,-31.8123,115.9678,336.0,1029.0,Major Cities,Perth - North East
+Jerrabomberra High School,Jerrabomberra,NSW,Government,Secondary,-35.3824,149.1889,333.0,1068.0,Major Cities,Capital Region
+My College,Dallas,VIC,Independent,Combined,-37.6761,144.9236,325.0,1005.0,Major Cities,Melbourne - North West
+Pine View Primary School,Baldivis,WA,Government,Primary,-32.3587,115.8069,321.0,994.0,Major Cities,Perth - South West
+Kurrun Primary School,Officer,VIC,Government,Primary,-38.0692,145.4032,321.0,1054.0,Major Cities,Melbourne - South East
+Porters Creek Public School,Warnervale,NSW,Government,Primary,-33.2486,151.4553,317.0,988.0,Major Cities,Central Coast
+Throsby School,Throsby,ACT,Government,Primary,-35.1935,149.1653,316.0,1096.0,Major Cities,Australian Capital Territory
+The Industry School - Gold Coast,Robina,QLD,Independent,Secondary,-28.085,153.3896,315.0,1040.0,Major Cities,Gold Coast
+Banum Warrik Primary School,Kalkallo,VIC,Government,Primary,-37.5209,144.9557,309.0,1037.0,Major Cities,Melbourne - North West
+Muslim Girls Grammar School,Granville,NSW,Independent,Secondary,-33.8348,151.0102,304.0,994.0,Major Cities,Sydney - Parramatta
+Jilbup Primary School,Hammond Park,WA,Government,Primary,-32.1758,115.8309,294.0,1054.0,Major Cities,Perth - South West
+Endeavour Hills Specialist School,Endeavour Hills,VIC,Government,Special,-37.9783,145.2436,293.0,985.0,Major Cities,Melbourne - South East
+Eglinton Beach Primary School,Eglinton,WA,Government,Primary,-31.5937,115.6616,288.0,1020.0,Major Cities,Perth - North West
+Goolwa Secondary College,Goolwa,SA,Government,Secondary,-35.4929,138.7733,285.0,957.0,Inner Regional,South Australia - South East
+Jindabyne Public School,Jindabyne,NSW,Government,Primary,-36.4305,148.6109,283.0,1032.0,Outer Regional,Capital Region
+St Angela of the Cross Primary School,Warragul,VIC,Catholic,Primary,-38.1417,145.9625,282.0,1035.0,Inner Regional,Latrobe - Gippsland
+Coomera State Special School,Coomera,QLD,Government,Special,-27.847,153.3431,278.0,1005.0,Major Cities,Gold Coast
+Jindabyne High School,Jindabyne,NSW,Government,Secondary,-36.4305,148.6109,277.0,1009.0,Outer Regional,Capital Region
+Madora Bay Primary School,Madora Bay,WA,Government,Primary,-32.4737,115.7527,276.0,1004.0,Major Cities,Mandurah
+Box Hill Public School,Box Hill,NSW,Government,Primary,-33.6423,150.8921,271.0,1123.0,Major Cities,Sydney - Baulkham Hills and Hawkesbury
+Gulyangarri Public School,Liverpool,NSW,Government,Primary,-33.9178,150.9322,267.0,959.0,Major Cities,Sydney - South West
+Landsdale Gardens Primary School,Landsdale,WA,Government,Primary,-31.8167,115.8568,264.0,1032.0,Major Cities,Perth - North West
+Ngutu College,Woodville North,SA,Independent,Combined,-34.8661,138.5389,260.0,909.0,Major Cities,Adelaide - West
+Arrahman College,Austral,NSW,Independent,Primary,-33.913,150.8196,256.0,1084.0,Major Cities,Sydney - South West
+Maarakool Primary School,Brabham,WA,Government,Primary,-31.824,115.9789,256.0,1035.0,Major Cities,Perth - North East
+Collingwood Park State Secondary College,Collingwood Park,QLD,Government,Secondary,-27.6237,152.8639,256.0,962.0,Major Cities,Ipswich
+Yarralinka Primary School,Southern River,WA,Government,Primary,-32.1013,115.9692,253.0,1040.0,Major Cities,Perth - South East
+Star of the Sea School,Merrimac,QLD,Catholic,Primary,-28.0498,153.3677,236.0,1045.0,Major Cities,Gold Coast
+Mary Queen of Heaven Catholic Primary School,Greenvale,VIC,Catholic,Primary,-37.6298,144.8844,236.0,1065.0,Major Cities,Melbourne - North West
+Scenic Shores State School,Redland Bay,QLD,Government,Primary,-27.6656,153.3041,234.0,1011.0,Major Cities,Brisbane - East
+Wulerrp Secondary College,Clyde North,VIC,Government,Secondary,-38.0924,145.3686,233.0,1053.0,Major Cities,Melbourne - South East
+St Francis of Assisi College,Renmark,SA,Catholic,Secondary,-34.1759,140.7313,228.0,1004.0,Outer Regional,South Australia - South East
+The Industry School - Sunshine Coast,Maroochydore,QLD,Independent,Secondary,-26.6534,153.0895,226.0,1054.0,Major Cities,Sunshine Coast
+Mirniyan Primary School,Clyde North,VIC,Government,Primary,-38.1017,145.3384,226.0,1021.0,Major Cities,Melbourne - South East
+Barayip Primary School,Tarneit,VIC,Government,Primary,-37.8343,144.6411,219.0,1059.0,Major Cities,Melbourne - West
+Notre Dame College,Bells Creek,QLD,Catholic,Combined,-26.8284,153.0626,216.0,1066.0,Major Cities,Sunshine Coast
+Shirley Smith High School,Kenny,ACT,Government,Secondary,-35.2102,149.154,210.0,1078.0,Major Cities,Australian Capital Territory
+Nirimba Fields Public School,Nirimba Fields,NSW,Government,Primary,-33.7145,150.8728,210.0,1126.0,Major Cities,Sydney - Blacktown
+Emmaus Catholic Primary School,Dayton,WA,Catholic,Primary,-31.8471,115.9724,207.0,1054.0,Major Cities,Perth - North East
+St Teresa of Kolkata Catholic Primary School,Tarneit North,VIC,Catholic,Primary,-37.8234,144.6861,204.0,1104.0,Major Cities,Melbourne - West
+Turrun Primary School,Clyde North,VIC,Government,Primary,-38.082,145.3532,203.0,1058.0,Major Cities,Melbourne - South East
+The Industry School - Brisbane,Spring Hill,QLD,Independent,Secondary,-27.462,153.0236,201.0,1063.0,Major Cities,Brisbane Inner City
+Bungendore High School,Bungendore,NSW,Government,Secondary,-35.2549,149.4458,197.0,1026.0,Inner Regional,Capital Region
+Trinity College Roseworthy,Roseworthy,SA,Independent,Primary,-34.5505,138.7472,192.0,1037.0,Inner Regional,Adelaide - North
+Wayi School,Craigieburn,VIC,Government,Special,-37.5865,144.9112,192.0,994.0,Major Cities,Melbourne - North West
+Wentworth Point High School,Wentworth Point,NSW,Government,Secondary,-33.8237,151.0816,188.0,1062.0,Major Cities,Sydney - Parramatta
+St Sava College,Varroville,NSW,Independent,Primary,-33.993,150.8088,188.0,1052.0,Major Cities,Sydney - Outer South West
+Muhammadiyah Australia College,Melton,VIC,Independent,Combined,-37.6822,144.6049,182.0,1052.0,Major Cities,Melbourne - West
+Murrumbateman Public School,Murrumbateman,NSW,Government,Primary,-34.9664,149.0303,171.0,1056.0,Inner Regional,Capital Region
+Edmund Rice Flexi School,Elizabeth,SA,Catholic,Special,-34.7133,138.671,163.0,908.0,Major Cities,Adelaide - North
+OneSchool Global NSW - Illawarra,Maddens Plains,NSW,Independent,Combined,-34.2454,150.9425,159.0,973.0,Inner Regional,Illawarra
+Woogaroo Creek State School,Augustine Heights,QLD,Government,Primary,-27.6665,152.8709,157.0,953.0,Major Cities,Ipswich
+Foundation Learning Centre,Narre Warren,VIC,Independent,Special,-38.0269,145.3054,155.0,968.0,Major Cities,Melbourne - South East
+Niddrie Autistic School,Niddrie,VIC,Government,Special,-37.7441,144.8877,153.0,1038.0,Major Cities,Melbourne - North West
+Australian Islamic Centre College,Newport,VIC,Independent,Primary,-37.8466,144.8631,151.0,1032.0,Major Cities,Melbourne - West
+SEDA College NT,Fannie Bay,NT,Independent,Secondary,-12.424,130.8378,150.0,980.0,Outer Regional,Darwin
+St Joseph's Catholic Primary School,Rosebery,NSW,Catholic,Primary,-33.9171,151.2069,150.0,1112.0,Major Cities,Sydney - City and Inner South
+Legana Primary School,Legana,TAS,Government,Primary,-41.3697,147.0518,144.0,1002.0,Inner Regional,Launceston and North East
+My Dream Australian Academy,Auburn,NSW,Independent,Combined,-33.8517,151.0319,140.0,991.0,Major Cities,Sydney - Parramatta
+Compass Catholic Community,Davoren Park,SA,Catholic,Special,-34.6857,138.6731,139.0,916.0,Major Cities,Adelaide - North
+Brighton High School,Brighton,TAS,Government,Secondary,-42.7042,147.2467,133.0,921.0,Inner Regional,Hobart
+Lysterfield Lake College,Narre Warren North,VIC,Independent,Combined,-37.9751,145.3176,130.0,1139.0,Major Cities,Melbourne - South East
+Mary Help of Christians Catholic College,Shaw,QLD,Catholic,Secondary,-19.2894,146.7002,127.0,990.0,Outer Regional,Townsville
+St Josephine Bakhita Catholic Primary School,Clyde North,VIC,Catholic,Primary,-38.1109,145.3654,121.0,1101.0,Major Cities,Melbourne - South East
+Tallawong Public School,Rouse Hill,NSW,Government,Primary,-33.6871,150.8983,121.0,1083.0,Major Cities,Sydney - Blacktown
+Nganboo Borron School,Werribee,VIC,Government,Special,-37.9083,144.6038,115.0,965.0,Major Cities,Melbourne - West
+Kuyim Primary School,Pakenham,VIC,Government,Primary,-38.0562,145.4483,115.0,1019.0,Major Cities,Melbourne - South East
+Dharra School,Aintree,VIC,Government,Special,-37.7105,144.6655,111.0,1029.0,Major Cities,Melbourne - West
+Carlo Acutis Catholic Primary School,Wollert,VIC,Catholic,Primary,-37.6004,144.9909,111.0,1098.0,Major Cities,Melbourne - North East
+Wirrigirri Primary School,Wollert,VIC,Government,Primary,-37.6177,145.0374,111.0,1062.0,Major Cities,Melbourne - North East
+Hampton East School,Hampton East,VIC,Government,Special,-37.9398,145.031,111.0,1058.0,Major Cities,Melbourne - Inner South
+OneSchool Global NSW - Orange,East Orange,NSW,Independent,Combined,-33.277,149.1071,109.0,977.0,Inner Regional,Central West
+OneSchool Global NSW - Maitland,East Maitland,NSW,Independent,Combined,-32.7554,151.5994,108.0,975.0,Major Cities,Hunter Valley exc Newcastle
+Green Square Public School,Zetlands,NSW,Government,Primary,-33.9087,151.2065,107.0,1122.0,Major Cities,Sydney - City and Inner South
+Kurmile Primary School,Officer,VIC,Government,Primary,-38.0596,145.3972,107.0,1008.0,Major Cities,Melbourne - South East
+Y School WA,Mirrabooka,WA,Independent,Special,-31.8701,115.8569,103.0,944.0,Major Cities,Perth - North West
+Sidrah Gardens School,Narre Warren North,VIC,Independent,Primary,-37.9726,145.316,102.0,1104.0,Major Cities,Melbourne - South East
+Urban College,Boronia,VIC,Independent,Secondary,-37.8612,145.2805,100.0,975.0,Major Cities,Melbourne - Outer East
+Clearview Christian College,Tannum Sands,QLD,Independent,Secondary,-23.9404,151.3655,97.0,990.0,Inner Regional,Central Queensland
+Geelong English Language School,Belmont,VIC,Government,Combined,-38.1867,144.3382,95.0,884.0,Major Cities,Geelong
+Humanitas High School,Fortitude Valley,QLD,Independent,Secondary,-27.4555,153.0314,90.0,1107.0,Major Cities,Brisbane Inner City
+The Village School Gold Coast,Coolangatta,QLD,Independent,Primary,-28.1686,153.5398,88.0,1047.0,Major Cities,Gold Coast
+Gledswood Hills High School,Gledswood Hills,NSW,Government,Secondary,-34.0225,150.7696,87.0,1013.0,Major Cities,Sydney - South West
+OneSchool Global NSW - Mount Victoria ,Mount Victoria,NSW,Independent,Combined,-33.5889,150.2527,87.0,976.0,Inner Regional,Sydney - Outer West and Blue Mountains
+Aunty Agnes Shea High School,Taylor,ACT,Government,Secondary,-35.1485,149.1104,83.0,1051.0,Major Cities,Australian Capital Territory
+Maam Giingana Gumbaynggirr,Coffs Harbour,NSW,Independent,Combined,-30.3009,153.1237,81.0,798.0,Inner Regional,Coffs Harbour - Grafton
+Novoschool,Newcastle West,NSW,Independent,Secondary,-32.9289,151.7648,79.0,1077.0,Major Cities,Newcastle and Lake Macquarie
+Gateway Community High,Carlingford,NSW,Independent,Special,-33.7812,151.0552,74.0,1070.0,Major Cities,Sydney - Parramatta
+Woodline Primary,Ceres,VIC,Independent,Primary,-38.1719,144.2859,73.0,1100.0,Major Cities,Geelong
+Islamic College of Sport,Coburg,VIC,Independent,Secondary,-37.7449,144.9677,72.0,989.0,Major Cities,Melbourne - Inner
+EOC Broken Bay,Davidson,NSW,Catholic,Special,-33.7416,151.1985,70.0,1059.0,Major Cities,Sydney - Northern Beaches
+Y Community School,Epping,VIC,Independent,Secondary,-37.648,145.0188,65.0,966.0,Major Cities,Melbourne - North East
+Westbourne College Sydney,Ultimo,NSW,Independent,Secondary,-33.8793,151.1991,65.0,1153.0,Major Cities,Sydney - City and Inner South
+Youth2Industry College,South Melbourne,VIC,Independent,Secondary,-37.8371,144.9666,64.0,1033.0,Major Cities,Melbourne - Inner
+Mastery Schools Victoria,Bundoora,VIC,Independent,Special,-37.7183,145.0602,62.0,1082.0,Major Cities,Melbourne - North East
+Plenty River College,South Morang,VIC,Independent,Secondary,-37.6486,145.0816,62.0,1013.0,Major Cities,Melbourne - North East
+Hubbard's School,Milton,QLD,Independent,Secondary,-27.4714,153.0064,58.0,1143.0,Major Cities,Brisbane Inner City
+Dhupuma Barker,East Arnhem,NT,Independent,Primary,-12.2182,136.7055,58.0,612.0,Very Remote,Northern Territory - Outback
+OneSchool Global NSW - Goulburn,Goulburn,NSW,Independent,Combined,-34.7235,149.7442,57.0,971.0,Inner Regional,Capital Region
+The Younity School,Burpengary,QLD,Independent,Secondary,-27.1677,152.9621,55.0,921.0,Major Cities,Moreton Bay - North
+Julia Gillard Community College,Werribee,VIC,Independent,Special,-37.9016,144.663,54.0,941.0,Major Cities,Melbourne - West
+St Marcellin Catholic College,Madora Bay,WA,Independent,Combined,-32.4708,115.756,54.0,1046.0,Major Cities,Mandurah
+Manjali Studio School,King Leopold Ranges,WA,Independent,Secondary,-17.5724,125.0672,50.0,712.0,Very Remote,Western Australia - Outback (North)
+St Benedict School,Mount Torrens,SA,Independent,Primary,-34.8945,138.9507,49.0,1109.0,Inner Regional,Adelaide - Central and Hills
+Dunsborough Christian College,Dunsborough,WA,Independent,Combined,-33.6392,115.1017,48.0,1028.0,Inner Regional,Bunbury
+Compass Independent School,Kelvin Grove,QLD,Independent,Combined,-27.4551,153.0133,47.0,1157.0,Major Cities,Brisbane Inner City
+Richard Gill School,Muswellbrook,NSW,Independent,Primary,-32.2841,150.9034,43.0,996.0,Inner Regional,Hunter Valley exc Newcastle
+OneSchool Global NSW - Condobolin,Condobolin,NSW,Independent,Combined,-33.0944,147.139,43.0,978.0,Outer Regional,Central West
+Kluthuthu Christian College,Napranum,QLD,Independent,Combined,-12.6874,141.8888,42.0,634.0,Very Remote,Queensland - Outback
+Ignatius Learning Centre,Richmond,VIC,Catholic,Secondary,-37.8222,144.9982,41.0,,Major Cities,Melbourne - Inner
+Australian International Islamic College Darwin,Berrimah,NT,Independent,Primary,-12.4199,130.9175,40.0,1071.0,Outer Regional,Darwin
+St Luke's Arrunga,Marsden Park,NSW,Catholic,Special,-33.699,150.8194,40.0,1046.0,Major Cities,Sydney - Blacktown
+Djerriwarrh Community & Education Services - Djerriwarrh Community College,Melton,VIC,Independent,Secondary,-37.6863,144.5778,39.0,929.0,Major Cities,Melbourne - West
+Wycliffe Hope School,Warrimoo,NSW,Independent,Special,-33.72,150.6153,39.0,1037.0,Major Cities,Sydney - Outer West and Blue Mountains
+Tombolo Academy,Hampton,VIC,Independent,Special,-37.9384,145.0235,38.0,1119.0,Major Cities,Melbourne - Inner South
+Ngarra Christian College,Riverstone,NSW,Independent,Special,-33.6783,150.8733,37.0,1085.0,Major Cities,Sydney - Blacktown
+OneSchool Global NSW - Wagga Wagga,Wagga Wagga,NSW,Independent,Combined,-35.1437,147.3445,36.0,990.0,Inner Regional,Riverina
+OneSchool Global NSW - Armidale ,Armidale,NSW,Independent,Combined,-30.5041,151.6559,35.0,981.0,Inner Regional,New England and North West
+North Academy,West Wallsend,NSW,Independent,Special,-32.9024,151.582,35.0,966.0,Major Cities,Newcastle and Lake Macquarie
+Tirriwirri School,Karabar,NSW,Government,Special,-35.3661,149.2266,34.0,944.0,Major Cities,Capital Region
+Nawarddeken Academy Kunmayali School,West Arnhem Land,NT,Independent,Secondary,-12.7647,133.845,34.0,687.0,Very Remote,Northern Territory - Outback
+Omni Academies of Learning,Toowong,QLD,Independent,Secondary,-27.4845,152.9917,33.0,1151.0,Major Cities,Brisbane Inner City
+Pacific Gulgangali Jarjums Christian School,Tweed Heads South,NSW,Independent,Special,-28.1965,153.5215,32.0,781.0,Major Cities,Richmond - Tweed
+OneSchool Global NSW - Albury,Lavington,NSW,Independent,Combined,-36.0375,146.9234,31.0,973.0,Inner Regional,Murray
+Brewarrina Christian School,Gongolgon,NSW,Independent,Combined,-30.3811,146.9066,30.0,756.0,Very Remote,Far West and Orana
+Edu Space Redcliffe,Redcliffe,QLD,Independent,Secondary,-27.2313,153.11,30.0,883.0,Major Cities,Moreton Bay - North
+St Philip's Christian College Gilibaa,Salamander Bay,NSW,Independent,Primary,-32.7394,152.1096,30.0,763.0,Inner Regional,Hunter Valley exc Newcastle
+South East Brisbane Steiner School,Thorneside,QLD,Independent,Primary,-27.48,153.2014,30.0,1037.0,Major Cities,Brisbane - East
+Hartford College,Daceyville,NSW,Independent,Combined,-33.9305,151.2257,29.0,1117.0,Major Cities,Sydney - City and Inner South
+William Campbell College,Nowra Hill,NSW,Independent,Special,-34.9273,150.5473,28.0,881.0,Inner Regional,Southern Highlands and Shoalhaven
+Marri Mittigar School,Hornsby,NSW,Independent,Special,-33.7116,151.1016,28.0,984.0,Major Cities,Sydney - North Sydney and Hornsby
+Eaton College,Mount Louisa,QLD,Independent,Special,-19.2682,146.7363,27.0,967.0,Outer Regional,Townsville
+Yattalunga Valley Christian School,Green Point,NSW,Independent,Special,-33.4611,151.3634,26.0,1095.0,Major Cities,Central Coast
+North Coast Pathway,Alstonville,NSW,Independent,Special,-28.8514,153.4582,26.0,998.0,Inner Regional,Richmond - Tweed
+Yallorin Yimba Silver Lining School,Cluden,QLD,Independent,Secondary,-19.3205,146.8255,26.0,791.0,Outer Regional,Townsville
+Alta-1 Kimberley College,Kununurra,WA,Independent,Special,-15.7963,128.6881,26.0,668.0,Very Remote,Western Australia - Outback (North)
+OneSchool Global NSW - Leeton,Leeton,NSW,Independent,Combined,-34.564,146.3914,26.0,977.0,Outer Regional,Riverina
+International Maarif Schools of Australia – Melbourne Campus,Kilmore,VIC,Independent,Primary,-37.301,144.9533,25.0,1080.0,Inner Regional,Hume
+Ontrack College Emerald,Emerald,QLD,Independent,Special,-23.5474,148.1895,23.0,904.0,Outer Regional,Central Queensland
+St Peter's Heart,Campbelltown,NSW,Independent,Special,-34.0668,150.8179,22.0,1071.0,Major Cities,Sydney - Outer South West
+St John of Kronstadt Academy,Upper Mount Gravatt,QLD,Independent,Primary,-27.5605,153.0832,21.0,1087.0,Major Cities,Brisbane - South
+Blue Gum Community School,Hornsby,NSW,Independent,Primary,-33.7023,151.0906,21.0,1105.0,Major Cities,Sydney - North Sydney and Hornsby
+The Avenue School,Ferntree Gully,VIC,Independent,Secondary,-37.8834,145.2931,21.0,999.0,Major Cities,Melbourne - Outer East
+Sydney Science College,Epping,NSW,Independent,Secondary,-33.7732,151.0816,20.0,1140.0,Major Cities,Sydney - Ryde
+Lyrebird College,Coldstream,VIC,Independent,Special,-37.7334,145.3821,20.0,1102.0,Major Cities,Melbourne - Outer East
+Ming-De International School Toowoomba,Westbrook,QLD,Independent,Combined,-27.616,151.8317,19.0,1075.0,Inner Regional,Toowoomba
+OakTree College,West Footscray,VIC,Independent,Secondary,-37.8111,144.8654,19.0,966.0,Major Cities,Melbourne - West
+OneSchool Global NSW - Cowra ,Cowra,NSW,Independent,Primary,-33.8388,148.6622,18.0,963.0,Inner Regional,Central West
+IES College,Spring Hill,QLD,Independent,Secondary,-27.46,153.0222,17.0,1125.0,Major Cities,Brisbane Inner City
+Corner Inlet College,Foster,VIC,Independent,Secondary,-38.7091,146.1962,16.0,973.0,Inner Regional,Latrobe - Gippsland
+Neerim District Rural Primary School,Nayook,VIC,Government,Primary,-37.9215,145.9498,15.0,1079.0,Inner Regional,Latrobe - Gippsland
+Impact Community ACADEMY,Bundaberg East,QLD,Independent,Secondary,-24.8553,152.3758,14.0,,Inner Regional,Wide Bay
+The Heights Learning Community,Gillieston Heights,NSW,Independent,Primary,-32.7542,151.5378,14.0,1058.0,Major Cities,Hunter Valley exc Newcastle
+Cedars Christian College - Aspire,Unanderra,NSW,Independent,Special,-34.4551,150.8284,13.0,1094.0,Major Cities,Illawarra
+Premer Public School,Premer,NSW,Government,Primary,-31.4536,149.9005,12.0,822.0,Outer Regional,New England and North West
+Nawarddeken Academy Manmoyi School,West Arnhem Land,NT,Independent,Combined,-12.5442,134.1135,11.0,558.0,Very Remote,Northern Territory - Outback
+Centre of Excellence in Agricultural Education,Richmond,NSW,Government,Secondary,-33.6154,150.7474,11.0,1098.0,Major Cities,Sydney - Outer West and Blue Mountains
+Nawarddeken Academy Mamadawerre School,West Arnhem Land,NT,Independent,Combined,-12.2575,133.524,8.0,640.0,Very Remote,Northern Territory - Outback
+Challenge Trade and Business College,Collingwood Park,QLD,Independent,Secondary,-27.6107,152.8587,7.0,968.0,Major Cities,Ipswich
+Lindfield Montessori Preschool,West Lindfield,NSW,Independent,Primary,-33.7778,151.1484,3.0,,Major Cities,Sydney - North Sydney and Hornsby
+Australian International High School,Sydney,NSW,Independent,Secondary,-33.8752,151.2065,,1028.0,Major Cities,Sydney - City and Inner South
+Monash Children's Hospital School,Clayton,VIC,Government,Special,-37.9205,145.1228,,,Major Cities,Melbourne - South East

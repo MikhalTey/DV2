@@ -1,0 +1,123 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Hexagonal binning map. Every school is snapped to a hexagon of equal ground area, and the hexagon is shaded by the share of its students in government schools. Unlike the choropleth, each cell covers the same amount of land, so dense city areas are not compressed into slivers.",
+  "title": {
+    "text": "Choice exists where people are packed in",
+    "subtitle": [
+      "Australia divided into equal-sized hexagons. Shading is the share of local students in a",
+      "government school in 2025; hexagons with fewer than three schools are left out.",
+      "Source: ACARA School Profile and School Location, 2025."
+    ]
+  },
+  "width": "container",
+  "height": 470,
+  "projection": {
+    "type": "albers",
+    "rotate": [
+      -134,
+      0
+    ],
+    "parallels": [
+      -18,
+      -36
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "maps/au_sa4_states.topo.json",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f4f3f0",
+        "stroke": "#e1e0d9",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "maps/school_hexbins.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#fcfcfb",
+        "strokeWidth": 0.4
+      },
+      "encoding": {
+        "color": {
+          "field": "properties.gov_share",
+          "type": "quantitative",
+          "title": "Students in a government school (%)",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              50,
+              60,
+              70,
+              80,
+              90
+            ],
+            "range": [
+              "#cde2fb",
+              "#9ec5f4",
+              "#6da7ec",
+              "#3987e5",
+              "#256abf",
+              "#0d366b"
+            ]
+          },
+          "legend": {
+            "orient": "none",
+            "direction": "horizontal",
+            "legendX": 10,
+            "legendY": 398,
+            "titleLimit": 420,
+            "symbolType": "square",
+            "symbolSize": 120,
+            "format": "d"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.schools",
+            "title": "Schools in this cell",
+            "format": ",.0f"
+          },
+          {
+            "field": "properties.students",
+            "title": "Students",
+            "format": ",.0f"
+          },
+          {
+            "field": "properties.gov_share",
+            "title": "Government share (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "properties.gov_students",
+            "title": "Government students",
+            "format": ",.0f"
+          },
+          {
+            "field": "properties.catholic_students",
+            "title": "Catholic students",
+            "format": ",.0f"
+          },
+          {
+            "field": "properties.independent_students",
+            "title": "Independent students",
+            "format": ",.0f"
+          }
+        ]
+      }
+    }
+  ]
+}

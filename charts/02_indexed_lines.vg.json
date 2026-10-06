@@ -1,0 +1,251 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Each sector indexed to its own 2008 size, so the three growth paths can be compared on one axis despite very different starting sizes.",
+  "title": {
+    "text": "Same starting line, very different journeys",
+    "subtitle": "Students in each sector, with 2008 set to 100. Source: ACARA School Profile 2008-2025."
+  },
+  "width": "container",
+  "height": 320,
+  "data": {
+    "url": "data/processed/national_sector_trend.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "enrolments": "number",
+        "share": "number",
+        "indexed": "number"
+      }
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "format": "d",
+        "tickCount": 7,
+        "grid": false
+      },
+      "scale": {
+        "domain": [
+          2008,
+          2027
+        ],
+        "nice": false,
+        "zero": false
+      }
+    },
+    "color": {
+      "field": "sector",
+      "type": "nominal",
+      "title": "Sector",
+      "scale": {
+        "domain": [
+          "Government",
+          "Catholic",
+          "Independent"
+        ],
+        "range": [
+          "#2a78d6",
+          "#eb6834",
+          "#1baf7a"
+        ]
+      },
+      "legend": {
+        "orient": "top",
+        "direction": "horizontal",
+        "offset": 6
+      }
+    }
+  },
+  "layer": [
+    {
+      "description": "The 100 baseline, so 'no growth since 2008' is visible.",
+      "data": {
+        "values": [
+          {
+            "v": 100
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#c3c2b7",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#c3c2b7"
+        }
+      }
+    },
+    {
+      "description": "Marks 2020, when the government line turns over.",
+      "data": {
+        "values": [
+          {
+            "year": 2020
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#0b0b0b",
+        "strokeWidth": 1,
+        "opacity": 0.35
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#0b0b0b"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2,
+        "strokeCap": "round"
+      },
+      "encoding": {
+        "y": {
+          "field": "indexed",
+          "type": "quantitative",
+          "title": "2008 = 100",
+          "scale": {
+            "domain": [
+              95,
+              155
+            ],
+            "zero": false
+          },
+          "axis": {
+            "tickCount": 5
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "title": "Year",
+            "format": "d"
+          },
+          {
+            "field": "sector",
+            "title": "Sector"
+          },
+          {
+            "field": "indexed",
+            "title": "Index (2008 = 100)",
+            "format": ".1f"
+          },
+          {
+            "field": "enrolments",
+            "title": "Students",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "description": "End dot with a surface ring so it stays readable where lines cross.",
+      "transform": [
+        {
+          "filter": "datum.year === 2025"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 80,
+        "stroke": "#fcfcfb",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "indexed",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "description": "End label, nudged so the two lines that finish close together stay readable.",
+      "transform": [
+        {
+          "filter": "datum.year === 2025"
+        },
+        {
+          "filter": "datum.sector === 'Government'"
+        },
+        {
+          "calculate": "datum.sector + '  ' + format(datum.indexed, '.0f')",
+          "as": "end_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 9,
+        "fontSize": 11.5,
+        "fontWeight": 600,
+        "dy": 10
+      },
+      "encoding": {
+        "y": {
+          "field": "indexed",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "end_label"
+        },
+        "color": {
+          "value": "#52514e"
+        }
+      }
+    },
+    {
+      "description": "End label, nudged so the two lines that finish close together stay readable.",
+      "transform": [
+        {
+          "filter": "datum.year === 2025"
+        },
+        {
+          "filter": "datum.sector !== 'Government'"
+        },
+        {
+          "calculate": "datum.sector + '  ' + format(datum.indexed, '.0f')",
+          "as": "end_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 9,
+        "fontSize": 11.5,
+        "fontWeight": 600,
+        "dy": -4
+      },
+      "encoding": {
+        "y": {
+          "field": "indexed",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "end_label"
+        },
+        "color": {
+          "value": "#52514e"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+grade,grade_order,sector,enrolments_2020,enrolments_2025,pct_change
+Foundation,0,Catholic,57618,59161,2.7
+Foundation,0,Government,226877,210089,-7.4
+Foundation,0,Independent,36773,41721,13.5
+Year 1,1,Catholic,56747,58847,3.7
+Year 1,1,Government,227634,209711,-7.9
+Year 1,1,Independent,36410,41568,14.2
+Year 2,2,Catholic,56854,58929,3.6
+Year 2,2,Government,230856,215416,-6.7
+Year 2,2,Independent,36608,42016,14.8
+Year 3,3,Catholic,56301,59698,6.0
+Year 3,3,Government,225804,220425,-2.4
+Year 3,3,Independent,37597,44213,17.6
+Year 4,4,Catholic,55951,59215,5.8
+Year 4,4,Government,224802,222491,-1.0
+Year 4,4,Independent,38847,45703,17.6
+Year 5,5,Catholic,56334,57957,2.9
+Year 5,5,Government,223279,223654,0.2
+Year 5,5,Independent,43277,50617,17.0
+Year 6,6,Catholic,55182,57490,4.2
+Year 6,6,Government,220760,224754,1.8
+Year 6,6,Independent,44231,51617,16.7
+Year 7,7,Catholic,61548,68498,11.3
+Year 7,7,Government,192839,186663,-3.2
+Year 7,7,Independent,66397,79066,19.1
+Year 8,8,Catholic,60356,66474,10.1
+Year 8,8,Government,188160,184815,-1.8
+Year 8,8,Independent,65406,77026,17.8
+Year 9,9,Catholic,57514,63690,10.7
+Year 9,9,Government,182199,185759,2.0
+Year 9,9,Independent,63569,76546,20.4
+Year 10,10,Catholic,54406,61967,13.9
+Year 10,10,Government,174769,189613,8.5
+Year 10,10,Independent,62767,77780,23.9
+Year 11,11,Catholic,50313,54790,8.9
+Year 11,11,Government,162981,176185,8.1
+Year 11,11,Independent,60191,71552,18.9
+Year 12,12,Catholic,46518,50884,9.4
+Year 12,12,Government,135951,152312,12.0
+Year 12,12,Independent,54214,65605,21.0

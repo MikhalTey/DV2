@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8"><title>DV2 spec test</title>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+<style>body{font:13px system-ui;margin:16px;background:#fcfcfb}
+ .c{width:900px;margin:0 0 30px}#log{font:12px monospace;white-space:pre-wrap;margin-bottom:14px;color:#a00}</style>
+<div id="log"></div><div id="holder"></div>
+<script>
+const all=["01_national_area","02_indexed_lines","03_state_change","04_grade_diverging",
+ "05_grade_heatmap","06_map_sa4_change","07_map_new_schools","08_map_hexbin",
+ "09_remoteness_dumbbell","10_icsea_bars","11_icsea_density","12_state_small_multiples"];
+const q=new URLSearchParams(location.search);
+const only=q.get('only');
+const files = only ? all.filter(f=>only.split(',').some(o=>f.startsWith(o))) : all;
+const log=document.getElementById('log'), holder=document.getElementById('holder');
+let out=[];
+(async()=>{
+  const theme=await (await fetch('charts/theme.json?cb='+Date.now())).json();
+  for(const f of files){
+    const d=document.createElement('div'); d.className='c'; d.id='x'+f; holder.appendChild(d);
+    try{ await vegaEmbed('#x'+f,'charts/'+f+'.vg.json?cb='+Date.now(),{actions:false,config:theme,renderer:'svg'}); out.push('OK   '+f); }
+    catch(e){ out.push('FAIL '+f+' :: '+(e.message||e)); }
+  }
+  log.textContent=out.filter(l=>l.startsWith('FAIL')).join('\n');
+  document.title='done '+out.filter(l=>l.startsWith('OK')).length+'/'+files.length;
+})();
+</script>

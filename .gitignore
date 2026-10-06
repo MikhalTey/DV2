@@ -1,0 +1,15 @@
+# Source spreadsheets. Together these are about 74 MB, they never change, and the
+# page does not load them. data/raw/SOURCES.md has the exact download URLs, and
+# scripts/build_data.py turns them back into everything in data/processed.
+data/raw/*.xlsx
+
+# Monash course material, not mine to republish
+*Specifications.pdf
+
+# Local development only
+.claude/
+
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

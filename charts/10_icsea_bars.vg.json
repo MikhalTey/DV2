@@ -1,0 +1,208 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Change in student numbers between 2020 and 2025, grouped by the socio-educational advantage of the school community and by sector. Counted in students rather than percent, because some of these groups are small and a percentage would overstate them.",
+  "title": {
+    "text": "Government schools held both ends and lost the middle",
+    "subtitle": [
+      "Change in students, 2020 to 2025, by the school community's ICSEA score. ICSEA is ACARA's measure of",
+      "how advantaged a school's families are, with 1000 as the national average.",
+      "Counted in students, not percent, so small groups are not made to look bigger than they are.",
+      "Source: ACARA School Profile 2008-2025."
+    ]
+  },
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "data/processed/icsea_change.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "enrolments_2020": "number",
+        "enrolments_2025": "number",
+        "pct_change": "number",
+        "change": "number",
+        "band_order": "number"
+      }
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "band",
+      "type": "nominal",
+      "title": "School community's ICSEA score",
+      "sort": {
+        "field": "band_order",
+        "op": "min"
+      },
+      "axis": {
+        "labelFontSize": 11,
+        "labelAngle": 0,
+        "domain": false,
+        "ticks": false,
+        "titlePadding": 14
+      }
+    },
+    "xOffset": {
+      "field": "sector",
+      "type": "nominal",
+      "sort": [
+        "Government",
+        "Catholic",
+        "Independent"
+      ]
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": 21,
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "y": {
+          "field": "change",
+          "type": "quantitative",
+          "title": "Change in students, 2020 to 2025",
+          "scale": {
+            "domain": [
+              -62000,
+              100000
+            ]
+          },
+          "axis": {
+            "tickCount": 6,
+            "format": "+,.0f"
+          }
+        },
+        "color": {
+          "field": "sector",
+          "type": "nominal",
+          "title": "Sector",
+          "scale": {
+            "domain": [
+              "Government",
+              "Catholic",
+              "Independent"
+            ],
+            "range": [
+              "#2a78d6",
+              "#eb6834",
+              "#1baf7a"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "offset": 6
+          }
+        },
+        "tooltip": [
+          {
+            "field": "band",
+            "title": "ICSEA band"
+          },
+          {
+            "field": "sector",
+            "title": "Sector"
+          },
+          {
+            "field": "enrolments_2020",
+            "title": "Students 2020",
+            "format": ",.0f"
+          },
+          {
+            "field": "enrolments_2025",
+            "title": "Students 2025",
+            "format": ",.0f"
+          },
+          {
+            "field": "change",
+            "title": "Change in students",
+            "format": "+,.0f"
+          },
+          {
+            "field": "pct_change",
+            "title": "Change",
+            "format": "+.1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.sector === 'Government'"
+        },
+        {
+          "filter": "datum.change < 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10.5,
+        "fontWeight": 600,
+        "baseline": "top",
+        "dy": 6
+      },
+      "encoding": {
+        "y": {
+          "field": "change",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "change",
+          "type": "quantitative",
+          "format": "+,.0f"
+        },
+        "color": {
+          "value": "#52514e"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.sector === 'Government'"
+        },
+        {
+          "filter": "datum.change >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10.5,
+        "fontWeight": 600,
+        "baseline": "bottom",
+        "dy": -6
+      },
+      "encoding": {
+        "y": {
+          "field": "change",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "change",
+          "type": "quantitative",
+          "format": "+,.0f"
+        },
+        "color": {
+          "value": "#52514e"
+        }
+      }
+    },
+    {
+      "description": "Zero line. Uses the inherited data so it adds no extra category to the axis.",
+      "mark": {
+        "type": "rule",
+        "color": "#52514e",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        }
+      }
+    }
+  ]
+}

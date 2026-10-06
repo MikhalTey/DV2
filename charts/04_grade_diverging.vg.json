@@ -1,0 +1,221 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Percentage change in enrolments between 2020 and 2025 at each year level, one panel per sector. Government loses its youngest year levels and gains its oldest; the other two sectors gain everywhere.",
+  "title": {
+    "text": "Fewer small children, but only in government schools",
+    "subtitle": [
+      "Change in enrolments at each year level, 2020 to 2025. Australia's birth rate fell, so the",
+      "youngest year levels are smaller everywhere. Only the government sector actually shrank.",
+      "Source: ACARA Enrolments by Grade 2008-2025."
+    ]
+  },
+  "data": {
+    "url": "data/processed/grade_change.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "grade_order": "number",
+        "enrolments_2020": "number",
+        "enrolments_2025": "number",
+        "pct_change": "number"
+      }
+    }
+  },
+  "facet": {
+    "column": {
+      "field": "sector",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Government",
+        "Catholic",
+        "Independent"
+      ],
+      "header": {
+        "labelFontSize": 12.5,
+        "labelFontWeight": 600,
+        "labelColor": "#0b0b0b",
+        "labelPadding": 6
+      }
+    }
+  },
+  "spacing": 26,
+  "spec": {
+    "width": 248,
+    "height": 330,
+    "layer": [
+      {
+        "mark": {
+          "type": "bar",
+          "height": 13,
+          "cornerRadiusEnd": 3
+        },
+        "encoding": {
+          "y": {
+            "field": "grade",
+            "type": "nominal",
+            "title": null,
+            "sort": {
+              "field": "grade_order",
+              "op": "min"
+            },
+            "axis": {
+              "labelFontSize": 10.5,
+              "domain": false,
+              "ticks": false
+            }
+          },
+          "x": {
+            "field": "pct_change",
+            "type": "quantitative",
+            "title": "Change in students, 2020 to 2025 (%)",
+            "scale": {
+              "domain": [
+                -12,
+                26
+              ]
+            },
+            "axis": {
+              "tickCount": 4,
+              "format": "+d"
+            }
+          },
+          "color": {
+            "field": "sector",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "Government",
+                "Catholic",
+                "Independent"
+              ],
+              "range": [
+                "#2a78d6",
+                "#eb6834",
+                "#1baf7a"
+              ]
+            },
+            "legend": null
+          },
+          "opacity": {
+            "condition": {
+              "test": "datum.pct_change < 0",
+              "value": 1
+            },
+            "value": 0.55
+          },
+          "tooltip": [
+            {
+              "field": "grade",
+              "title": "Year level"
+            },
+            {
+              "field": "sector",
+              "title": "Sector"
+            },
+            {
+              "field": "enrolments_2020",
+              "title": "Students 2020",
+              "format": ",.0f"
+            },
+            {
+              "field": "enrolments_2025",
+              "title": "Students 2025",
+              "format": ",.0f"
+            },
+            {
+              "field": "pct_change",
+              "title": "Change",
+              "format": "+.1f"
+            }
+          ]
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum.pct_change < 0"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "fontSize": 9.5,
+          "fontWeight": 500,
+          "align": "right",
+          "dx": -4
+        },
+        "encoding": {
+          "x": {
+            "field": "pct_change",
+            "type": "quantitative"
+          },
+          "text": {
+            "field": "pct_change",
+            "type": "quantitative",
+            "format": "+.0f"
+          },
+          "color": {
+            "value": "#52514e"
+          },
+          "y": {
+            "field": "grade",
+            "type": "nominal",
+            "sort": {
+              "field": "grade_order",
+              "op": "min"
+            }
+          }
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum.pct_change >= 0"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "fontSize": 9.5,
+          "fontWeight": 500,
+          "align": "left",
+          "dx": 4
+        },
+        "encoding": {
+          "x": {
+            "field": "pct_change",
+            "type": "quantitative"
+          },
+          "text": {
+            "field": "pct_change",
+            "type": "quantitative",
+            "format": "+.0f"
+          },
+          "color": {
+            "value": "#52514e"
+          },
+          "y": {
+            "field": "grade",
+            "type": "nominal",
+            "sort": {
+              "field": "grade_order",
+              "op": "min"
+            }
+          }
+        }
+      },
+      {
+        "description": "Zero line. Uses the inherited data so it adds no extra category to the axis.",
+        "mark": {
+          "type": "rule",
+          "color": "#52514e",
+          "strokeWidth": 1
+        },
+        "encoding": {
+          "x": {
+            "datum": 0
+          }
+        }
+      }
+    ]
+  }
+}

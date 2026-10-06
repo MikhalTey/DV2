@@ -1,0 +1,203 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Small multiples of the government share of enrolments in each state and territory, 2008 to 2025, on a shared axis. Shows that 2020 is a genuine turning point in all eight jurisdictions rather than an artefact of the national average.",
+  "title": {
+    "text": "This is not an average hiding eight different stories",
+    "subtitle": [
+      "Share of students in a government school, 2008 to 2025. The grey line marks 2020.",
+      "Every panel uses the same scale. Source: ACARA School Profile 2008-2025."
+    ]
+  },
+  "data": {
+    "url": "data/processed/state_sector_trend.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "enrolments": "number",
+        "share": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.sector === 'Government'"
+    }
+  ],
+  "facet": {
+    "field": "state",
+    "type": "nominal",
+    "title": null,
+    "sort": [
+      "NSW",
+      "VIC",
+      "QLD",
+      "WA",
+      "SA",
+      "TAS",
+      "ACT",
+      "NT"
+    ],
+    "header": {
+      "labelFontSize": 11.5,
+      "labelFontWeight": 600,
+      "labelColor": "#0b0b0b",
+      "labelPadding": 3
+    }
+  },
+  "columns": 4,
+  "spacing": {
+    "row": 18,
+    "column": 20
+  },
+  "spec": {
+    "width": 186,
+    "height": 105,
+    "layer": [
+      {
+        "data": {
+          "values": [
+            {
+              "year": 2020
+            }
+          ]
+        },
+        "mark": {
+          "type": "rule",
+          "color": "#c3c2b7",
+          "strokeWidth": 1
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "strokeWidth": 2,
+          "color": "#2a78d6",
+          "strokeCap": "round"
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+              "format": "d",
+              "values": [
+                2010,
+                2020
+              ],
+              "grid": false
+            },
+            "scale": {
+              "domain": [
+                2008,
+                2025
+              ],
+              "nice": false,
+              "zero": false
+            }
+          },
+          "y": {
+            "field": "share",
+            "type": "quantitative",
+            "title": "Government share (%)",
+            "scale": {
+              "domain": [
+                56,
+                78
+              ],
+              "zero": false
+            },
+            "axis": {
+              "tickCount": 3
+            }
+          },
+          "tooltip": [
+            {
+              "field": "state_name",
+              "title": "State"
+            },
+            {
+              "field": "year",
+              "title": "Year",
+              "format": "d"
+            },
+            {
+              "field": "share",
+              "title": "Government share (%)",
+              "format": ".1f"
+            },
+            {
+              "field": "enrolments",
+              "title": "Government students",
+              "format": ",.0f"
+            }
+          ]
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum.year === 2025"
+          }
+        ],
+        "mark": {
+          "type": "point",
+          "filled": true,
+          "size": 70,
+          "color": "#2a78d6",
+          "stroke": "#fcfcfb",
+          "strokeWidth": 2
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "share",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum.year === 2025"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "dy": -13,
+          "fontSize": 10.5,
+          "fontWeight": 600
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "share",
+            "type": "quantitative"
+          },
+          "text": {
+            "field": "share",
+            "type": "quantitative",
+            "format": ".0f"
+          },
+          "color": {
+            "value": "#52514e"
+          }
+        }
+      }
+    ]
+  }
+}
