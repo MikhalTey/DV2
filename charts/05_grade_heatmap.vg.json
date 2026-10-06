@@ -58,7 +58,7 @@
       "mark": {
         "type": "rect",
         "cornerRadius": 2,
-        "stroke": "#fcfcfb",
+        "stroke": "#eeebe3",
         "strokeWidth": 2
       },
       "encoding": {
@@ -80,7 +80,7 @@
               "#9c2c2b",
               "#e34948",
               "#f0a9a8",
-              "#f0efec",
+              "#e1ddd2",
               "#b7d3f6",
               "#5598e7",
               "#184f95"
@@ -137,7 +137,7 @@
         "color": {
           "condition": {
             "test": "datum.pct_change < -6 || datum.pct_change >= 6",
-            "value": "#ffffff"
+            "value": "#eeebe3"
           },
           "value": "#52514e"
         }

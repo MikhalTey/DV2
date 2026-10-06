@@ -48,8 +48,8 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#f0efec",
-        "stroke": "#fcfcfb",
+        "fill": "#e1ddd2",
+        "stroke": "#eeebe3",
         "strokeWidth": 1
       }
     },
@@ -74,7 +74,7 @@
       "mark": {
         "type": "circle",
         "opacity": 0.72,
-        "stroke": "#fcfcfb",
+        "stroke": "#eeebe3",
         "strokeWidth": 0.6
       },
       "encoding": {

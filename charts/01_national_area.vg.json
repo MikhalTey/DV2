@@ -44,7 +44,7 @@
       "mark": {
         "type": "area",
         "line": {
-          "color": "#fcfcfb",
+          "color": "#eeebe3",
           "strokeWidth": 2.5
         },
         "opacity": 0.72

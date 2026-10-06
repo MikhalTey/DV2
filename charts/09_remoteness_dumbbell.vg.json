@@ -85,7 +85,7 @@
         "type": "point",
         "filled": true,
         "size": 150,
-        "stroke": "#fcfcfb",
+        "stroke": "#eeebe3",
         "strokeWidth": 2
       },
       "encoding": {

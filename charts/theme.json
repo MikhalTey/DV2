@@ -1,7 +1,9 @@
 {
-  "background": "#fbfaf4",
+  "background": "#eeebe3",
   "font": "Archivo, Helvetica Neue, Helvetica, Arial, sans-serif",
-  "view": { "stroke": null },
+  "view": {
+    "stroke": null
+  },
   "padding": 4,
   "axis": {
     "labelFont": "IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace",
@@ -11,11 +13,11 @@
     "titleColor": "#5c5950",
     "titleFontSize": 10.5,
     "titleFontWeight": 600,
-    "gridColor": "#e6e3d8",
+    "gridColor": "#ddd8cb",
     "gridWidth": 1,
     "gridDash": [],
-    "domainColor": "#c6c2b4",
-    "tickColor": "#c6c2b4",
+    "domainColor": "#c2bcac",
+    "tickColor": "#c2bcac",
     "labelPadding": 7,
     "titlePadding": 11,
     "labelOverlap": "greedy"
@@ -55,15 +57,29 @@
     "titleFontSize": 11
   },
   "range": {
-    "category": ["#2a78d6", "#eb6834", "#1baf7a"]
+    "category": [
+      "#2a78d6",
+      "#eb6834",
+      "#1baf7a"
+    ]
   },
   "text": {
     "font": "IBM Plex Mono, ui-monospace, Menlo, monospace",
     "color": "#5c5950",
     "fontSize": 10.5
   },
-  "rule": { "color": "#c6c2b4" },
-  "line": { "strokeWidth": 2, "strokeCap": "round", "strokeJoin": "round" },
-  "point": { "size": 80 },
-  "bar": { "cornerRadiusEnd": 3 }
+  "rule": {
+    "color": "#c2bcac"
+  },
+  "line": {
+    "strokeWidth": 2,
+    "strokeCap": "round",
+    "strokeJoin": "round"
+  },
+  "point": {
+    "size": 80
+  },
+  "bar": {
+    "cornerRadiusEnd": 3
+  }
 }

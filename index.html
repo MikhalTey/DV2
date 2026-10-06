@@ -17,12 +17,12 @@
 
 <style>
   :root{
-    --page:#fbfaf4;
-    --band:#eaf0f4;
+    --page:#eeebe3;
+    --band:transparent;   /* one ground for the whole page */
     --ink:#16150f;
     --ink-2:#4a473f;
     --ink-3:#8a877e;
-    --rule:#dedbd0;
+    --rule:#dcd7ca;
     --rule-strong:#16150f;
     --gov:#2a78d6;
     --fall:#a8322c;
@@ -118,12 +118,12 @@
   /* ===================== tinted band ===================== */
   .band{
     background:var(--band); margin-top:96px; padding-bottom:40px;
-    border-top:1px solid #c6d4dd; border-bottom:1px solid #c6d4dd;
+    border-top:1px solid #dcd7ca; border-bottom:1px solid #dcd7ca;
   }
-  .band .sec-num{color:#5f7489}
-  .band .sec-head p{color:#36424e}
-  .band .fig-head{border-top-color:#2c3a46}
-  .band .note{border-top-color:#c6d4dd}
+  .band .sec-num{color:var(--ink-3)}
+  
+  
+  
 
   /* ===================== figures : no cards ===================== */
   /* Charts sit directly on the page the way a newsroom sets them: a rule, a
@@ -589,7 +589,7 @@
 </footer>
 
 <script>
-const BUILD = "2026-10-06e";
+const BUILD = "2026-10-07a";
 const v = url => url + "?v=" + BUILD;
 
 // [chart target, spec, control-bar target]

@@ -48,8 +48,8 @@
           },
           "mark": {
             "type": "geoshape",
-            "fill": "#e8e9e4",
-            "stroke": "#fcfcfb",
+            "fill": "#e1ddd2",
+            "stroke": "#eeebe3",
             "strokeWidth": 1
           }
         },
@@ -138,7 +138,7 @@
                 "orient": "none",
                 "direction": "horizontal",
                 "legendX": 10,
-                "legendY": 392,
+                "legendY": 778,
                 "titleLimit": 420,
                 "symbolType": "square",
                 "symbolSize": 120,
@@ -176,7 +176,7 @@
                 "empty": false,
                 "value": "#0b0b0b"
               },
-              "value": "#fcfcfb"
+              "value": "#eeebe3"
             },
             "strokeWidth": {
               "condition": {
@@ -348,7 +348,7 @@
             "filled": true,
             "size": 85,
             "color": "#2a78d6",
-            "stroke": "#fcfcfb",
+            "stroke": "#eeebe3",
             "strokeWidth": 2
           },
           "encoding": {}
