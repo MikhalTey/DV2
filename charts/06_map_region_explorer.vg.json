@@ -24,7 +24,7 @@
         ]
       },
       "width": 880,
-      "height": 430,
+      "height": 820,
       "projection": {
         "type": "albers",
         "rotate": [
@@ -220,7 +220,7 @@
         "subtitle": "Government share of students, 2008 to 2025. The grey line is Australia as a whole."
       },
       "width": 880,
-      "height": 210,
+      "height": 230,
       "data": {
         "url": "data/processed/sa4_by_year.csv",
         "format": {

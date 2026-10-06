@@ -6,7 +6,7 @@
     "subtitle": "Change in enrolments, 2020 to 2025. Red is a fall, blue is a rise. Source: ACARA Enrolments by Grade."
   },
   "width": "container",
-  "height": 150,
+  "height": 190,
   "data": {
     "url": "data/processed/grade_change.csv",
     "format": {

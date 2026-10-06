@@ -9,7 +9,7 @@
     ]
   },
   "width": "container",
-  "height": 440,
+  "height": 600,
   "projection": {
     "type": "albers",
     "rotate": [

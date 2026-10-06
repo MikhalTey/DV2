@@ -45,14 +45,14 @@
       "labelPadding": 3
     }
   },
-  "columns": 4,
+  "columns": 8,
   "spacing": {
     "row": 18,
     "column": 20
   },
   "spec": {
     "width": 186,
-    "height": 105,
+    "height": 150,
     "layer": [
       {
         "data": {
