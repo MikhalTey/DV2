@@ -19,26 +19,28 @@
   :root{
     --page:#f9f9f7;
     --surface:#fcfcfb;
+    --band:#e7edf2;          /* tinted ground for the full-bleed map section */
     --ink:#0b0b0b;
     --ink-2:#52514e;
     --ink-3:#898781;
     --rule:#e1e0d9;
+    --rule-band:#ccd8e3;
     --gov:#2a78d6;
-    --cath:#eb6834;
-    --indep:#1baf7a;
     --fall:#b3332f;
     --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
     --sans:Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     --wrap:1060px;
+    --narrow:780px;
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
   body{
     margin:0; background:var(--page); color:var(--ink);
     font-family:var(--sans); font-size:16px; line-height:1.6;
-    -webkit-font-smoothing:antialiased;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
   }
   .wrap{max-width:var(--wrap); margin:0 auto; padding:0 24px}
+  .wrap.narrow{max-width:var(--narrow)}
 
   /* ---------- masthead ---------- */
   header.hero{padding:72px 0 0}
@@ -63,8 +65,7 @@
   /* ---------- key numbers ---------- */
   .stats{
     display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
-    background:var(--rule); border:1px solid var(--rule);
-    margin:44px 0 12px;
+    background:var(--rule); border:1px solid var(--rule); margin:44px 0 12px;
   }
   .stat{background:var(--surface); padding:20px 18px}
   .stat .n{
@@ -72,7 +73,7 @@
     line-height:1; letter-spacing:-.02em; display:block; margin-bottom:8px;
   }
   .stat .n.down{color:var(--fall)}
-  .stat .n.up{color:var(--indep)}
+  .stat .n.up{color:#157d57}
   .stat .l{font-size:12.5px; line-height:1.4; color:var(--ink-2)}
 
   /* ---------- sections ---------- */
@@ -89,41 +90,55 @@
   .sec-head p{margin:0 0 12px; color:var(--ink-2); font-size:16.5px}
   .sec-head p:last-child{margin-bottom:0}
 
+  /* ---------- the tinted band ---------- */
+  .band{
+    background:var(--band); margin-top:70px; padding-bottom:76px;
+    border-top:1px solid var(--rule-band); border-bottom:1px solid var(--rule-band);
+  }
+  .band .sec-num{color:#637587}
+  .band .sec-head p{color:#3d4a57}
+  .band .chart{border-color:var(--rule-band)}
+
   /* ---------- chart frames ---------- */
   .chart{
     background:var(--surface); border:1px solid var(--rule);
     padding:22px 22px 18px; margin:0 0 26px;
   }
-  .chart.tall{padding-bottom:12px}
+  .chart.feature{padding:28px 26px 22px}
   .vis{width:100%; overflow-x:auto}
+  /* Vega rounds its canvas up to a whole pixel while the container width is
+     fractional, which is enough to raise a scrollbar on a chart that fits.
+     Capping the canvas removes it without hiding a genuine overflow. */
+  .vis canvas, .vis svg{max-width:100%; display:block}
   .note{
     font-size:13.5px; line-height:1.55; color:var(--ink-2);
     border-top:1px solid var(--rule); margin-top:16px; padding-top:14px;
   }
   .note b{color:var(--ink); font-weight:600}
-  .pair{display:grid; grid-template-columns:1fr 1fr; gap:26px}
+  .howto{
+    font-size:12.5px; color:var(--gov); font-weight:600; letter-spacing:.01em;
+    margin:0 0 15px; display:flex; align-items:center; gap:8px;
+  }
+  .howto::before{
+    content:""; width:7px; height:7px; border-radius:50%;
+    background:var(--gov); flex:none;
+  }
+  .pair{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start}
   .pair .chart{margin-bottom:0}
 
   /* ---------- pull quote ---------- */
   .pull{
     font-family:var(--serif); font-size:clamp(20px,2.6vw,27px); line-height:1.35;
     color:var(--ink); border-left:3px solid var(--fall);
-    padding:6px 0 6px 22px; margin:38px 0; max-width:48ch; font-weight:600;
+    padding:6px 0 6px 22px; margin:40px 0; max-width:48ch; font-weight:600;
   }
-
-  /* ---------- legend key inline ---------- */
-  .key{display:flex; flex-wrap:wrap; gap:18px; font-size:13px; color:var(--ink-2); margin:0 0 28px}
-  .key span{display:flex; align-items:center; gap:7px}
-  .key i{width:11px; height:11px; border-radius:2px; display:block}
 
   /* ---------- footer ---------- */
   footer{
     margin-top:80px; border-top:1px solid var(--rule);
     background:var(--surface); padding:46px 0 70px;
   }
-  footer h3{
-    font-family:var(--serif); font-size:19px; font-weight:600; margin:0 0 12px;
-  }
+  footer h3{font-family:var(--serif); font-size:19px; font-weight:600; margin:0 0 12px}
   footer h3:not(:first-child){margin-top:34px}
   footer p, footer li{font-size:13.5px; line-height:1.65; color:var(--ink-2)}
   footer ul{margin:0; padding-left:18px}
@@ -134,20 +149,25 @@
   .defs dt{font-weight:600; color:var(--ink); font-size:13.5px; margin-top:10px}
   .defs dd{margin:2px 0 0; font-size:13.5px; color:var(--ink-2)}
 
-  /* vega tweaks */
+  /* ---------- vega chrome ---------- */
   .vega-bindings{
     font-family:var(--sans); font-size:13px; color:var(--ink-2);
-    margin-top:10px; padding-top:12px; border-top:1px solid var(--rule);
+    margin-top:14px; padding-top:14px; border-top:1px solid var(--rule);
+    display:flex; flex-wrap:wrap; gap:20px; align-items:center;
   }
+  .vega-bind{display:flex; align-items:center; gap:7px}
+  .vega-bind label{display:flex; align-items:center; gap:7px; margin:0}
+  .vega-bind span{font-weight:600; color:var(--ink)}
+  .vega-bind input[type=range]{accent-color:var(--gov); width:250px; max-width:55vw}
   .vega-bind select{
     font-family:var(--sans); font-size:13px; padding:4px 8px;
     border:1px solid var(--rule); background:var(--surface); color:var(--ink);
-    border-radius:3px; margin-left:4px;
+    border-radius:3px;
   }
   .vega-embed{width:100%}
   .vega-embed summary{display:none}
 
-  @media (max-width:860px){
+  @media (max-width:880px){
     .pair{grid-template-columns:1fr}
     .stats{grid-template-columns:repeat(2,1fr)}
     .cols{grid-template-columns:1fr; gap:0}
@@ -167,7 +187,7 @@
       government school enrolments stopped growing, and they have fallen every year since.
     </p>
     <p class="byline">
-      By <strong>Mikhalangelo</strong> &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp;
+      By <strong>Mikhalangelo</strong> &nbsp;&middot;&nbsp; October 2026 &nbsp;&middot;&nbsp;
       Data from the Australian Curriculum, Assessment and Reporting Authority and the Australian Bureau of Statistics
     </p>
 
@@ -194,7 +214,7 @@
 
 <main>
 
-<!-- ============================ 1 ============================ -->
+<!-- ======================= PART ONE ======================= -->
 <section>
   <div class="wrap">
     <div class="sec-head">
@@ -203,41 +223,38 @@
       <p>
         Australian schools are run in three sectors. <b>Government</b> schools are run by the states and
         territories. <b>Catholic</b> and <b>independent</b> schools charge fees and together make up the
-        non-government sector. For more than a decade the split between them barely moved.
-      </p>
-      <p>
-        Stacked up, the three sectors look like a steady, growing system. The total climbs every single year.
-        Nothing about the shape of it suggests a turning point.
+        non-government sector. Government is about three and a half times the size of either of the others,
+        so raw enrolment lines show only the size gap. Setting each sector to 100 in its own 2008 size
+        strips that out and leaves the growth rates.
       </p>
     </div>
 
-    <div class="key">
-      <span><i style="background:#2a78d6"></i> Government</span>
-      <span><i style="background:#eb6834"></i> Catholic</span>
-      <span><i style="background:#1baf7a"></i> Independent</span>
-    </div>
-
-    <div class="chart"><div class="vis" id="v01"></div>
+    <div class="chart feature">
+      <p class="howto">Click a sector in the legend to pull it out of the group</p>
+      <div class="vis" id="v02"></div>
       <p class="note">
-        The system gained about 158,000 students between 2020 and 2025. Stacked totals hide what happened
-        underneath, because a band can keep its place while shrinking relative to the whole.
+        Independent schools ended 48% larger than they started. Government schools grew 17% over
+        seventeen years, and <b>all of that growth happened before 2020</b>. Since then the line has bent
+        downwards, which no other sector did.
       </p>
     </div>
 
-    <p class="pull">Start each sector at the same place, and the three lines separate immediately.</p>
+    <p class="pull">The system kept growing the whole time. That is what made the turn so easy to miss.</p>
+  </div>
 
-    <div class="chart"><div class="vis" id="v02"></div>
+  <div class="wrap narrow">
+    <div class="chart">
+      <div class="vis" id="v01"></div>
       <p class="note">
-        Indexing removes the size difference. Every sector starts at 100 in 2008, so the lines show growth
-        rates rather than headcounts. Independent schools ended 48% larger than they started. Government
-        schools grew 17% over seventeen years, and <b>all of that growth happened before 2020</b>. Since then
-        the line has bent downwards.
+        Stacked up, the three sectors look like a steady system: the total climbs every year and gained
+        about 158,000 students between 2020 and 2025. Stacked totals hide what happens underneath,
+        because a band can keep its place while shrinking relative to the whole.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ============================ 2 ============================ -->
+<!-- ======================= PART TWO ======================= -->
 <section>
   <div class="wrap">
     <div class="sec-head">
@@ -270,7 +287,8 @@
   </div>
 </section>
 
-<!-- ============================ 3 ============================ -->
+<!-- ======================= PART THREE: tinted band ======================= -->
+<div class="band">
 <section>
   <div class="wrap">
     <div class="sec-head">
@@ -282,54 +300,63 @@
         individual localities shows something less expected.
       </p>
     </div>
+  </div>
 
+  <div class="wrap narrow">
     <div class="chart"><div class="vis" id="v03"></div>
       <p class="note">
         Counted in students rather than percentages, New South Wales lost 36,470 government students in five
         years while its total student population grew. Victoria and Western Australia went the other way.
-        The grey marker shows where each government system would have landed if it had simply grown at the
+        The grey tick shows where each government system would have landed if it had simply grown at the
         same rate as its state's whole student population.
       </p>
     </div>
+  </div>
 
-    <div class="chart tall"><div class="vis" id="v06"></div>
+  <div class="wrap">
+    <div class="chart feature">
+      <p class="howto">Drag the year, then click any region to see its own history</p>
+      <div class="vis" id="v06"></div>
       <p class="note">
-        Broken into the 88 regions the Bureau of Statistics uses, the deepest falls are in places like
-        Richmond&nbsp;&ndash;&nbsp;Tweed on the New South Wales north coast (down 8.1 points), Mackay in
-        Queensland, the Murray, and the Hunter Valley. These are regional and outer-suburban areas. Of the
-        88 regions, 83 fell, and the only five that went the other way are all inner-city: inner Perth,
-        inner-east and south-east Melbourne, southern Brisbane and Hobart's south east.
+        Drag the slider back to 2008 and the coast sits deep blue. Drag it forward and the colour drains out
+        after 2020. The deepest falls are in places like Richmond&nbsp;&ndash;&nbsp;Tweed on the New South
+        Wales north coast, Mackay in Queensland, the Murray and the Hunter Valley: regional and
+        outer-suburban areas, not inner cities. Of the 88 regions, 83 fell, and the only five that went the
+        other way are all inner-city.
       </p>
     </div>
 
-    <div class="chart tall"><div class="vis" id="v08"></div>
-      <p class="note">
-        Regions are wildly different sizes, so a region map flatters the empty inland. Splitting the country
-        into equal-sized cells instead shows the underlying pattern plainly: deep blue almost everywhere a
-        long way from a city, where a government school is often the only school, and much paler along the
-        populated coast where families have a choice to make.
-      </p>
+    <div class="pair">
+      <div class="chart"><div class="vis" id="v08"></div>
+        <p class="note">
+          Regions are wildly different sizes, so the map above flatters the empty inland. Splitting the
+          country into equal-sized cells instead shows the real pattern: deep blue almost everywhere a long
+          way from a city, much paler along the populated coast.
+        </p>
+      </div>
+      <div class="chart"><div class="vis" id="v09"></div>
+        <p class="note">
+          The same gradient as numbers. Very remote Australia is 88% government and barely moved, because
+          there is usually nothing else within reach. The sharpest fall was <b>not</b> in the major cities
+          but in inner regional Australia, down 4.6 points in five years.
+        </p>
+      </div>
     </div>
 
-    <div class="chart tall"><div class="vis" id="v07"></div>
+    <div class="chart">
+      <p class="howto">Use the menu under the map to show one sector at a time</p>
+      <div class="vis" id="v07"></div>
       <p class="note">
         260 schools opened between 2020 and 2025. Governments built 131 of them, but independent bodies
         built 104 and they cluster on the growth fringes of Melbourne, Sydney, Brisbane and Perth, and along
         the same regional coast where the government share fell fastest.
       </p>
     </div>
-
-    <div class="chart"><div class="vis" id="v09"></div>
-      <p class="note">
-        Grouping by remoteness makes the point directly. Very remote Australia is 88% government and barely
-        moved, because there is usually nothing else within reach. The sharpest fall was <b>not</b> in the
-        major cities but in inner regional Australia, down 4.6 points in five years.
-      </p>
-    </div>
   </div>
 </section>
+</div>
 
-<!-- ============================ 4 ============================ -->
+<!-- ======================= PART FOUR ======================= -->
 <section>
   <div class="wrap">
     <div class="sec-head">
@@ -360,7 +387,7 @@
   </div>
 </section>
 
-<!-- ============================ 5 ============================ -->
+<!-- ======================= PART FIVE ======================= -->
 <section>
   <div class="wrap">
     <div class="sec-head">
@@ -412,8 +439,8 @@
         </ul>
         <p>
           All three are published under Creative Commons Attribution 4.0. The Vega-Lite specification for
-          every chart and map on this page, the scripts that build the data, and the source files exactly as
-          downloaded are in the same repository as this page.
+          every chart and map on this page, the scripts that build the data, and a list of the source files
+          with their download URLs are in the same repository as this page.
         </p>
 
         <h3>How it was made</h3>
@@ -430,8 +457,9 @@
           ICSEA bands use fixed cut points rather than quartiles, so 2020 and 2025 are measured the same way.
         </p>
         <p>
-          Generative AI (Claude) was used to help write and debug the chart specifications and to edit the
-          text on this page. All figures were computed directly from the source files listed above.
+          Generative AI (Claude) was used to help write and debug the chart specifications and the data build
+          scripts, and to edit the text on this page. All figures were computed directly from the source
+          files listed above.
         </p>
       </div>
 
@@ -479,15 +507,15 @@
 
 <script>
 const CHARTS = [
-  ["#v01","charts/01_national_area.vg.json"],
   ["#v02","charts/02_indexed_lines.vg.json"],
-  ["#v03","charts/03_state_change.vg.json"],
+  ["#v01","charts/01_national_area.vg.json"],
   ["#v04","charts/04_grade_diverging.vg.json"],
   ["#v05","charts/05_grade_heatmap.vg.json"],
-  ["#v06","charts/06_map_sa4_change.vg.json"],
-  ["#v07","charts/07_map_new_schools.vg.json"],
+  ["#v03","charts/03_state_change.vg.json"],
+  ["#v06","charts/06_map_region_explorer.vg.json"],
   ["#v08","charts/08_map_hexbin.vg.json"],
   ["#v09","charts/09_remoteness_dumbbell.vg.json"],
+  ["#v07","charts/07_map_new_schools.vg.json"],
   ["#v10","charts/10_icsea_bars.vg.json"],
   ["#v11","charts/11_icsea_density.vg.json"],
   ["#v12","charts/12_state_small_multiples.vg.json"]
@@ -498,8 +526,8 @@ const CHARTS = [
   const opts = { actions: false, config: theme, renderer: "canvas" };
 
   // All twelve are kicked off together so their data downloads overlap. Every chart
-  // is rendered on load rather than on scroll: the whole page is only about 1.5 MB,
-  // and a chart that silently fails to appear is worse than a second of waiting.
+  // renders on load rather than on scroll: the whole page is about 1 MB, and a chart
+  // that silently fails to appear is worse than a second of waiting.
   await Promise.allSettled(CHARTS.map(([el, url]) =>
     vegaEmbed(el, url, opts).catch(err => {
       console.error("chart failed:", url, err);

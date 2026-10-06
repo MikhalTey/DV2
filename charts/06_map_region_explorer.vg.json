@@ -1,0 +1,403 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Linked pair. The map shows the government share of students in each of the 88 ABS regions for whichever year the slider is set to, so dragging it from 2008 to 2025 shows the colour draining out of the coast after 2020. Clicking a region draws that region's own eighteen-year trajectory underneath, against the national line. Albers equal-area conic projection.",
+  "params": [
+    {
+      "name": "yearSel",
+      "value": 2025,
+      "bind": {
+        "input": "range",
+        "min": 2008,
+        "max": 2025,
+        "step": 1,
+        "name": "Year:  "
+      }
+    }
+  ],
+  "vconcat": [
+    {
+      "title": {
+        "text": "Drag the year. Watch the colour drain out of the coast.",
+        "subtitle": [
+          "Share of local students in a government school. Click any region to see its own history below.",
+          "Sources: ACARA School Profile and School Location; ABS Statistical Areas Level 4, 2021."
+        ]
+      },
+      "width": 880,
+      "height": 430,
+      "projection": {
+        "type": "albers",
+        "rotate": [
+          -134,
+          0
+        ],
+        "parallels": [
+          -18,
+          -36
+        ]
+      },
+      "layer": [
+        {
+          "description": "Faint land underneath, so a region with no schools still reads as land.",
+          "data": {
+            "url": "maps/au_sa4_states.topo.json",
+            "format": {
+              "type": "topojson",
+              "feature": "states"
+            }
+          },
+          "mark": {
+            "type": "geoshape",
+            "fill": "#e8e9e4",
+            "stroke": "#fcfcfb",
+            "strokeWidth": 1
+          }
+        },
+        {
+          "description": "The regions themselves. Data drives the marks and the geometry is looked up, which is what lets the year filter work.",
+          "data": {
+            "url": "data/processed/sa4_by_year.csv",
+            "format": {
+              "type": "csv",
+              "parse": {
+                "year": "number",
+                "gov_share": "number",
+                "national_share": "number",
+                "students": "number"
+              }
+            }
+          },
+          "transform": [
+            {
+              "filter": "datum.year === yearSel"
+            },
+            {
+              "lookup": "sa4_code",
+              "from": {
+                "data": {
+                  "url": "maps/au_sa4_states.topo.json",
+                  "format": {
+                    "type": "topojson",
+                    "feature": "sa4"
+                  }
+                },
+                "key": "properties.sa4_code"
+              },
+              "as": "geo"
+            }
+          ],
+          "params": [
+            {
+              "name": "regionSel",
+              "select": {
+                "type": "point",
+                "fields": [
+                  "sa4_code"
+                ],
+                "toggle": false
+              },
+              "value": [
+                {
+                  "sa4_code": "112"
+                }
+              ]
+            }
+          ],
+          "mark": {
+            "type": "geoshape",
+            "cursor": "pointer"
+          },
+          "encoding": {
+            "shape": {
+              "field": "geo",
+              "type": "geojson"
+            },
+            "color": {
+              "field": "gov_share",
+              "type": "quantitative",
+              "title": "Students in a government school (%)",
+              "scale": {
+                "type": "threshold",
+                "domain": [
+                  50,
+                  60,
+                  70,
+                  80,
+                  90
+                ],
+                "range": [
+                  "#cde2fb",
+                  "#9ec5f4",
+                  "#6da7ec",
+                  "#3987e5",
+                  "#256abf",
+                  "#0d366b"
+                ]
+              },
+              "legend": {
+                "orient": "none",
+                "direction": "horizontal",
+                "legendX": 10,
+                "legendY": 392,
+                "titleLimit": 420,
+                "symbolType": "square",
+                "symbolSize": 120,
+                "format": "d"
+              }
+            },
+            "tooltip": [
+              {
+                "field": "sa4_name",
+                "title": "Region"
+              },
+              {
+                "field": "state",
+                "title": "State"
+              },
+              {
+                "field": "year",
+                "title": "Year",
+                "format": "d"
+              },
+              {
+                "field": "gov_share",
+                "title": "Government share (%)",
+                "format": ".1f"
+              },
+              {
+                "field": "students",
+                "title": "Students",
+                "format": ",.0f"
+              }
+            ],
+            "stroke": {
+              "condition": {
+                "param": "regionSel",
+                "empty": false,
+                "value": "#0b0b0b"
+              },
+              "value": "#fcfcfb"
+            },
+            "strokeWidth": {
+              "condition": {
+                "param": "regionSel",
+                "empty": false,
+                "value": 2
+              },
+              "value": 0.5
+            },
+            "order": {
+              "condition": {
+                "param": "regionSel",
+                "empty": false,
+                "value": 1
+              },
+              "value": 0
+            }
+          }
+        },
+        {
+          "description": "State outlines over the top for orientation.",
+          "data": {
+            "url": "maps/au_sa4_states.topo.json",
+            "format": {
+              "type": "topojson",
+              "feature": "states"
+            }
+          },
+          "mark": {
+            "type": "geoshape",
+            "fill": null,
+            "stroke": "#8d9199",
+            "strokeWidth": 0.7
+          }
+        }
+      ]
+    },
+    {
+      "title": {
+        "text": "The region you picked, against the country",
+        "subtitle": "Government share of students, 2008 to 2025. The grey line is Australia as a whole."
+      },
+      "width": 880,
+      "height": 210,
+      "data": {
+        "url": "data/processed/sa4_by_year.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "gov_share": "number",
+            "national_share": "number",
+            "students": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "param": "regionSel"
+          }
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "format": "d",
+            "tickCount": 7,
+            "grid": false
+          },
+          "scale": {
+            "domain": [
+              2008,
+              2025
+            ],
+            "nice": false,
+            "zero": false
+          }
+        },
+        "y": {
+          "field": "gov_share",
+          "type": "quantitative",
+          "title": "Government share (%)",
+          "scale": {
+            "zero": false,
+            "nice": true
+          },
+          "axis": {
+            "tickCount": 4
+          }
+        }
+      },
+      "layer": [
+        {
+          "description": "Marks 2020, the year the national turn begins.",
+          "mark": {
+            "type": "rule",
+            "color": "#c3c2b7",
+            "strokeWidth": 1
+          },
+          "encoding": {
+            "x": {
+              "datum": 2020
+            }
+          }
+        },
+        {
+          "description": "Australia as a whole, for comparison.",
+          "mark": {
+            "type": "line",
+            "strokeWidth": 2,
+            "color": "#b9b8b0",
+            "strokeCap": "round"
+          },
+          "encoding": {
+            "y": {
+              "field": "national_share",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "line",
+            "strokeWidth": 2.5,
+            "color": "#2a78d6",
+            "strokeCap": "round"
+          },
+          "encoding": {
+            "tooltip": [
+              {
+                "field": "sa4_name",
+                "title": "Region"
+              },
+              {
+                "field": "year",
+                "title": "Year",
+                "format": "d"
+              },
+              {
+                "field": "gov_share",
+                "title": "This region (%)",
+                "format": ".1f"
+              },
+              {
+                "field": "national_share",
+                "title": "Australia (%)",
+                "format": ".1f"
+              },
+              {
+                "field": "students",
+                "title": "Students",
+                "format": ",.0f"
+              }
+            ]
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.year === 2025"
+            }
+          ],
+          "mark": {
+            "type": "point",
+            "filled": true,
+            "size": 85,
+            "color": "#2a78d6",
+            "stroke": "#fcfcfb",
+            "strokeWidth": 2
+          },
+          "encoding": {}
+        },
+        {
+          "description": "Names the region on the chart, so the link back to the map never depends on memory.",
+          "transform": [
+            {
+              "filter": "datum.year === 2025"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dy": -16,
+            "fontSize": 11.5,
+            "fontWeight": 600,
+            "color": "#0b0b0b"
+          },
+          "encoding": {
+            "text": {
+              "field": "sa4_name"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.year === 2025"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dy": 16,
+            "fontSize": 10.5,
+            "color": "#898781"
+          },
+          "encoding": {
+            "y": {
+              "field": "national_share",
+              "type": "quantitative"
+            },
+            "text": {
+              "value": "Australia"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

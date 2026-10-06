@@ -1,0 +1,1585 @@
+sa4_code,sa4_name,state,year,gov_share,national_share,students
+101,Capital Region,NSW,2008,75.66,66.18,28682.0
+101,Capital Region,NSW,2009,75.66,66.03,28522.0
+101,Capital Region,NSW,2010,75.96,65.81,28715.0
+101,Capital Region,NSW,2011,75.63,65.63,28557.0
+101,Capital Region,NSW,2012,75.22,65.53,28767.0
+101,Capital Region,NSW,2013,74.82,65.48,28790.0
+101,Capital Region,NSW,2014,75.83,65.52,28461.0
+101,Capital Region,NSW,2015,75.44,65.54,28785.0
+101,Capital Region,NSW,2016,75.64,65.75,28849.0
+101,Capital Region,NSW,2017,75.57,65.97,28861.0
+101,Capital Region,NSW,2018,75.76,66.09,29181.0
+101,Capital Region,NSW,2019,75.49,66.1,29116.0
+101,Capital Region,NSW,2020,74.6,66.01,29293.0
+101,Capital Region,NSW,2021,73.65,65.47,29409.0
+101,Capital Region,NSW,2022,72.5,64.86,29361.0
+101,Capital Region,NSW,2023,72.35,64.33,30172.0
+101,Capital Region,NSW,2024,71.81,63.75,30237.0
+101,Capital Region,NSW,2025,71.19,63.19,30517.0
+102,Central Coast,NSW,2008,75.04,66.18,51226.0
+102,Central Coast,NSW,2009,74.85,66.03,51419.0
+102,Central Coast,NSW,2010,74.83,65.81,51909.0
+102,Central Coast,NSW,2011,73.98,65.63,52058.0
+102,Central Coast,NSW,2012,73.66,65.53,52225.0
+102,Central Coast,NSW,2013,72.9,65.48,52605.0
+102,Central Coast,NSW,2014,72.29,65.52,52984.0
+102,Central Coast,NSW,2015,71.93,65.54,53158.0
+102,Central Coast,NSW,2016,71.73,65.75,52991.0
+102,Central Coast,NSW,2017,71.48,65.97,53222.0
+102,Central Coast,NSW,2018,71.48,66.09,53360.0
+102,Central Coast,NSW,2019,71.2,66.1,53112.0
+102,Central Coast,NSW,2020,71.01,66.01,53461.0
+102,Central Coast,NSW,2021,69.85,65.47,53315.0
+102,Central Coast,NSW,2022,68.62,64.86,52585.0
+102,Central Coast,NSW,2023,67.61,64.33,52506.0
+102,Central Coast,NSW,2024,66.5,63.75,52821.0
+102,Central Coast,NSW,2025,65.68,63.19,52810.0
+103,Central West,NSW,2008,70.89,66.18,33442.0
+103,Central West,NSW,2009,70.95,66.03,33185.0
+103,Central West,NSW,2010,70.68,65.81,33433.0
+103,Central West,NSW,2011,70.34,65.63,33850.0
+103,Central West,NSW,2012,69.27,65.53,33979.0
+103,Central West,NSW,2013,68.8,65.48,34275.0
+103,Central West,NSW,2014,68.81,65.52,34481.0
+103,Central West,NSW,2015,68.67,65.54,34521.0
+103,Central West,NSW,2016,68.9,65.75,34643.0
+103,Central West,NSW,2017,69.19,65.97,34662.0
+103,Central West,NSW,2018,69.38,66.09,34668.0
+103,Central West,NSW,2019,68.46,66.1,35160.0
+103,Central West,NSW,2020,67.98,66.01,35125.0
+103,Central West,NSW,2021,66.67,65.47,35183.0
+103,Central West,NSW,2022,65.19,64.86,35248.0
+103,Central West,NSW,2023,63.84,64.33,34938.0
+103,Central West,NSW,2024,62.79,63.75,34924.0
+103,Central West,NSW,2025,62.03,63.19,34548.0
+104,Coffs Harbour - Grafton,NSW,2008,72.85,66.18,23247.0
+104,Coffs Harbour - Grafton,NSW,2009,72.31,66.03,22882.0
+104,Coffs Harbour - Grafton,NSW,2010,72.39,65.81,22812.0
+104,Coffs Harbour - Grafton,NSW,2011,71.99,65.63,22846.0
+104,Coffs Harbour - Grafton,NSW,2012,71.3,65.53,22571.0
+104,Coffs Harbour - Grafton,NSW,2013,70.97,65.48,22601.0
+104,Coffs Harbour - Grafton,NSW,2014,70.73,65.52,22641.0
+104,Coffs Harbour - Grafton,NSW,2015,70.8,65.54,22695.0
+104,Coffs Harbour - Grafton,NSW,2016,70.67,65.75,22568.0
+104,Coffs Harbour - Grafton,NSW,2017,70.64,65.97,22595.0
+104,Coffs Harbour - Grafton,NSW,2018,70.43,66.09,22552.0
+104,Coffs Harbour - Grafton,NSW,2019,70.29,66.1,22419.0
+104,Coffs Harbour - Grafton,NSW,2020,69.75,66.01,22410.0
+104,Coffs Harbour - Grafton,NSW,2021,69.51,65.47,22283.0
+104,Coffs Harbour - Grafton,NSW,2022,68.76,64.86,22326.0
+104,Coffs Harbour - Grafton,NSW,2023,67.3,64.33,22469.0
+104,Coffs Harbour - Grafton,NSW,2024,66.03,63.75,22412.0
+104,Coffs Harbour - Grafton,NSW,2025,65.1,63.19,22439.0
+105,Far West and Orana,NSW,2008,75.38,66.18,20590.0
+105,Far West and Orana,NSW,2009,75.14,66.03,20191.0
+105,Far West and Orana,NSW,2010,74.85,65.81,20041.0
+105,Far West and Orana,NSW,2011,74.33,65.63,19950.0
+105,Far West and Orana,NSW,2012,74.04,65.53,19938.0
+105,Far West and Orana,NSW,2013,73.6,65.48,20025.0
+105,Far West and Orana,NSW,2014,73.2,65.52,19645.0
+105,Far West and Orana,NSW,2015,73.18,65.54,19622.0
+105,Far West and Orana,NSW,2016,73.06,65.75,19504.0
+105,Far West and Orana,NSW,2017,73.14,65.97,19437.0
+105,Far West and Orana,NSW,2018,73.05,66.09,19380.0
+105,Far West and Orana,NSW,2019,73.18,66.1,19251.0
+105,Far West and Orana,NSW,2020,72.87,66.01,18899.0
+105,Far West and Orana,NSW,2021,72.22,65.47,18927.0
+105,Far West and Orana,NSW,2022,71.49,64.86,18804.0
+105,Far West and Orana,NSW,2023,70.3,64.33,18791.0
+105,Far West and Orana,NSW,2024,68.99,63.75,18758.0
+105,Far West and Orana,NSW,2025,68.28,63.19,18608.0
+106,Hunter Valley exc Newcastle,NSW,2008,73.8,66.18,39476.0
+106,Hunter Valley exc Newcastle,NSW,2009,73.23,66.03,39245.0
+106,Hunter Valley exc Newcastle,NSW,2010,73.02,65.81,39606.0
+106,Hunter Valley exc Newcastle,NSW,2011,72.88,65.63,40060.0
+106,Hunter Valley exc Newcastle,NSW,2012,72.46,65.53,40908.0
+106,Hunter Valley exc Newcastle,NSW,2013,71.95,65.48,41661.0
+106,Hunter Valley exc Newcastle,NSW,2014,71.35,65.52,42311.0
+106,Hunter Valley exc Newcastle,NSW,2015,70.7,65.54,42718.0
+106,Hunter Valley exc Newcastle,NSW,2016,71.95,65.75,42242.0
+106,Hunter Valley exc Newcastle,NSW,2017,71.92,65.97,42641.0
+106,Hunter Valley exc Newcastle,NSW,2018,71.3,66.09,43147.0
+106,Hunter Valley exc Newcastle,NSW,2019,70.55,66.1,43355.0
+106,Hunter Valley exc Newcastle,NSW,2020,69.84,66.01,43856.0
+106,Hunter Valley exc Newcastle,NSW,2021,67.15,65.47,45212.0
+106,Hunter Valley exc Newcastle,NSW,2022,65.82,64.86,45445.0
+106,Hunter Valley exc Newcastle,NSW,2023,64.76,64.33,45574.0
+106,Hunter Valley exc Newcastle,NSW,2024,63.7,63.75,45786.0
+106,Hunter Valley exc Newcastle,NSW,2025,62.63,63.19,46323.0
+107,Illawarra,NSW,2008,74.0,66.18,44192.0
+107,Illawarra,NSW,2009,73.73,66.03,44209.0
+107,Illawarra,NSW,2010,73.59,65.81,44418.0
+107,Illawarra,NSW,2011,73.01,65.63,44545.0
+107,Illawarra,NSW,2012,71.76,65.53,45110.0
+107,Illawarra,NSW,2013,70.95,65.48,45368.0
+107,Illawarra,NSW,2014,70.73,65.52,45981.0
+107,Illawarra,NSW,2015,70.7,65.54,46375.0
+107,Illawarra,NSW,2016,70.47,65.75,46585.0
+107,Illawarra,NSW,2017,70.8,65.97,46615.0
+107,Illawarra,NSW,2018,71.1,66.09,46687.0
+107,Illawarra,NSW,2019,71.55,66.1,46685.0
+107,Illawarra,NSW,2020,71.8,66.01,47092.0
+107,Illawarra,NSW,2021,71.41,65.47,46887.0
+107,Illawarra,NSW,2022,70.44,64.86,46691.0
+107,Illawarra,NSW,2023,69.48,64.33,46799.0
+107,Illawarra,NSW,2024,69.21,63.75,46970.0
+107,Illawarra,NSW,2025,68.78,63.19,47260.0
+108,Mid North Coast,NSW,2008,73.81,66.18,32449.0
+108,Mid North Coast,NSW,2009,73.31,66.03,32250.0
+108,Mid North Coast,NSW,2010,72.68,65.81,32472.0
+108,Mid North Coast,NSW,2011,71.82,65.63,32525.0
+108,Mid North Coast,NSW,2012,70.49,65.53,32502.0
+108,Mid North Coast,NSW,2013,69.53,65.48,32579.0
+108,Mid North Coast,NSW,2014,68.75,65.52,32599.0
+108,Mid North Coast,NSW,2015,68.13,65.54,32662.0
+108,Mid North Coast,NSW,2016,68.14,65.75,32779.0
+108,Mid North Coast,NSW,2017,68.15,65.97,33063.0
+108,Mid North Coast,NSW,2018,68.24,66.09,32975.0
+108,Mid North Coast,NSW,2019,68.09,66.1,32885.0
+108,Mid North Coast,NSW,2020,67.77,66.01,32753.0
+108,Mid North Coast,NSW,2021,67.02,65.47,32745.0
+108,Mid North Coast,NSW,2022,65.85,64.86,32157.0
+108,Mid North Coast,NSW,2023,64.09,64.33,31803.0
+108,Mid North Coast,NSW,2024,62.81,63.75,31679.0
+108,Mid North Coast,NSW,2025,62.28,63.19,31603.0
+109,Murray,NSW,2008,72.12,66.18,17591.0
+109,Murray,NSW,2009,71.95,66.03,17391.0
+109,Murray,NSW,2010,71.5,65.81,17589.0
+109,Murray,NSW,2011,69.92,65.63,17516.0
+109,Murray,NSW,2012,69.68,65.53,17569.0
+109,Murray,NSW,2013,68.81,65.48,17599.0
+109,Murray,NSW,2014,68.21,65.52,17639.0
+109,Murray,NSW,2015,67.83,65.54,17640.0
+109,Murray,NSW,2016,67.38,65.75,17475.0
+109,Murray,NSW,2017,66.74,65.97,17365.0
+109,Murray,NSW,2018,66.37,66.09,17367.0
+109,Murray,NSW,2019,66.06,66.1,17396.0
+109,Murray,NSW,2020,66.03,66.01,17432.0
+109,Murray,NSW,2021,65.0,65.47,17468.0
+109,Murray,NSW,2022,63.96,64.86,17386.0
+109,Murray,NSW,2023,61.7,64.33,17588.0
+109,Murray,NSW,2024,60.39,63.75,17990.0
+109,Murray,NSW,2025,58.77,63.19,18573.0
+110,New England and North West,NSW,2008,72.54,66.18,28119.0
+110,New England and North West,NSW,2009,72.59,66.03,27954.0
+110,New England and North West,NSW,2010,70.6,65.81,28852.0
+110,New England and North West,NSW,2011,70.77,65.63,29088.0
+110,New England and North West,NSW,2012,72.01,65.53,28735.0
+110,New England and North West,NSW,2013,70.63,65.48,29258.0
+110,New England and North West,NSW,2014,70.25,65.52,29387.0
+110,New England and North West,NSW,2015,70.12,65.54,29475.0
+110,New England and North West,NSW,2016,70.08,65.75,29436.0
+110,New England and North West,NSW,2017,69.72,65.97,29486.0
+110,New England and North West,NSW,2018,69.36,66.09,29673.0
+110,New England and North West,NSW,2019,70.38,66.1,30763.0
+110,New England and North West,NSW,2020,70.62,66.01,30241.0
+110,New England and North West,NSW,2021,69.91,65.47,29986.0
+110,New England and North West,NSW,2022,69.03,64.86,30027.0
+110,New England and North West,NSW,2023,68.49,64.33,30163.0
+110,New England and North West,NSW,2024,67.92,63.75,29792.0
+110,New England and North West,NSW,2025,67.13,63.19,29783.0
+111,Newcastle and Lake Macquarie,NSW,2008,72.16,66.18,54212.0
+111,Newcastle and Lake Macquarie,NSW,2009,72.0,66.03,54096.0
+111,Newcastle and Lake Macquarie,NSW,2010,72.0,65.81,54169.0
+111,Newcastle and Lake Macquarie,NSW,2011,71.64,65.63,54503.0
+111,Newcastle and Lake Macquarie,NSW,2012,71.35,65.53,55176.0
+111,Newcastle and Lake Macquarie,NSW,2013,71.14,65.48,55657.0
+111,Newcastle and Lake Macquarie,NSW,2014,71.3,65.52,56186.0
+111,Newcastle and Lake Macquarie,NSW,2015,71.62,65.54,56212.0
+111,Newcastle and Lake Macquarie,NSW,2016,71.53,65.75,56762.0
+111,Newcastle and Lake Macquarie,NSW,2017,71.15,65.97,57458.0
+111,Newcastle and Lake Macquarie,NSW,2018,70.99,66.09,57934.0
+111,Newcastle and Lake Macquarie,NSW,2019,70.81,66.1,58624.0
+111,Newcastle and Lake Macquarie,NSW,2020,70.66,66.01,59404.0
+111,Newcastle and Lake Macquarie,NSW,2021,70.35,65.47,59315.0
+111,Newcastle and Lake Macquarie,NSW,2022,69.86,64.86,59135.0
+111,Newcastle and Lake Macquarie,NSW,2023,69.48,64.33,59249.0
+111,Newcastle and Lake Macquarie,NSW,2024,68.58,63.75,59721.0
+111,Newcastle and Lake Macquarie,NSW,2025,68.12,63.19,59889.0
+112,Richmond - Tweed,NSW,2008,66.83,66.18,38239.0
+112,Richmond - Tweed,NSW,2009,66.83,66.03,38178.0
+112,Richmond - Tweed,NSW,2010,66.48,65.81,38162.0
+112,Richmond - Tweed,NSW,2011,65.86,65.63,38336.0
+112,Richmond - Tweed,NSW,2012,65.16,65.53,38337.0
+112,Richmond - Tweed,NSW,2013,64.48,65.48,38537.0
+112,Richmond - Tweed,NSW,2014,64.07,65.52,38783.0
+112,Richmond - Tweed,NSW,2015,63.64,65.54,38951.0
+112,Richmond - Tweed,NSW,2016,63.95,65.75,39193.0
+112,Richmond - Tweed,NSW,2017,63.31,65.97,39189.0
+112,Richmond - Tweed,NSW,2018,62.85,66.09,39102.0
+112,Richmond - Tweed,NSW,2019,62.27,66.1,39237.0
+112,Richmond - Tweed,NSW,2020,61.06,66.01,39389.0
+112,Richmond - Tweed,NSW,2021,59.36,65.47,39047.0
+112,Richmond - Tweed,NSW,2022,57.87,64.86,38185.0
+112,Richmond - Tweed,NSW,2023,55.96,64.33,37808.0
+112,Richmond - Tweed,NSW,2024,54.27,63.75,37595.0
+112,Richmond - Tweed,NSW,2025,53.0,63.19,37514.0
+113,Riverina,NSW,2008,67.6,66.18,26894.0
+113,Riverina,NSW,2009,67.13,66.03,26714.0
+113,Riverina,NSW,2010,66.81,65.81,26514.0
+113,Riverina,NSW,2011,66.68,65.63,26434.0
+113,Riverina,NSW,2012,66.88,65.53,26485.0
+113,Riverina,NSW,2013,66.68,65.48,26579.0
+113,Riverina,NSW,2014,66.64,65.52,26842.0
+113,Riverina,NSW,2015,66.52,65.54,26866.0
+113,Riverina,NSW,2016,66.62,65.75,26898.0
+113,Riverina,NSW,2017,66.84,65.97,26850.0
+113,Riverina,NSW,2018,66.33,66.09,26801.0
+113,Riverina,NSW,2019,66.21,66.1,26943.0
+113,Riverina,NSW,2020,65.54,66.01,26851.0
+113,Riverina,NSW,2021,64.47,65.47,26581.0
+113,Riverina,NSW,2022,63.5,64.86,26554.0
+113,Riverina,NSW,2023,62.89,64.33,26370.0
+113,Riverina,NSW,2024,62.19,63.75,26356.0
+113,Riverina,NSW,2025,61.74,63.19,26327.0
+114,Southern Highlands and Shoalhaven,NSW,2008,71.87,66.18,22112.0
+114,Southern Highlands and Shoalhaven,NSW,2009,71.97,66.03,21962.0
+114,Southern Highlands and Shoalhaven,NSW,2010,72.21,65.81,21736.0
+114,Southern Highlands and Shoalhaven,NSW,2011,72.47,65.63,21626.0
+114,Southern Highlands and Shoalhaven,NSW,2012,72.42,65.53,21527.0
+114,Southern Highlands and Shoalhaven,NSW,2013,72.31,65.48,21519.0
+114,Southern Highlands and Shoalhaven,NSW,2014,72.23,65.52,21678.0
+114,Southern Highlands and Shoalhaven,NSW,2015,72.27,65.54,21893.0
+114,Southern Highlands and Shoalhaven,NSW,2016,72.07,65.75,22132.0
+114,Southern Highlands and Shoalhaven,NSW,2017,71.66,65.97,22284.0
+114,Southern Highlands and Shoalhaven,NSW,2018,71.35,66.09,22137.0
+114,Southern Highlands and Shoalhaven,NSW,2019,71.22,66.1,22101.0
+114,Southern Highlands and Shoalhaven,NSW,2020,70.81,66.01,22107.0
+114,Southern Highlands and Shoalhaven,NSW,2021,69.77,65.47,22027.0
+114,Southern Highlands and Shoalhaven,NSW,2022,69.32,64.86,21819.0
+114,Southern Highlands and Shoalhaven,NSW,2023,68.46,64.33,21418.0
+114,Southern Highlands and Shoalhaven,NSW,2024,68.33,63.75,21529.0
+114,Southern Highlands and Shoalhaven,NSW,2025,68.31,63.19,21553.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2008,62.28,66.18,36565.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2009,63.13,66.03,36882.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2010,63.8,65.81,37697.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2011,63.57,65.63,38710.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2012,63.61,65.53,39414.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2013,63.76,65.48,39945.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2014,63.83,65.52,40484.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2015,63.76,65.54,41021.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2016,63.13,65.75,41928.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2017,63.53,65.97,42666.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2018,64.02,66.09,43331.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2019,64.22,66.1,44311.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2020,64.38,66.01,45828.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2021,63.78,65.47,47239.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2022,61.85,64.86,48411.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2023,60.93,64.33,49260.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2024,59.89,63.75,49789.0
+115,Sydney - Baulkham Hills and Hawkesbury,NSW,2025,58.98,63.19,50055.0
+116,Sydney - Blacktown,NSW,2008,63.84,66.18,53939.0
+116,Sydney - Blacktown,NSW,2009,64.17,66.03,54201.0
+116,Sydney - Blacktown,NSW,2010,64.44,65.81,54737.0
+116,Sydney - Blacktown,NSW,2011,64.3,65.63,55038.0
+116,Sydney - Blacktown,NSW,2012,63.66,65.53,55735.0
+116,Sydney - Blacktown,NSW,2013,63.54,65.48,56844.0
+116,Sydney - Blacktown,NSW,2014,63.19,65.52,57677.0
+116,Sydney - Blacktown,NSW,2015,63.38,65.54,58520.0
+116,Sydney - Blacktown,NSW,2016,64.01,65.75,59777.0
+116,Sydney - Blacktown,NSW,2017,64.5,65.97,61097.0
+116,Sydney - Blacktown,NSW,2018,64.58,66.09,62473.0
+116,Sydney - Blacktown,NSW,2019,64.75,66.1,64392.0
+116,Sydney - Blacktown,NSW,2020,64.75,66.01,66645.0
+116,Sydney - Blacktown,NSW,2021,64.73,65.47,68584.0
+116,Sydney - Blacktown,NSW,2022,64.26,64.86,70404.0
+116,Sydney - Blacktown,NSW,2023,63.96,64.33,73108.0
+116,Sydney - Blacktown,NSW,2024,63.42,63.75,75185.0
+116,Sydney - Blacktown,NSW,2025,62.94,63.19,76900.0
+117,Sydney - City and Inner South,NSW,2008,49.08,66.18,24065.0
+117,Sydney - City and Inner South,NSW,2009,49.62,66.03,24740.0
+117,Sydney - City and Inner South,NSW,2010,49.94,65.81,25161.0
+117,Sydney - City and Inner South,NSW,2011,50.37,65.63,25475.0
+117,Sydney - City and Inner South,NSW,2012,51.13,65.53,25689.0
+117,Sydney - City and Inner South,NSW,2013,51.96,65.48,26668.0
+117,Sydney - City and Inner South,NSW,2014,52.52,65.52,27284.0
+117,Sydney - City and Inner South,NSW,2015,52.81,65.54,27833.0
+117,Sydney - City and Inner South,NSW,2016,53.32,65.75,28414.0
+117,Sydney - City and Inner South,NSW,2017,53.19,65.97,28686.0
+117,Sydney - City and Inner South,NSW,2018,53.45,66.09,29142.0
+117,Sydney - City and Inner South,NSW,2019,53.79,66.1,29686.0
+117,Sydney - City and Inner South,NSW,2020,53.7,66.01,30099.0
+117,Sydney - City and Inner South,NSW,2021,53.78,65.47,30380.0
+117,Sydney - City and Inner South,NSW,2022,53.81,64.86,30682.0
+117,Sydney - City and Inner South,NSW,2023,53.94,64.33,31302.0
+117,Sydney - City and Inner South,NSW,2024,53.76,63.75,31761.0
+117,Sydney - City and Inner South,NSW,2025,53.08,63.19,31628.0
+118,Sydney - Eastern Suburbs,NSW,2008,40.99,66.18,32995.0
+118,Sydney - Eastern Suburbs,NSW,2009,41.16,66.03,33354.0
+118,Sydney - Eastern Suburbs,NSW,2010,41.31,65.81,33920.0
+118,Sydney - Eastern Suburbs,NSW,2011,41.2,65.63,34480.0
+118,Sydney - Eastern Suburbs,NSW,2012,41.25,65.53,35278.0
+118,Sydney - Eastern Suburbs,NSW,2013,41.12,65.48,36064.0
+118,Sydney - Eastern Suburbs,NSW,2014,41.72,65.52,36839.0
+118,Sydney - Eastern Suburbs,NSW,2015,41.86,65.54,37504.0
+118,Sydney - Eastern Suburbs,NSW,2016,41.96,65.75,38182.0
+118,Sydney - Eastern Suburbs,NSW,2017,42.07,65.97,38616.0
+118,Sydney - Eastern Suburbs,NSW,2018,42.21,66.09,38865.0
+118,Sydney - Eastern Suburbs,NSW,2019,42.03,66.1,39216.0
+118,Sydney - Eastern Suburbs,NSW,2020,43.15,66.01,38101.0
+118,Sydney - Eastern Suburbs,NSW,2021,42.72,65.47,38031.0
+118,Sydney - Eastern Suburbs,NSW,2022,41.63,64.86,37673.0
+118,Sydney - Eastern Suburbs,NSW,2023,40.32,64.33,37643.0
+118,Sydney - Eastern Suburbs,NSW,2024,39.44,63.75,37425.0
+118,Sydney - Eastern Suburbs,NSW,2025,38.79,63.19,36951.0
+119,Sydney - Inner South West,NSW,2008,66.1,66.18,73339.0
+119,Sydney - Inner South West,NSW,2009,65.87,66.03,73860.0
+119,Sydney - Inner South West,NSW,2010,65.83,65.81,74310.0
+119,Sydney - Inner South West,NSW,2011,65.32,65.63,75053.0
+119,Sydney - Inner South West,NSW,2012,64.73,65.53,75693.0
+119,Sydney - Inner South West,NSW,2013,64.28,65.48,77014.0
+119,Sydney - Inner South West,NSW,2014,64.01,65.52,77907.0
+119,Sydney - Inner South West,NSW,2015,63.7,65.54,78991.0
+119,Sydney - Inner South West,NSW,2016,63.75,65.75,79295.0
+119,Sydney - Inner South West,NSW,2017,63.74,65.97,80044.0
+119,Sydney - Inner South West,NSW,2018,63.31,66.09,80075.0
+119,Sydney - Inner South West,NSW,2019,62.86,66.1,80555.0
+119,Sydney - Inner South West,NSW,2020,62.33,66.01,80718.0
+119,Sydney - Inner South West,NSW,2021,61.13,65.47,80287.0
+119,Sydney - Inner South West,NSW,2022,59.92,64.86,80196.0
+119,Sydney - Inner South West,NSW,2023,59.38,64.33,80591.0
+119,Sydney - Inner South West,NSW,2024,58.28,63.75,80800.0
+119,Sydney - Inner South West,NSW,2025,57.84,63.19,80189.0
+120,Sydney - Inner West,NSW,2008,55.52,66.18,36344.0
+120,Sydney - Inner West,NSW,2009,55.78,66.03,36733.0
+120,Sydney - Inner West,NSW,2010,56.46,65.81,37504.0
+120,Sydney - Inner West,NSW,2011,56.68,65.63,38240.0
+120,Sydney - Inner West,NSW,2012,56.97,65.53,38865.0
+120,Sydney - Inner West,NSW,2013,57.05,65.48,39957.0
+120,Sydney - Inner West,NSW,2014,57.31,65.52,40868.0
+120,Sydney - Inner West,NSW,2015,57.41,65.54,41620.0
+120,Sydney - Inner West,NSW,2016,57.96,65.75,42108.0
+120,Sydney - Inner West,NSW,2017,58.11,65.97,42780.0
+120,Sydney - Inner West,NSW,2018,58.02,66.09,43288.0
+120,Sydney - Inner West,NSW,2019,57.8,66.1,43578.0
+120,Sydney - Inner West,NSW,2020,57.65,66.01,43631.0
+120,Sydney - Inner West,NSW,2021,56.71,65.47,43397.0
+120,Sydney - Inner West,NSW,2022,55.78,64.86,42978.0
+120,Sydney - Inner West,NSW,2023,54.03,64.33,43440.0
+120,Sydney - Inner West,NSW,2024,53.09,63.75,43278.0
+120,Sydney - Inner West,NSW,2025,52.01,63.19,42679.0
+121,Sydney - North Sydney and Hornsby,NSW,2008,51.93,66.18,61273.0
+121,Sydney - North Sydney and Hornsby,NSW,2009,52.38,66.03,62213.0
+121,Sydney - North Sydney and Hornsby,NSW,2010,53.03,65.81,63269.0
+121,Sydney - North Sydney and Hornsby,NSW,2011,53.25,65.63,64613.0
+121,Sydney - North Sydney and Hornsby,NSW,2012,53.46,65.53,65464.0
+121,Sydney - North Sydney and Hornsby,NSW,2013,54.02,65.48,66865.0
+121,Sydney - North Sydney and Hornsby,NSW,2014,54.21,65.52,68324.0
+121,Sydney - North Sydney and Hornsby,NSW,2015,54.69,65.54,69698.0
+121,Sydney - North Sydney and Hornsby,NSW,2016,54.92,65.75,71371.0
+121,Sydney - North Sydney and Hornsby,NSW,2017,55.38,65.97,72697.0
+121,Sydney - North Sydney and Hornsby,NSW,2018,55.78,66.09,73837.0
+121,Sydney - North Sydney and Hornsby,NSW,2019,55.9,66.1,74709.0
+121,Sydney - North Sydney and Hornsby,NSW,2020,55.62,66.01,75344.0
+121,Sydney - North Sydney and Hornsby,NSW,2021,54.41,65.47,75486.0
+121,Sydney - North Sydney and Hornsby,NSW,2022,53.52,64.86,75458.0
+121,Sydney - North Sydney and Hornsby,NSW,2023,52.89,64.33,75792.0
+121,Sydney - North Sydney and Hornsby,NSW,2024,52.08,63.75,75721.0
+121,Sydney - North Sydney and Hornsby,NSW,2025,51.28,63.19,75171.0
+122,Sydney - Northern Beaches,NSW,2008,66.48,66.18,33248.0
+122,Sydney - Northern Beaches,NSW,2009,66.69,66.03,34219.0
+122,Sydney - Northern Beaches,NSW,2010,66.62,65.81,35025.0
+122,Sydney - Northern Beaches,NSW,2011,66.71,65.63,35844.0
+122,Sydney - Northern Beaches,NSW,2012,66.04,65.53,37335.0
+122,Sydney - Northern Beaches,NSW,2013,66.38,65.48,38367.0
+122,Sydney - Northern Beaches,NSW,2014,66.84,65.52,39340.0
+122,Sydney - Northern Beaches,NSW,2015,66.79,65.54,40303.0
+122,Sydney - Northern Beaches,NSW,2016,66.73,65.75,40923.0
+122,Sydney - Northern Beaches,NSW,2017,66.74,65.97,41450.0
+122,Sydney - Northern Beaches,NSW,2018,67.19,66.09,41424.0
+122,Sydney - Northern Beaches,NSW,2019,67.44,66.1,41741.0
+122,Sydney - Northern Beaches,NSW,2020,67.91,66.01,41842.0
+122,Sydney - Northern Beaches,NSW,2021,67.11,65.47,41535.0
+122,Sydney - Northern Beaches,NSW,2022,65.9,64.86,40548.0
+122,Sydney - Northern Beaches,NSW,2023,65.08,64.33,40331.0
+122,Sydney - Northern Beaches,NSW,2024,64.02,63.75,39891.0
+122,Sydney - Northern Beaches,NSW,2025,62.82,63.19,39053.0
+123,Sydney - Outer South West,NSW,2008,74.82,66.18,44582.0
+123,Sydney - Outer South West,NSW,2009,74.76,66.03,44354.0
+123,Sydney - Outer South West,NSW,2010,74.5,65.81,44588.0
+123,Sydney - Outer South West,NSW,2011,74.49,65.63,44699.0
+123,Sydney - Outer South West,NSW,2012,74.49,65.53,44636.0
+123,Sydney - Outer South West,NSW,2013,73.63,65.48,45497.0
+123,Sydney - Outer South West,NSW,2014,73.49,65.52,45762.0
+123,Sydney - Outer South West,NSW,2015,73.83,65.54,46367.0
+123,Sydney - Outer South West,NSW,2016,73.91,65.75,47013.0
+123,Sydney - Outer South West,NSW,2017,74.16,65.97,47846.0
+123,Sydney - Outer South West,NSW,2018,73.96,66.09,48486.0
+123,Sydney - Outer South West,NSW,2019,73.81,66.1,49657.0
+123,Sydney - Outer South West,NSW,2020,73.31,66.01,50265.0
+123,Sydney - Outer South West,NSW,2021,72.65,65.47,50489.0
+123,Sydney - Outer South West,NSW,2022,72.37,64.86,51346.0
+123,Sydney - Outer South West,NSW,2023,71.6,64.33,51861.0
+123,Sydney - Outer South West,NSW,2024,71.17,63.75,52535.0
+123,Sydney - Outer South West,NSW,2025,70.6,63.19,53103.0
+124,Sydney - Outer West and Blue Mountains,NSW,2008,66.7,66.18,51846.0
+124,Sydney - Outer West and Blue Mountains,NSW,2009,66.8,66.03,51702.0
+124,Sydney - Outer West and Blue Mountains,NSW,2010,66.96,65.81,51661.0
+124,Sydney - Outer West and Blue Mountains,NSW,2011,66.95,65.63,51906.0
+124,Sydney - Outer West and Blue Mountains,NSW,2012,66.5,65.53,51754.0
+124,Sydney - Outer West and Blue Mountains,NSW,2013,66.55,65.48,52181.0
+124,Sydney - Outer West and Blue Mountains,NSW,2014,66.89,65.52,52472.0
+124,Sydney - Outer West and Blue Mountains,NSW,2015,67.24,65.54,52893.0
+124,Sydney - Outer West and Blue Mountains,NSW,2016,67.59,65.75,53185.0
+124,Sydney - Outer West and Blue Mountains,NSW,2017,68.07,65.97,53275.0
+124,Sydney - Outer West and Blue Mountains,NSW,2018,68.77,66.09,53462.0
+124,Sydney - Outer West and Blue Mountains,NSW,2019,69.13,66.1,54191.0
+124,Sydney - Outer West and Blue Mountains,NSW,2020,69.6,66.01,54282.0
+124,Sydney - Outer West and Blue Mountains,NSW,2021,69.44,65.47,54552.0
+124,Sydney - Outer West and Blue Mountains,NSW,2022,68.74,64.86,54027.0
+124,Sydney - Outer West and Blue Mountains,NSW,2023,68.31,64.33,54079.0
+124,Sydney - Outer West and Blue Mountains,NSW,2024,67.87,63.75,54536.0
+124,Sydney - Outer West and Blue Mountains,NSW,2025,67.49,63.19,54870.0
+125,Sydney - Parramatta,NSW,2008,62.43,66.18,60685.0
+125,Sydney - Parramatta,NSW,2009,62.24,66.03,60508.0
+125,Sydney - Parramatta,NSW,2010,62.39,65.81,61242.0
+125,Sydney - Parramatta,NSW,2011,62.58,65.63,62097.0
+125,Sydney - Parramatta,NSW,2012,62.78,65.53,63015.0
+125,Sydney - Parramatta,NSW,2013,62.43,65.48,64845.0
+125,Sydney - Parramatta,NSW,2014,62.85,65.52,66497.0
+125,Sydney - Parramatta,NSW,2015,63.29,65.54,67826.0
+125,Sydney - Parramatta,NSW,2016,63.62,65.75,69375.0
+125,Sydney - Parramatta,NSW,2017,64.11,65.97,71500.0
+125,Sydney - Parramatta,NSW,2018,64.55,66.09,72939.0
+125,Sydney - Parramatta,NSW,2019,64.72,66.1,74711.0
+125,Sydney - Parramatta,NSW,2020,64.7,66.01,75715.0
+125,Sydney - Parramatta,NSW,2021,64.04,65.47,75339.0
+125,Sydney - Parramatta,NSW,2022,64.47,64.86,74839.0
+125,Sydney - Parramatta,NSW,2023,64.06,64.33,75493.0
+125,Sydney - Parramatta,NSW,2024,63.47,63.75,75837.0
+125,Sydney - Parramatta,NSW,2025,63.05,63.19,75732.0
+126,Sydney - Ryde,NSW,2008,65.78,66.18,24718.0
+126,Sydney - Ryde,NSW,2009,65.66,66.03,24789.0
+126,Sydney - Ryde,NSW,2010,65.64,65.81,24942.0
+126,Sydney - Ryde,NSW,2011,65.56,65.63,25104.0
+126,Sydney - Ryde,NSW,2012,65.35,65.53,25509.0
+126,Sydney - Ryde,NSW,2013,65.48,65.48,26246.0
+126,Sydney - Ryde,NSW,2014,65.76,65.52,26874.0
+126,Sydney - Ryde,NSW,2015,66.06,65.54,27433.0
+126,Sydney - Ryde,NSW,2016,66.87,65.75,27988.0
+126,Sydney - Ryde,NSW,2017,67.45,65.97,28504.0
+126,Sydney - Ryde,NSW,2018,68.35,66.09,29328.0
+126,Sydney - Ryde,NSW,2019,69.08,66.1,30097.0
+126,Sydney - Ryde,NSW,2020,69.33,66.01,30556.0
+126,Sydney - Ryde,NSW,2021,69.12,65.47,30491.0
+126,Sydney - Ryde,NSW,2022,69.16,64.86,30658.0
+126,Sydney - Ryde,NSW,2023,69.12,64.33,30959.0
+126,Sydney - Ryde,NSW,2024,68.68,63.75,31064.0
+126,Sydney - Ryde,NSW,2025,67.9,63.19,30844.0
+127,Sydney - South West,NSW,2008,69.33,66.18,67960.0
+127,Sydney - South West,NSW,2009,68.8,66.03,69296.0
+127,Sydney - South West,NSW,2010,68.01,65.81,70051.0
+127,Sydney - South West,NSW,2011,67.46,65.63,71037.0
+127,Sydney - South West,NSW,2012,66.65,65.53,71996.0
+127,Sydney - South West,NSW,2013,66.01,65.48,73355.0
+127,Sydney - South West,NSW,2014,65.67,65.52,75003.0
+127,Sydney - South West,NSW,2015,65.35,65.54,76449.0
+127,Sydney - South West,NSW,2016,64.65,65.75,77853.0
+127,Sydney - South West,NSW,2017,64.31,65.97,81073.0
+127,Sydney - South West,NSW,2018,63.87,66.09,82834.0
+127,Sydney - South West,NSW,2019,63.33,66.1,84745.0
+127,Sydney - South West,NSW,2020,61.8,66.01,88147.0
+127,Sydney - South West,NSW,2021,60.61,65.47,89115.0
+127,Sydney - South West,NSW,2022,59.75,64.86,89676.0
+127,Sydney - South West,NSW,2023,59.14,64.33,91869.0
+127,Sydney - South West,NSW,2024,58.59,63.75,93847.0
+127,Sydney - South West,NSW,2025,58.09,63.19,95387.0
+128,Sydney - Sutherland,NSW,2008,71.09,66.18,34652.0
+128,Sydney - Sutherland,NSW,2009,71.08,66.03,34905.0
+128,Sydney - Sutherland,NSW,2010,70.95,65.81,35103.0
+128,Sydney - Sutherland,NSW,2011,70.45,65.63,35474.0
+128,Sydney - Sutherland,NSW,2012,70.25,65.53,35952.0
+128,Sydney - Sutherland,NSW,2013,70.31,65.48,36284.0
+128,Sydney - Sutherland,NSW,2014,70.17,65.52,36737.0
+128,Sydney - Sutherland,NSW,2015,70.0,65.54,37219.0
+128,Sydney - Sutherland,NSW,2016,70.07,65.75,37393.0
+128,Sydney - Sutherland,NSW,2017,70.35,65.97,37713.0
+128,Sydney - Sutherland,NSW,2018,70.43,66.09,37715.0
+128,Sydney - Sutherland,NSW,2019,70.85,66.1,38030.0
+128,Sydney - Sutherland,NSW,2020,71.03,66.01,38488.0
+128,Sydney - Sutherland,NSW,2021,70.63,65.47,38233.0
+128,Sydney - Sutherland,NSW,2022,70.14,64.86,37831.0
+128,Sydney - Sutherland,NSW,2023,69.72,64.33,37751.0
+128,Sydney - Sutherland,NSW,2024,69.2,63.75,37647.0
+128,Sydney - Sutherland,NSW,2025,68.7,63.19,37410.0
+201,Ballarat,VIC,2008,61.21,66.18,23050.0
+201,Ballarat,VIC,2009,60.41,66.03,22847.0
+201,Ballarat,VIC,2010,59.61,65.81,23072.0
+201,Ballarat,VIC,2011,60.89,65.63,24319.0
+201,Ballarat,VIC,2012,58.29,65.53,23531.0
+201,Ballarat,VIC,2013,59.59,65.48,24744.0
+201,Ballarat,VIC,2014,59.86,65.52,25283.0
+201,Ballarat,VIC,2015,59.5,65.54,25328.0
+201,Ballarat,VIC,2016,59.21,65.75,25564.0
+201,Ballarat,VIC,2017,59.32,65.97,25851.0
+201,Ballarat,VIC,2018,59.04,66.09,26259.0
+201,Ballarat,VIC,2019,59.3,66.1,26652.0
+201,Ballarat,VIC,2020,58.8,66.01,27107.0
+201,Ballarat,VIC,2021,58.95,65.47,27449.0
+201,Ballarat,VIC,2022,58.53,64.86,27511.0
+201,Ballarat,VIC,2023,58.23,64.33,27799.0
+201,Ballarat,VIC,2024,57.31,63.75,28112.0
+201,Ballarat,VIC,2025,56.67,63.19,28337.0
+202,Bendigo,VIC,2008,68.99,66.18,22317.0
+202,Bendigo,VIC,2009,68.05,66.03,22244.0
+202,Bendigo,VIC,2010,67.53,65.81,22635.0
+202,Bendigo,VIC,2011,66.68,65.63,23057.0
+202,Bendigo,VIC,2012,65.92,65.53,23459.0
+202,Bendigo,VIC,2013,65.55,65.48,23622.0
+202,Bendigo,VIC,2014,65.34,65.52,23946.0
+202,Bendigo,VIC,2015,65.6,65.54,24267.0
+202,Bendigo,VIC,2016,66.02,65.75,24554.0
+202,Bendigo,VIC,2017,65.85,65.97,24968.0
+202,Bendigo,VIC,2018,66.04,66.09,25251.0
+202,Bendigo,VIC,2019,65.66,66.1,25686.0
+202,Bendigo,VIC,2020,65.45,66.01,25966.0
+202,Bendigo,VIC,2021,65.29,65.47,26014.0
+202,Bendigo,VIC,2022,64.87,64.86,25796.0
+202,Bendigo,VIC,2023,64.21,64.33,26077.0
+202,Bendigo,VIC,2024,63.92,63.75,26212.0
+202,Bendigo,VIC,2025,63.34,63.19,26288.0
+203,Geelong,VIC,2008,61.76,66.18,35628.0
+203,Geelong,VIC,2009,61.47,66.03,36184.0
+203,Geelong,VIC,2010,61.18,65.81,36719.0
+203,Geelong,VIC,2011,62.74,65.63,39571.0
+203,Geelong,VIC,2012,62.86,65.53,40919.0
+203,Geelong,VIC,2013,62.11,65.48,41589.0
+203,Geelong,VIC,2014,61.6,65.52,42248.0
+203,Geelong,VIC,2015,61.26,65.54,43207.0
+203,Geelong,VIC,2016,60.87,65.75,44106.0
+203,Geelong,VIC,2017,60.91,65.97,45395.0
+203,Geelong,VIC,2018,60.86,66.09,46521.0
+203,Geelong,VIC,2019,60.72,66.1,47846.0
+203,Geelong,VIC,2020,60.62,66.01,48871.0
+203,Geelong,VIC,2021,59.28,65.47,50456.0
+203,Geelong,VIC,2022,58.61,64.86,51035.0
+203,Geelong,VIC,2023,57.82,64.33,52255.0
+203,Geelong,VIC,2024,57.85,63.75,53413.0
+203,Geelong,VIC,2025,57.71,63.19,54442.0
+204,Hume,VIC,2008,66.74,66.18,24651.0
+204,Hume,VIC,2009,65.52,66.03,24956.0
+204,Hume,VIC,2010,65.59,65.81,26046.0
+204,Hume,VIC,2011,64.08,65.63,25830.0
+204,Hume,VIC,2012,63.43,65.53,25993.0
+204,Hume,VIC,2013,63.91,65.48,27268.0
+204,Hume,VIC,2014,63.76,65.52,27457.0
+204,Hume,VIC,2015,63.14,65.54,27464.0
+204,Hume,VIC,2016,62.91,65.75,27647.0
+204,Hume,VIC,2017,62.46,65.97,28279.0
+204,Hume,VIC,2018,62.35,66.09,28434.0
+204,Hume,VIC,2019,61.8,66.1,28541.0
+204,Hume,VIC,2020,60.98,66.01,28949.0
+204,Hume,VIC,2021,60.53,65.47,29169.0
+204,Hume,VIC,2022,59.72,64.86,29352.0
+204,Hume,VIC,2023,57.78,64.33,29852.0
+204,Hume,VIC,2024,56.58,63.75,30418.0
+204,Hume,VIC,2025,55.91,63.19,30663.0
+205,Latrobe - Gippsland,VIC,2008,69.82,66.18,41240.0
+205,Latrobe - Gippsland,VIC,2009,69.59,66.03,41539.0
+205,Latrobe - Gippsland,VIC,2010,69.39,65.81,41486.0
+205,Latrobe - Gippsland,VIC,2011,68.81,65.63,41517.0
+205,Latrobe - Gippsland,VIC,2012,68.14,65.53,41579.0
+205,Latrobe - Gippsland,VIC,2013,68.19,65.48,41701.0
+205,Latrobe - Gippsland,VIC,2014,67.78,65.52,42036.0
+205,Latrobe - Gippsland,VIC,2015,67.88,65.54,42303.0
+205,Latrobe - Gippsland,VIC,2016,67.79,65.75,42744.0
+205,Latrobe - Gippsland,VIC,2017,68.58,65.97,43557.0
+205,Latrobe - Gippsland,VIC,2018,68.95,66.09,44057.0
+205,Latrobe - Gippsland,VIC,2019,68.68,66.1,44652.0
+205,Latrobe - Gippsland,VIC,2020,68.41,66.01,45309.0
+205,Latrobe - Gippsland,VIC,2021,68.16,65.47,45524.0
+205,Latrobe - Gippsland,VIC,2022,67.66,64.86,45655.0
+205,Latrobe - Gippsland,VIC,2023,66.91,64.33,45886.0
+205,Latrobe - Gippsland,VIC,2024,66.12,63.75,46190.0
+205,Latrobe - Gippsland,VIC,2025,65.24,63.19,46368.0
+206,Melbourne - Inner,VIC,2008,53.37,66.18,55909.0
+206,Melbourne - Inner,VIC,2009,53.86,66.03,57453.0
+206,Melbourne - Inner,VIC,2010,54.5,65.81,58317.0
+206,Melbourne - Inner,VIC,2011,55.15,65.63,59555.0
+206,Melbourne - Inner,VIC,2012,55.92,65.53,61057.0
+206,Melbourne - Inner,VIC,2013,56.72,65.48,62803.0
+206,Melbourne - Inner,VIC,2014,57.32,65.52,64614.0
+206,Melbourne - Inner,VIC,2015,58.09,65.54,66535.0
+206,Melbourne - Inner,VIC,2016,58.89,65.75,68476.0
+206,Melbourne - Inner,VIC,2017,59.2,65.97,70290.0
+206,Melbourne - Inner,VIC,2018,59.72,66.09,71828.0
+206,Melbourne - Inner,VIC,2019,60.48,66.1,73184.0
+206,Melbourne - Inner,VIC,2020,60.85,66.01,73939.0
+206,Melbourne - Inner,VIC,2021,61.06,65.47,73860.0
+206,Melbourne - Inner,VIC,2022,61.08,64.86,74239.0
+206,Melbourne - Inner,VIC,2023,61.39,64.33,76447.0
+206,Melbourne - Inner,VIC,2024,61.13,63.75,77874.0
+206,Melbourne - Inner,VIC,2025,60.52,63.19,78819.0
+207,Melbourne - Inner East,VIC,2008,54.16,66.18,58102.0
+207,Melbourne - Inner East,VIC,2009,54.36,66.03,58781.0
+207,Melbourne - Inner East,VIC,2010,54.74,65.81,59831.0
+207,Melbourne - Inner East,VIC,2011,54.77,65.63,60168.0
+207,Melbourne - Inner East,VIC,2012,55.21,65.53,60517.0
+207,Melbourne - Inner East,VIC,2013,55.59,65.48,61382.0
+207,Melbourne - Inner East,VIC,2014,56.26,65.52,62714.0
+207,Melbourne - Inner East,VIC,2015,57.01,65.54,63593.0
+207,Melbourne - Inner East,VIC,2016,57.52,65.75,64947.0
+207,Melbourne - Inner East,VIC,2017,57.46,65.97,66795.0
+207,Melbourne - Inner East,VIC,2018,58.09,66.09,67655.0
+207,Melbourne - Inner East,VIC,2019,58.42,66.1,68296.0
+207,Melbourne - Inner East,VIC,2020,58.26,66.01,68134.0
+207,Melbourne - Inner East,VIC,2021,58.05,65.47,66301.0
+207,Melbourne - Inner East,VIC,2022,58.12,64.86,65232.0
+207,Melbourne - Inner East,VIC,2023,58.71,64.33,65676.0
+207,Melbourne - Inner East,VIC,2024,58.75,63.75,65336.0
+207,Melbourne - Inner East,VIC,2025,58.39,63.19,64632.0
+208,Melbourne - Inner South,VIC,2008,51.8,66.18,54345.0
+208,Melbourne - Inner South,VIC,2009,52.37,66.03,55272.0
+208,Melbourne - Inner South,VIC,2010,52.78,65.81,55876.0
+208,Melbourne - Inner South,VIC,2011,53.02,65.63,56483.0
+208,Melbourne - Inner South,VIC,2012,53.03,65.53,57508.0
+208,Melbourne - Inner South,VIC,2013,53.33,65.48,58979.0
+208,Melbourne - Inner South,VIC,2014,53.53,65.52,60107.0
+208,Melbourne - Inner South,VIC,2015,53.81,65.54,61238.0
+208,Melbourne - Inner South,VIC,2016,54.13,65.75,62634.0
+208,Melbourne - Inner South,VIC,2017,54.59,65.97,63556.0
+208,Melbourne - Inner South,VIC,2018,55.1,66.09,64580.0
+208,Melbourne - Inner South,VIC,2019,55.54,66.1,65544.0
+208,Melbourne - Inner South,VIC,2020,55.71,66.01,65521.0
+208,Melbourne - Inner South,VIC,2021,55.27,65.47,64684.0
+208,Melbourne - Inner South,VIC,2022,55.1,64.86,63982.0
+208,Melbourne - Inner South,VIC,2023,55.24,64.33,64579.0
+208,Melbourne - Inner South,VIC,2024,55.18,63.75,64499.0
+208,Melbourne - Inner South,VIC,2025,55.02,63.19,64334.0
+209,Melbourne - North East,VIC,2008,64.16,66.18,59419.0
+209,Melbourne - North East,VIC,2009,63.96,66.03,60788.0
+209,Melbourne - North East,VIC,2010,64.78,65.81,63219.0
+209,Melbourne - North East,VIC,2011,64.71,65.63,63949.0
+209,Melbourne - North East,VIC,2012,64.79,65.53,64623.0
+209,Melbourne - North East,VIC,2013,64.91,65.48,66513.0
+209,Melbourne - North East,VIC,2014,65.58,65.52,68403.0
+209,Melbourne - North East,VIC,2015,66.02,65.54,70390.0
+209,Melbourne - North East,VIC,2016,66.7,65.75,72182.0
+209,Melbourne - North East,VIC,2017,67.46,65.97,74162.0
+209,Melbourne - North East,VIC,2018,67.55,66.09,76172.0
+209,Melbourne - North East,VIC,2019,67.79,66.1,77737.0
+209,Melbourne - North East,VIC,2020,67.96,66.01,79808.0
+209,Melbourne - North East,VIC,2021,67.68,65.47,80524.0
+209,Melbourne - North East,VIC,2022,67.37,64.86,81196.0
+209,Melbourne - North East,VIC,2023,67.09,64.33,83153.0
+209,Melbourne - North East,VIC,2024,66.4,63.75,84793.0
+209,Melbourne - North East,VIC,2025,65.62,63.19,85930.0
+210,Melbourne - North West,VIC,2008,53.51,66.18,51534.0
+210,Melbourne - North West,VIC,2009,53.11,66.03,52343.0
+210,Melbourne - North West,VIC,2010,53.72,65.81,54251.0
+210,Melbourne - North West,VIC,2011,53.88,65.63,55671.0
+210,Melbourne - North West,VIC,2012,55.47,65.53,58923.0
+210,Melbourne - North West,VIC,2013,55.64,65.48,60329.0
+210,Melbourne - North West,VIC,2014,55.6,65.52,61896.0
+210,Melbourne - North West,VIC,2015,55.82,65.54,63354.0
+210,Melbourne - North West,VIC,2016,55.59,65.75,64996.0
+210,Melbourne - North West,VIC,2017,55.6,65.97,67124.0
+210,Melbourne - North West,VIC,2018,55.46,66.09,69285.0
+210,Melbourne - North West,VIC,2019,55.77,66.1,71304.0
+210,Melbourne - North West,VIC,2020,55.72,66.01,73110.0
+210,Melbourne - North West,VIC,2021,55.24,65.47,74158.0
+210,Melbourne - North West,VIC,2022,54.62,64.86,75642.0
+210,Melbourne - North West,VIC,2023,54.27,64.33,77813.0
+210,Melbourne - North West,VIC,2024,53.54,63.75,79697.0
+210,Melbourne - North West,VIC,2025,53.29,63.19,81667.0
+211,Melbourne - Outer East,VIC,2008,65.44,66.18,75084.0
+211,Melbourne - Outer East,VIC,2009,65.5,66.03,75145.0
+211,Melbourne - Outer East,VIC,2010,65.21,65.81,74694.0
+211,Melbourne - Outer East,VIC,2011,64.64,65.63,73444.0
+211,Melbourne - Outer East,VIC,2012,64.53,65.53,74151.0
+211,Melbourne - Outer East,VIC,2013,64.49,65.48,74966.0
+211,Melbourne - Outer East,VIC,2014,64.2,65.52,75022.0
+211,Melbourne - Outer East,VIC,2015,64.32,65.54,75345.0
+211,Melbourne - Outer East,VIC,2016,64.52,65.75,75601.0
+211,Melbourne - Outer East,VIC,2017,64.78,65.97,75998.0
+211,Melbourne - Outer East,VIC,2018,65.05,66.09,76364.0
+211,Melbourne - Outer East,VIC,2019,65.18,66.1,76814.0
+211,Melbourne - Outer East,VIC,2020,64.91,66.01,77141.0
+211,Melbourne - Outer East,VIC,2021,64.51,65.47,77074.0
+211,Melbourne - Outer East,VIC,2022,63.76,64.86,76120.0
+211,Melbourne - Outer East,VIC,2023,63.21,64.33,76786.0
+211,Melbourne - Outer East,VIC,2024,62.22,63.75,77453.0
+211,Melbourne - Outer East,VIC,2025,61.42,63.19,77539.0
+212,Melbourne - South East,VIC,2008,66.49,66.18,96053.0
+212,Melbourne - South East,VIC,2009,67.53,66.03,102302.0
+212,Melbourne - South East,VIC,2010,68.41,65.81,106700.0
+212,Melbourne - South East,VIC,2011,68.25,65.63,109138.0
+212,Melbourne - South East,VIC,2012,68.27,65.53,112490.0
+212,Melbourne - South East,VIC,2013,68.2,65.48,115735.0
+212,Melbourne - South East,VIC,2014,68.08,65.52,118360.0
+212,Melbourne - South East,VIC,2015,68.14,65.54,121577.0
+212,Melbourne - South East,VIC,2016,68.41,65.75,124672.0
+212,Melbourne - South East,VIC,2017,68.72,65.97,128468.0
+212,Melbourne - South East,VIC,2018,69.21,66.09,132021.0
+212,Melbourne - South East,VIC,2019,69.54,66.1,135066.0
+212,Melbourne - South East,VIC,2020,69.54,66.01,138153.0
+212,Melbourne - South East,VIC,2021,69.49,65.47,139998.0
+212,Melbourne - South East,VIC,2022,69.56,64.86,142566.0
+212,Melbourne - South East,VIC,2023,69.59,64.33,146802.0
+212,Melbourne - South East,VIC,2024,69.76,63.75,150690.0
+212,Melbourne - South East,VIC,2025,69.95,63.19,153574.0
+213,Melbourne - West,VIC,2008,63.29,66.18,80465.0
+213,Melbourne - West,VIC,2009,63.41,66.03,82878.0
+213,Melbourne - West,VIC,2010,64.09,65.81,87499.0
+213,Melbourne - West,VIC,2011,64.43,65.63,91009.0
+213,Melbourne - West,VIC,2012,64.33,65.53,95704.0
+213,Melbourne - West,VIC,2013,65.69,65.48,103718.0
+213,Melbourne - West,VIC,2014,65.95,65.52,107992.0
+213,Melbourne - West,VIC,2015,66.1,65.54,112208.0
+213,Melbourne - West,VIC,2016,66.33,65.75,117011.0
+213,Melbourne - West,VIC,2017,66.74,65.97,122458.0
+213,Melbourne - West,VIC,2018,66.99,66.09,127563.0
+213,Melbourne - West,VIC,2019,67.29,66.1,132457.0
+213,Melbourne - West,VIC,2020,67.99,66.01,139179.0
+213,Melbourne - West,VIC,2021,67.64,65.47,142967.0
+213,Melbourne - West,VIC,2022,67.61,64.86,146909.0
+213,Melbourne - West,VIC,2023,67.76,64.33,153322.0
+213,Melbourne - West,VIC,2024,67.57,63.75,158676.0
+213,Melbourne - West,VIC,2025,67.07,63.19,163303.0
+214,Mornington Peninsula,VIC,2008,75.08,66.18,42187.0
+214,Mornington Peninsula,VIC,2009,74.73,66.03,42461.0
+214,Mornington Peninsula,VIC,2010,72.97,65.81,43654.0
+214,Mornington Peninsula,VIC,2011,72.47,65.63,43597.0
+214,Mornington Peninsula,VIC,2012,72.17,65.53,43692.0
+214,Mornington Peninsula,VIC,2013,72.05,65.48,44318.0
+214,Mornington Peninsula,VIC,2014,72.04,65.52,44889.0
+214,Mornington Peninsula,VIC,2015,72.08,65.54,45796.0
+214,Mornington Peninsula,VIC,2016,72.16,65.75,46507.0
+214,Mornington Peninsula,VIC,2017,72.19,65.97,46606.0
+214,Mornington Peninsula,VIC,2018,72.62,66.09,46903.0
+214,Mornington Peninsula,VIC,2019,72.89,66.1,47084.0
+214,Mornington Peninsula,VIC,2020,73.17,66.01,47231.0
+214,Mornington Peninsula,VIC,2021,73.01,65.47,47154.0
+214,Mornington Peninsula,VIC,2022,72.36,64.86,46300.0
+214,Mornington Peninsula,VIC,2023,71.8,64.33,46382.0
+214,Mornington Peninsula,VIC,2024,71.17,63.75,46256.0
+214,Mornington Peninsula,VIC,2025,70.75,63.19,46231.0
+215,North West,VIC,2008,75.59,66.18,24706.0
+215,North West,VIC,2009,76.09,66.03,24367.0
+215,North West,VIC,2010,76.48,65.81,24718.0
+215,North West,VIC,2011,76.58,65.63,25141.0
+215,North West,VIC,2012,76.11,65.53,25138.0
+215,North West,VIC,2013,75.29,65.48,25384.0
+215,North West,VIC,2014,74.51,65.52,25088.0
+215,North West,VIC,2015,74.15,65.54,24804.0
+215,North West,VIC,2016,73.8,65.75,24890.0
+215,North West,VIC,2017,73.73,65.97,24602.0
+215,North West,VIC,2018,73.69,66.09,24337.0
+215,North West,VIC,2019,73.33,66.1,24248.0
+215,North West,VIC,2020,72.94,66.01,24192.0
+215,North West,VIC,2021,72.89,65.47,23998.0
+215,North West,VIC,2022,72.62,64.86,23764.0
+215,North West,VIC,2023,72.5,64.33,23751.0
+215,North West,VIC,2024,72.03,63.75,23787.0
+215,North West,VIC,2025,71.83,63.19,23694.0
+216,Shepparton,VIC,2008,60.18,66.18,17540.0
+216,Shepparton,VIC,2009,62.12,66.03,18663.0
+216,Shepparton,VIC,2010,62.56,65.81,19380.0
+216,Shepparton,VIC,2011,60.49,65.63,19398.0
+216,Shepparton,VIC,2012,58.72,65.53,19545.0
+216,Shepparton,VIC,2013,57.55,65.48,19451.0
+216,Shepparton,VIC,2014,56.95,65.52,19584.0
+216,Shepparton,VIC,2015,56.48,65.54,19867.0
+216,Shepparton,VIC,2016,56.19,65.75,19819.0
+216,Shepparton,VIC,2017,55.77,65.97,20089.0
+216,Shepparton,VIC,2018,56.56,66.09,20401.0
+216,Shepparton,VIC,2019,56.06,66.1,20561.0
+216,Shepparton,VIC,2020,60.07,66.01,23129.0
+216,Shepparton,VIC,2021,58.87,65.47,23062.0
+216,Shepparton,VIC,2022,57.98,64.86,22867.0
+216,Shepparton,VIC,2023,57.65,64.33,22711.0
+216,Shepparton,VIC,2024,56.86,63.75,22820.0
+216,Shepparton,VIC,2025,56.79,63.19,22863.0
+217,Warrnambool and South West,VIC,2008,67.13,66.18,21657.0
+217,Warrnambool and South West,VIC,2009,66.01,66.03,21640.0
+217,Warrnambool and South West,VIC,2010,64.94,65.81,21432.0
+217,Warrnambool and South West,VIC,2011,63.74,65.63,21121.0
+217,Warrnambool and South West,VIC,2012,62.83,65.53,20825.0
+217,Warrnambool and South West,VIC,2013,61.79,65.48,20595.0
+217,Warrnambool and South West,VIC,2014,61.66,65.52,20437.0
+217,Warrnambool and South West,VIC,2015,61.57,65.54,20211.0
+217,Warrnambool and South West,VIC,2016,61.96,65.75,20022.0
+217,Warrnambool and South West,VIC,2017,61.94,65.97,19842.0
+217,Warrnambool and South West,VIC,2018,61.04,66.09,19709.0
+217,Warrnambool and South West,VIC,2019,60.66,66.1,19644.0
+217,Warrnambool and South West,VIC,2020,60.33,66.01,19610.0
+217,Warrnambool and South West,VIC,2021,59.85,65.47,19437.0
+217,Warrnambool and South West,VIC,2022,58.88,64.86,19114.0
+217,Warrnambool and South West,VIC,2023,58.61,64.33,19083.0
+217,Warrnambool and South West,VIC,2024,57.98,63.75,19041.0
+217,Warrnambool and South West,VIC,2025,57.86,63.19,18930.0
+301,Brisbane - East,QLD,2008,62.66,66.18,31429.0
+301,Brisbane - East,QLD,2009,62.12,66.03,31924.0
+301,Brisbane - East,QLD,2010,61.8,65.81,32233.0
+301,Brisbane - East,QLD,2011,62.3,65.63,33287.0
+301,Brisbane - East,QLD,2012,61.95,65.53,33565.0
+301,Brisbane - East,QLD,2013,61.73,65.48,33762.0
+301,Brisbane - East,QLD,2014,61.62,65.52,34080.0
+301,Brisbane - East,QLD,2015,61.84,65.54,34061.0
+301,Brisbane - East,QLD,2016,62.07,65.75,34255.0
+301,Brisbane - East,QLD,2017,62.59,65.97,34391.0
+301,Brisbane - East,QLD,2018,62.83,66.09,34514.0
+301,Brisbane - East,QLD,2019,63.1,66.1,34816.0
+301,Brisbane - East,QLD,2020,63.04,66.01,35435.0
+301,Brisbane - East,QLD,2021,62.66,65.47,35449.0
+301,Brisbane - East,QLD,2022,61.99,64.86,35579.0
+301,Brisbane - East,QLD,2023,61.38,64.33,35667.0
+301,Brisbane - East,QLD,2024,60.67,63.75,35639.0
+301,Brisbane - East,QLD,2025,60.51,63.19,35283.0
+302,Brisbane - North,QLD,2008,55.52,66.18,28553.0
+302,Brisbane - North,QLD,2009,55.22,66.03,28852.0
+302,Brisbane - North,QLD,2010,54.72,65.81,29129.0
+302,Brisbane - North,QLD,2011,54.32,65.63,29197.0
+302,Brisbane - North,QLD,2012,54.19,65.53,29772.0
+302,Brisbane - North,QLD,2013,53.67,65.48,30077.0
+302,Brisbane - North,QLD,2014,53.34,65.52,30503.0
+302,Brisbane - North,QLD,2015,53.65,65.54,30569.0
+302,Brisbane - North,QLD,2016,54.35,65.75,30954.0
+302,Brisbane - North,QLD,2017,54.91,65.97,31308.0
+302,Brisbane - North,QLD,2018,55.91,66.09,31838.0
+302,Brisbane - North,QLD,2019,56.34,66.1,32340.0
+302,Brisbane - North,QLD,2020,56.13,66.01,33589.0
+302,Brisbane - North,QLD,2021,56.04,65.47,33907.0
+302,Brisbane - North,QLD,2022,55.56,64.86,33771.0
+302,Brisbane - North,QLD,2023,55.26,64.33,33890.0
+302,Brisbane - North,QLD,2024,54.95,63.75,33975.0
+302,Brisbane - North,QLD,2025,53.98,63.19,33965.0
+303,Brisbane - South,QLD,2008,68.34,66.18,51958.0
+303,Brisbane - South,QLD,2009,68.29,66.03,52985.0
+303,Brisbane - South,QLD,2010,68.12,65.81,53762.0
+303,Brisbane - South,QLD,2011,68.39,65.63,55081.0
+303,Brisbane - South,QLD,2012,68.79,65.53,57040.0
+303,Brisbane - South,QLD,2013,68.36,65.48,57157.0
+303,Brisbane - South,QLD,2014,68.46,65.52,58332.0
+303,Brisbane - South,QLD,2015,68.21,65.54,59071.0
+303,Brisbane - South,QLD,2016,68.31,65.75,60040.0
+303,Brisbane - South,QLD,2017,68.46,65.97,61161.0
+303,Brisbane - South,QLD,2018,68.72,66.09,62729.0
+303,Brisbane - South,QLD,2019,68.79,66.1,64530.0
+303,Brisbane - South,QLD,2020,68.63,66.01,66845.0
+303,Brisbane - South,QLD,2021,68.61,65.47,68049.0
+303,Brisbane - South,QLD,2022,69.04,64.86,68679.0
+303,Brisbane - South,QLD,2023,69.21,64.33,69357.0
+303,Brisbane - South,QLD,2024,69.12,63.75,70082.0
+303,Brisbane - South,QLD,2025,69.07,63.19,70573.0
+304,Brisbane - West,QLD,2008,68.96,66.18,29072.0
+304,Brisbane - West,QLD,2009,69.41,66.03,29608.0
+304,Brisbane - West,QLD,2010,69.15,65.81,29776.0
+304,Brisbane - West,QLD,2011,68.55,65.63,30035.0
+304,Brisbane - West,QLD,2012,68.82,65.53,30344.0
+304,Brisbane - West,QLD,2013,68.28,65.48,31295.0
+304,Brisbane - West,QLD,2014,68.84,65.52,31722.0
+304,Brisbane - West,QLD,2015,69.44,65.54,32956.0
+304,Brisbane - West,QLD,2016,69.95,65.75,33758.0
+304,Brisbane - West,QLD,2017,70.46,65.97,34736.0
+304,Brisbane - West,QLD,2018,70.66,66.09,35553.0
+304,Brisbane - West,QLD,2019,70.54,66.1,36349.0
+304,Brisbane - West,QLD,2020,70.86,66.01,37667.0
+304,Brisbane - West,QLD,2021,70.89,65.47,38006.0
+304,Brisbane - West,QLD,2022,71.03,64.86,38164.0
+304,Brisbane - West,QLD,2023,71.28,64.33,38495.0
+304,Brisbane - West,QLD,2024,70.9,63.75,38465.0
+304,Brisbane - West,QLD,2025,70.56,63.19,38248.0
+305,Brisbane Inner City,QLD,2008,40.4,66.18,36501.0
+305,Brisbane Inner City,QLD,2009,41.17,66.03,37479.0
+305,Brisbane Inner City,QLD,2010,41.98,65.81,38194.0
+305,Brisbane Inner City,QLD,2011,42.69,65.63,39301.0
+305,Brisbane Inner City,QLD,2012,43.33,65.53,40125.0
+305,Brisbane Inner City,QLD,2013,44.28,65.48,40966.0
+305,Brisbane Inner City,QLD,2014,44.84,65.52,41666.0
+305,Brisbane Inner City,QLD,2015,44.65,65.54,43558.0
+305,Brisbane Inner City,QLD,2016,45.74,65.75,44644.0
+305,Brisbane Inner City,QLD,2017,46.39,65.97,45359.0
+305,Brisbane Inner City,QLD,2018,47.56,66.09,46328.0
+305,Brisbane Inner City,QLD,2019,48.8,66.1,47399.0
+305,Brisbane Inner City,QLD,2020,49.55,66.01,49185.0
+305,Brisbane Inner City,QLD,2021,50.0,65.47,49830.0
+305,Brisbane Inner City,QLD,2022,49.87,64.86,50494.0
+305,Brisbane Inner City,QLD,2023,49.87,64.33,51389.0
+305,Brisbane Inner City,QLD,2024,49.46,63.75,52323.0
+305,Brisbane Inner City,QLD,2025,48.82,63.19,52604.0
+306,Cairns,QLD,2008,69.42,66.18,38875.0
+306,Cairns,QLD,2009,68.35,66.03,40052.0
+306,Cairns,QLD,2010,68.56,65.81,41386.0
+306,Cairns,QLD,2011,68.52,65.63,42130.0
+306,Cairns,QLD,2012,68.03,65.53,42920.0
+306,Cairns,QLD,2013,68.05,65.48,43713.0
+306,Cairns,QLD,2014,68.37,65.52,44208.0
+306,Cairns,QLD,2015,69.27,65.54,45273.0
+306,Cairns,QLD,2016,69.24,65.75,46140.0
+306,Cairns,QLD,2017,69.39,65.97,46503.0
+306,Cairns,QLD,2018,69.33,66.09,46213.0
+306,Cairns,QLD,2019,69.5,66.1,46316.0
+306,Cairns,QLD,2020,70.11,66.01,48044.0
+306,Cairns,QLD,2021,69.81,65.47,48973.0
+306,Cairns,QLD,2022,69.12,64.86,49605.0
+306,Cairns,QLD,2023,67.81,64.33,49573.0
+306,Cairns,QLD,2024,66.05,63.75,49378.0
+306,Cairns,QLD,2025,64.67,63.19,48996.0
+307,Darling Downs - Maranoa,QLD,2008,79.37,66.18,20563.0
+307,Darling Downs - Maranoa,QLD,2009,77.52,66.03,20996.0
+307,Darling Downs - Maranoa,QLD,2010,76.53,65.81,21055.0
+307,Darling Downs - Maranoa,QLD,2011,75.73,65.63,21089.0
+307,Darling Downs - Maranoa,QLD,2012,75.06,65.53,21020.0
+307,Darling Downs - Maranoa,QLD,2013,74.97,65.48,21297.0
+307,Darling Downs - Maranoa,QLD,2014,75.53,65.52,21364.0
+307,Darling Downs - Maranoa,QLD,2015,75.76,65.54,21284.0
+307,Darling Downs - Maranoa,QLD,2016,76.31,65.75,21263.0
+307,Darling Downs - Maranoa,QLD,2017,76.17,65.97,21120.0
+307,Darling Downs - Maranoa,QLD,2018,75.71,66.09,21159.0
+307,Darling Downs - Maranoa,QLD,2019,74.92,66.1,20932.0
+307,Darling Downs - Maranoa,QLD,2020,73.94,66.01,21004.0
+307,Darling Downs - Maranoa,QLD,2021,73.55,65.47,20794.0
+307,Darling Downs - Maranoa,QLD,2022,72.23,64.86,20561.0
+307,Darling Downs - Maranoa,QLD,2023,71.25,64.33,20320.0
+307,Darling Downs - Maranoa,QLD,2024,70.32,63.75,20027.0
+307,Darling Downs - Maranoa,QLD,2025,69.85,63.19,20062.0
+308,Central Queensland,QLD,2008,70.0,66.18,38078.0
+308,Central Queensland,QLD,2009,69.25,66.03,38468.0
+308,Central Queensland,QLD,2010,68.55,65.81,38311.0
+308,Central Queensland,QLD,2011,67.75,65.63,38488.0
+308,Central Queensland,QLD,2012,67.57,65.53,39305.0
+308,Central Queensland,QLD,2013,67.48,65.48,40029.0
+308,Central Queensland,QLD,2014,67.61,65.52,40533.0
+308,Central Queensland,QLD,2015,67.09,65.54,40809.0
+308,Central Queensland,QLD,2016,67.36,65.75,40745.0
+308,Central Queensland,QLD,2017,67.55,65.97,41039.0
+308,Central Queensland,QLD,2018,68.07,66.09,41988.0
+308,Central Queensland,QLD,2019,68.72,66.1,44054.0
+308,Central Queensland,QLD,2020,68.31,66.01,45552.0
+308,Central Queensland,QLD,2021,68.12,65.47,46833.0
+308,Central Queensland,QLD,2022,67.44,64.86,47461.0
+308,Central Queensland,QLD,2023,65.75,64.33,47079.0
+308,Central Queensland,QLD,2024,64.97,63.75,47764.0
+308,Central Queensland,QLD,2025,64.64,63.19,48747.0
+309,Gold Coast,QLD,2008,65.79,66.18,75252.0
+309,Gold Coast,QLD,2009,65.8,66.03,77220.0
+309,Gold Coast,QLD,2010,65.66,65.81,78679.0
+309,Gold Coast,QLD,2011,65.96,65.63,80500.0
+309,Gold Coast,QLD,2012,65.96,65.53,82588.0
+309,Gold Coast,QLD,2013,66.25,65.48,84930.0
+309,Gold Coast,QLD,2014,66.38,65.52,87019.0
+309,Gold Coast,QLD,2015,66.25,65.54,88912.0
+309,Gold Coast,QLD,2016,66.23,65.75,90801.0
+309,Gold Coast,QLD,2017,66.22,65.97,93172.0
+309,Gold Coast,QLD,2018,66.3,66.09,94871.0
+309,Gold Coast,QLD,2019,66.02,66.1,96621.0
+309,Gold Coast,QLD,2020,65.9,66.01,99625.0
+309,Gold Coast,QLD,2021,65.07,65.47,101141.0
+309,Gold Coast,QLD,2022,64.11,64.86,101386.0
+309,Gold Coast,QLD,2023,62.88,64.33,102302.0
+309,Gold Coast,QLD,2024,62.04,63.75,103069.0
+309,Gold Coast,QLD,2025,61.14,63.19,103213.0
+310,Ipswich,QLD,2008,70.96,66.18,44960.0
+310,Ipswich,QLD,2009,71.07,66.03,46439.0
+310,Ipswich,QLD,2010,69.57,65.81,48661.0
+310,Ipswich,QLD,2011,69.27,65.63,49441.0
+310,Ipswich,QLD,2012,69.38,65.53,51124.0
+310,Ipswich,QLD,2013,69.52,65.48,52666.0
+310,Ipswich,QLD,2014,69.67,65.52,54299.0
+310,Ipswich,QLD,2015,69.55,65.54,55408.0
+310,Ipswich,QLD,2016,70.11,65.75,56983.0
+310,Ipswich,QLD,2017,70.87,65.97,58716.0
+310,Ipswich,QLD,2018,71.27,66.09,60184.0
+310,Ipswich,QLD,2019,71.19,66.1,62013.0
+310,Ipswich,QLD,2020,70.74,66.01,64571.0
+310,Ipswich,QLD,2021,70.03,65.47,65974.0
+310,Ipswich,QLD,2022,68.94,64.86,66741.0
+310,Ipswich,QLD,2023,68.29,64.33,68082.0
+310,Ipswich,QLD,2024,67.51,63.75,69507.0
+310,Ipswich,QLD,2025,66.98,63.19,71330.0
+311,Logan - Beaudesert,QLD,2008,72.94,66.18,50885.0
+311,Logan - Beaudesert,QLD,2009,72.76,66.03,51091.0
+311,Logan - Beaudesert,QLD,2010,72.4,65.81,50550.0
+311,Logan - Beaudesert,QLD,2011,71.94,65.63,50518.0
+311,Logan - Beaudesert,QLD,2012,71.63,65.53,50826.0
+311,Logan - Beaudesert,QLD,2013,71.29,65.48,51882.0
+311,Logan - Beaudesert,QLD,2014,71.34,65.52,52618.0
+311,Logan - Beaudesert,QLD,2015,71.1,65.54,53338.0
+311,Logan - Beaudesert,QLD,2016,71.95,65.75,54086.0
+311,Logan - Beaudesert,QLD,2017,71.75,65.97,55237.0
+311,Logan - Beaudesert,QLD,2018,72.36,66.09,56465.0
+311,Logan - Beaudesert,QLD,2019,71.56,66.1,58888.0
+311,Logan - Beaudesert,QLD,2020,70.9,66.01,60987.0
+311,Logan - Beaudesert,QLD,2021,70.31,65.47,62191.0
+311,Logan - Beaudesert,QLD,2022,70.5,64.86,62793.0
+311,Logan - Beaudesert,QLD,2023,70.33,64.33,64374.0
+311,Logan - Beaudesert,QLD,2024,69.25,63.75,66548.0
+311,Logan - Beaudesert,QLD,2025,68.74,63.19,68714.0
+312,Mackay - Isaac - Whitsunday,QLD,2008,76.69,66.18,26857.0
+312,Mackay - Isaac - Whitsunday,QLD,2009,76.13,66.03,27025.0
+312,Mackay - Isaac - Whitsunday,QLD,2010,75.52,65.81,27128.0
+312,Mackay - Isaac - Whitsunday,QLD,2011,75.62,65.63,27629.0
+312,Mackay - Isaac - Whitsunday,QLD,2012,75.25,65.53,28234.0
+312,Mackay - Isaac - Whitsunday,QLD,2013,75.11,65.48,28446.0
+312,Mackay - Isaac - Whitsunday,QLD,2014,75.23,65.52,28441.0
+312,Mackay - Isaac - Whitsunday,QLD,2015,75.73,65.54,28318.0
+312,Mackay - Isaac - Whitsunday,QLD,2016,75.85,65.75,28343.0
+312,Mackay - Isaac - Whitsunday,QLD,2017,76.01,65.97,28166.0
+312,Mackay - Isaac - Whitsunday,QLD,2018,76.18,66.09,28291.0
+312,Mackay - Isaac - Whitsunday,QLD,2019,75.82,66.1,28660.0
+312,Mackay - Isaac - Whitsunday,QLD,2020,75.39,66.01,29724.0
+312,Mackay - Isaac - Whitsunday,QLD,2021,75.11,65.47,29867.0
+312,Mackay - Isaac - Whitsunday,QLD,2022,73.87,64.86,29878.0
+312,Mackay - Isaac - Whitsunday,QLD,2023,70.3,64.33,31179.0
+312,Mackay - Isaac - Whitsunday,QLD,2024,68.92,63.75,31180.0
+312,Mackay - Isaac - Whitsunday,QLD,2025,67.87,63.19,31284.0
+313,Moreton Bay - North,QLD,2008,74.3,66.18,35563.0
+313,Moreton Bay - North,QLD,2009,72.76,66.03,36491.0
+313,Moreton Bay - North,QLD,2010,72.31,65.81,37131.0
+313,Moreton Bay - North,QLD,2011,71.91,65.63,37836.0
+313,Moreton Bay - North,QLD,2012,71.66,65.53,38355.0
+313,Moreton Bay - North,QLD,2013,71.98,65.48,39063.0
+313,Moreton Bay - North,QLD,2014,72.02,65.52,39425.0
+313,Moreton Bay - North,QLD,2015,72.18,65.54,39779.0
+313,Moreton Bay - North,QLD,2016,72.95,65.75,40104.0
+313,Moreton Bay - North,QLD,2017,73.27,65.97,40615.0
+313,Moreton Bay - North,QLD,2018,73.04,66.09,40966.0
+313,Moreton Bay - North,QLD,2019,72.34,66.1,41605.0
+313,Moreton Bay - North,QLD,2020,71.5,66.01,42763.0
+313,Moreton Bay - North,QLD,2021,69.83,65.47,43483.0
+313,Moreton Bay - North,QLD,2022,67.97,64.86,43891.0
+313,Moreton Bay - North,QLD,2023,66.98,64.33,44193.0
+313,Moreton Bay - North,QLD,2024,65.75,63.75,44779.0
+313,Moreton Bay - North,QLD,2025,64.44,63.19,45263.0
+314,Moreton Bay - South,QLD,2008,79.69,66.18,22554.0
+314,Moreton Bay - South,QLD,2009,79.0,66.03,23162.0
+314,Moreton Bay - South,QLD,2010,78.12,65.81,23588.0
+314,Moreton Bay - South,QLD,2011,77.31,65.63,23987.0
+314,Moreton Bay - South,QLD,2012,76.87,65.53,24974.0
+314,Moreton Bay - South,QLD,2013,76.23,65.48,25943.0
+314,Moreton Bay - South,QLD,2014,76.09,65.52,26983.0
+314,Moreton Bay - South,QLD,2015,76.06,65.54,27826.0
+314,Moreton Bay - South,QLD,2016,76.0,65.75,28972.0
+314,Moreton Bay - South,QLD,2017,75.45,65.97,30168.0
+314,Moreton Bay - South,QLD,2018,75.18,66.09,31400.0
+314,Moreton Bay - South,QLD,2019,75.2,66.1,32241.0
+314,Moreton Bay - South,QLD,2020,74.37,66.01,33144.0
+314,Moreton Bay - South,QLD,2021,73.92,65.47,33643.0
+314,Moreton Bay - South,QLD,2022,73.46,64.86,33838.0
+314,Moreton Bay - South,QLD,2023,73.02,64.33,34052.0
+314,Moreton Bay - South,QLD,2024,73.64,63.75,34129.0
+314,Moreton Bay - South,QLD,2025,73.21,63.19,34018.0
+315,Queensland - Outback,QLD,2008,88.12,66.18,14542.0
+315,Queensland - Outback,QLD,2009,87.93,66.03,14585.0
+315,Queensland - Outback,QLD,2010,86.45,65.81,14421.0
+315,Queensland - Outback,QLD,2011,86.02,65.63,14388.0
+315,Queensland - Outback,QLD,2012,84.68,65.53,14076.0
+315,Queensland - Outback,QLD,2013,84.39,65.48,14227.0
+315,Queensland - Outback,QLD,2014,84.89,65.52,14616.0
+315,Queensland - Outback,QLD,2015,84.15,65.54,13858.0
+315,Queensland - Outback,QLD,2016,84.13,65.75,13476.0
+315,Queensland - Outback,QLD,2017,83.71,65.97,13432.0
+315,Queensland - Outback,QLD,2018,83.0,66.09,13426.0
+315,Queensland - Outback,QLD,2019,83.53,66.1,13416.0
+315,Queensland - Outback,QLD,2020,83.61,66.01,13535.0
+315,Queensland - Outback,QLD,2021,83.33,65.47,13622.0
+315,Queensland - Outback,QLD,2022,83.48,64.86,13306.0
+315,Queensland - Outback,QLD,2023,82.84,64.33,13222.0
+315,Queensland - Outback,QLD,2024,82.06,63.75,13163.0
+315,Queensland - Outback,QLD,2025,81.16,63.19,12945.0
+316,Sunshine Coast,QLD,2008,69.11,66.18,49211.0
+316,Sunshine Coast,QLD,2009,68.52,66.03,50055.0
+316,Sunshine Coast,QLD,2010,68.25,65.81,50836.0
+316,Sunshine Coast,QLD,2011,67.97,65.63,51516.0
+316,Sunshine Coast,QLD,2012,68.09,65.53,52314.0
+316,Sunshine Coast,QLD,2013,67.77,65.48,53331.0
+316,Sunshine Coast,QLD,2014,67.9,65.52,54508.0
+316,Sunshine Coast,QLD,2015,67.74,65.54,55789.0
+316,Sunshine Coast,QLD,2016,67.94,65.75,57397.0
+316,Sunshine Coast,QLD,2017,68.11,65.97,58752.0
+316,Sunshine Coast,QLD,2018,68.31,66.09,59764.0
+316,Sunshine Coast,QLD,2019,68.38,66.1,60475.0
+316,Sunshine Coast,QLD,2020,68.35,66.01,61853.0
+316,Sunshine Coast,QLD,2021,67.52,65.47,62695.0
+316,Sunshine Coast,QLD,2022,66.51,64.86,62530.0
+316,Sunshine Coast,QLD,2023,65.58,64.33,63106.0
+316,Sunshine Coast,QLD,2024,65.11,63.75,64162.0
+316,Sunshine Coast,QLD,2025,64.53,63.19,64534.0
+317,Toowoomba,QLD,2008,56.49,66.18,26471.0
+317,Toowoomba,QLD,2009,56.83,66.03,26847.0
+317,Toowoomba,QLD,2010,56.83,65.81,26847.0
+317,Toowoomba,QLD,2011,56.4,65.63,27154.0
+317,Toowoomba,QLD,2012,56.66,65.53,27446.0
+317,Toowoomba,QLD,2013,56.82,65.48,27869.0
+317,Toowoomba,QLD,2014,57.51,65.52,28230.0
+317,Toowoomba,QLD,2015,57.46,65.54,28514.0
+317,Toowoomba,QLD,2016,57.63,65.75,28657.0
+317,Toowoomba,QLD,2017,58.41,65.97,28902.0
+317,Toowoomba,QLD,2018,58.99,66.09,29222.0
+317,Toowoomba,QLD,2019,59.15,66.1,29609.0
+317,Toowoomba,QLD,2020,58.89,66.01,30323.0
+317,Toowoomba,QLD,2021,58.14,65.47,30236.0
+317,Toowoomba,QLD,2022,57.0,64.86,29974.0
+317,Toowoomba,QLD,2023,55.79,64.33,30345.0
+317,Toowoomba,QLD,2024,55.15,63.75,30436.0
+317,Toowoomba,QLD,2025,54.41,63.19,30536.0
+318,Townsville,QLD,2008,63.1,66.18,39022.0
+318,Townsville,QLD,2009,62.13,66.03,39314.0
+318,Townsville,QLD,2010,61.47,65.81,39640.0
+318,Townsville,QLD,2011,60.82,65.63,39865.0
+318,Townsville,QLD,2012,60.61,65.53,40364.0
+318,Townsville,QLD,2013,60.96,65.48,41395.0
+318,Townsville,QLD,2014,61.09,65.52,41959.0
+318,Townsville,QLD,2015,61.12,65.54,42423.0
+318,Townsville,QLD,2016,60.93,65.75,42399.0
+318,Townsville,QLD,2017,60.68,65.97,42109.0
+318,Townsville,QLD,2018,61.19,66.09,42677.0
+318,Townsville,QLD,2019,60.28,66.1,42603.0
+318,Townsville,QLD,2020,59.4,66.01,43690.0
+318,Townsville,QLD,2021,59.08,65.47,44377.0
+318,Townsville,QLD,2022,57.75,64.86,43847.0
+318,Townsville,QLD,2023,56.48,64.33,43824.0
+318,Townsville,QLD,2024,55.55,63.75,43671.0
+318,Townsville,QLD,2025,54.93,63.19,43756.0
+319,Wide Bay,QLD,2008,78.06,66.18,46296.0
+319,Wide Bay,QLD,2009,77.33,66.03,46809.0
+319,Wide Bay,QLD,2010,76.71,65.81,46999.0
+319,Wide Bay,QLD,2011,76.13,65.63,46822.0
+319,Wide Bay,QLD,2012,75.42,65.53,47083.0
+319,Wide Bay,QLD,2013,75.04,65.48,47278.0
+319,Wide Bay,QLD,2014,74.69,65.52,47220.0
+319,Wide Bay,QLD,2015,74.69,65.54,46782.0
+319,Wide Bay,QLD,2016,74.84,65.75,46515.0
+319,Wide Bay,QLD,2017,74.42,65.97,46401.0
+319,Wide Bay,QLD,2018,73.9,66.09,46103.0
+319,Wide Bay,QLD,2019,73.2,66.1,46049.0
+319,Wide Bay,QLD,2020,72.02,66.01,46435.0
+319,Wide Bay,QLD,2021,70.96,65.47,46588.0
+319,Wide Bay,QLD,2022,69.81,64.86,46450.0
+319,Wide Bay,QLD,2023,69.2,64.33,46072.0
+319,Wide Bay,QLD,2024,67.93,63.75,45893.0
+319,Wide Bay,QLD,2025,66.67,63.19,45705.0
+401,Adelaide - Central and Hills,SA,2008,49.74,66.18,49914.0
+401,Adelaide - Central and Hills,SA,2009,49.7,66.03,50622.0
+401,Adelaide - Central and Hills,SA,2010,49.83,65.81,51224.0
+401,Adelaide - Central and Hills,SA,2011,51.64,65.63,53327.0
+401,Adelaide - Central and Hills,SA,2012,51.95,65.53,53832.0
+401,Adelaide - Central and Hills,SA,2013,53.75,65.48,55993.0
+401,Adelaide - Central and Hills,SA,2014,54.52,65.52,56844.0
+401,Adelaide - Central and Hills,SA,2015,55.87,65.54,58356.0
+401,Adelaide - Central and Hills,SA,2016,57.38,65.75,60374.0
+401,Adelaide - Central and Hills,SA,2017,58.39,65.97,60764.0
+401,Adelaide - Central and Hills,SA,2018,59.2,66.09,60513.0
+401,Adelaide - Central and Hills,SA,2019,59.38,66.1,60987.0
+401,Adelaide - Central and Hills,SA,2020,59.27,66.01,60924.0
+401,Adelaide - Central and Hills,SA,2021,59.04,65.47,61187.0
+401,Adelaide - Central and Hills,SA,2022,58.25,64.86,61211.0
+401,Adelaide - Central and Hills,SA,2023,58.48,64.33,61257.0
+401,Adelaide - Central and Hills,SA,2024,58.7,63.75,62236.0
+401,Adelaide - Central and Hills,SA,2025,57.97,63.19,62137.0
+402,Adelaide - North,SA,2008,60.95,66.18,55544.0
+402,Adelaide - North,SA,2009,60.76,66.03,56378.0
+402,Adelaide - North,SA,2010,61.33,65.81,57608.0
+402,Adelaide - North,SA,2011,62.84,65.63,60102.0
+402,Adelaide - North,SA,2012,62.59,65.53,60462.0
+402,Adelaide - North,SA,2013,63.28,65.48,62259.0
+402,Adelaide - North,SA,2014,63.14,65.52,62377.0
+402,Adelaide - North,SA,2015,63.36,65.54,63657.0
+402,Adelaide - North,SA,2016,63.47,65.75,64331.0
+402,Adelaide - North,SA,2017,63.6,65.97,65333.0
+402,Adelaide - North,SA,2018,63.85,66.09,66797.0
+402,Adelaide - North,SA,2019,64.08,66.1,68197.0
+402,Adelaide - North,SA,2020,63.58,66.01,69058.0
+402,Adelaide - North,SA,2021,62.15,65.47,70157.0
+402,Adelaide - North,SA,2022,60.79,64.86,71054.0
+402,Adelaide - North,SA,2023,60.02,64.33,72683.0
+402,Adelaide - North,SA,2024,59.42,63.75,75113.0
+402,Adelaide - North,SA,2025,58.53,63.19,76300.0
+403,Adelaide - South,SA,2008,66.5,66.18,47517.0
+403,Adelaide - South,SA,2009,66.67,66.03,48363.0
+403,Adelaide - South,SA,2010,67.39,65.81,49719.0
+403,Adelaide - South,SA,2011,68.01,65.63,51483.0
+403,Adelaide - South,SA,2012,67.57,65.53,51577.0
+403,Adelaide - South,SA,2013,68.34,65.48,52882.0
+403,Adelaide - South,SA,2014,67.99,65.52,52783.0
+403,Adelaide - South,SA,2015,67.31,65.54,53981.0
+403,Adelaide - South,SA,2016,67.64,65.75,54411.0
+403,Adelaide - South,SA,2017,67.37,65.97,54395.0
+403,Adelaide - South,SA,2018,65.95,66.09,55903.0
+403,Adelaide - South,SA,2019,66.02,66.1,56428.0
+403,Adelaide - South,SA,2020,65.3,66.01,56958.0
+403,Adelaide - South,SA,2021,64.3,65.47,56990.0
+403,Adelaide - South,SA,2022,63.35,64.86,57172.0
+403,Adelaide - South,SA,2023,62.18,64.33,57521.0
+403,Adelaide - South,SA,2024,61.8,63.75,58454.0
+403,Adelaide - South,SA,2025,60.79,63.19,58651.0
+404,Adelaide - West,SA,2008,58.21,66.18,25642.0
+404,Adelaide - West,SA,2009,58.45,66.03,26178.0
+404,Adelaide - West,SA,2010,58.35,65.81,26463.0
+404,Adelaide - West,SA,2011,59.05,65.63,27257.0
+404,Adelaide - West,SA,2012,60.09,65.53,28285.0
+404,Adelaide - West,SA,2013,60.81,65.48,29304.0
+404,Adelaide - West,SA,2014,60.21,65.52,28992.0
+404,Adelaide - West,SA,2015,60.38,65.54,29214.0
+404,Adelaide - West,SA,2016,61.17,65.75,29346.0
+404,Adelaide - West,SA,2017,61.82,65.97,29575.0
+404,Adelaide - West,SA,2018,61.31,66.09,30221.0
+404,Adelaide - West,SA,2019,61.01,66.1,30639.0
+404,Adelaide - West,SA,2020,60.31,66.01,30836.0
+404,Adelaide - West,SA,2021,57.92,65.47,30626.0
+404,Adelaide - West,SA,2022,55.67,64.86,31047.0
+404,Adelaide - West,SA,2023,55.54,64.33,31645.0
+404,Adelaide - West,SA,2024,55.13,63.75,32752.0
+404,Adelaide - West,SA,2025,54.16,63.19,33173.0
+405,Barossa - Yorke - Mid North,SA,2008,76.7,66.18,16439.0
+405,Barossa - Yorke - Mid North,SA,2009,75.44,66.03,16370.0
+405,Barossa - Yorke - Mid North,SA,2010,74.87,65.81,16525.0
+405,Barossa - Yorke - Mid North,SA,2011,74.47,65.63,16470.0
+405,Barossa - Yorke - Mid North,SA,2012,74.31,65.53,16518.0
+405,Barossa - Yorke - Mid North,SA,2013,74.8,65.48,17086.0
+405,Barossa - Yorke - Mid North,SA,2014,73.94,65.52,16843.0
+405,Barossa - Yorke - Mid North,SA,2015,74.31,65.54,16947.0
+405,Barossa - Yorke - Mid North,SA,2016,75.02,65.75,16884.0
+405,Barossa - Yorke - Mid North,SA,2017,75.41,65.97,16796.0
+405,Barossa - Yorke - Mid North,SA,2018,74.19,66.09,17020.0
+405,Barossa - Yorke - Mid North,SA,2019,73.57,66.1,16867.0
+405,Barossa - Yorke - Mid North,SA,2020,73.02,66.01,16693.0
+405,Barossa - Yorke - Mid North,SA,2021,72.3,65.47,16674.0
+405,Barossa - Yorke - Mid North,SA,2022,72.22,64.86,16520.0
+405,Barossa - Yorke - Mid North,SA,2023,71.93,64.33,16386.0
+405,Barossa - Yorke - Mid North,SA,2024,72.11,63.75,16525.0
+405,Barossa - Yorke - Mid North,SA,2025,71.32,63.19,16231.0
+406,South Australia - Outback,SA,2008,78.53,66.18,13411.0
+406,South Australia - Outback,SA,2009,78.08,66.03,13323.0
+406,South Australia - Outback,SA,2010,77.6,65.81,13421.0
+406,South Australia - Outback,SA,2011,77.18,65.63,13348.0
+406,South Australia - Outback,SA,2012,76.66,65.53,13493.0
+406,South Australia - Outback,SA,2013,76.75,65.48,13645.0
+406,South Australia - Outback,SA,2014,76.65,65.52,13353.0
+406,South Australia - Outback,SA,2015,76.91,65.54,13315.0
+406,South Australia - Outback,SA,2016,77.97,65.75,13148.0
+406,South Australia - Outback,SA,2017,78.19,65.97,12984.0
+406,South Australia - Outback,SA,2018,77.47,66.09,12887.0
+406,South Australia - Outback,SA,2019,77.19,66.1,12825.0
+406,South Australia - Outback,SA,2020,76.93,66.01,12755.0
+406,South Australia - Outback,SA,2021,76.04,65.47,12641.0
+406,South Australia - Outback,SA,2022,77.23,64.86,13577.0
+406,South Australia - Outback,SA,2023,75.43,64.33,13477.0
+406,South Australia - Outback,SA,2024,75.08,63.75,13546.0
+406,South Australia - Outback,SA,2025,74.17,63.19,13461.0
+407,South Australia - South East,SA,2008,79.58,66.18,26345.0
+407,South Australia - South East,SA,2009,78.68,66.03,26401.0
+407,South Australia - South East,SA,2010,78.9,65.81,27335.0
+407,South Australia - South East,SA,2011,79.12,65.63,27983.0
+407,South Australia - South East,SA,2012,79.16,65.53,27874.0
+407,South Australia - South East,SA,2013,79.45,65.48,28424.0
+407,South Australia - South East,SA,2014,79.67,65.52,28327.0
+407,South Australia - South East,SA,2015,79.65,65.54,28264.0
+407,South Australia - South East,SA,2016,79.53,65.75,28316.0
+407,South Australia - South East,SA,2017,79.36,65.97,28133.0
+407,South Australia - South East,SA,2018,78.39,66.09,27976.0
+407,South Australia - South East,SA,2019,78.09,66.1,27979.0
+407,South Australia - South East,SA,2020,77.66,66.01,27748.0
+407,South Australia - South East,SA,2021,76.76,65.47,27669.0
+407,South Australia - South East,SA,2022,76.13,64.86,27558.0
+407,South Australia - South East,SA,2023,75.52,64.33,27306.0
+407,South Australia - South East,SA,2024,75.2,63.75,27549.0
+407,South Australia - South East,SA,2025,74.32,63.19,27372.0
+501,Bunbury,WA,2008,73.85,66.18,27149.0
+501,Bunbury,WA,2009,73.79,66.03,27528.0
+501,Bunbury,WA,2010,73.44,65.81,27982.0
+501,Bunbury,WA,2011,73.42,65.63,28456.0
+501,Bunbury,WA,2012,73.61,65.53,29397.0
+501,Bunbury,WA,2013,73.22,65.48,29824.0
+501,Bunbury,WA,2014,73.76,65.52,31374.0
+501,Bunbury,WA,2015,73.28,65.54,32524.0
+501,Bunbury,WA,2016,72.5,65.75,33150.0
+501,Bunbury,WA,2017,72.55,65.97,33239.0
+501,Bunbury,WA,2018,72.38,66.09,33425.0
+501,Bunbury,WA,2019,71.96,66.1,33595.0
+501,Bunbury,WA,2020,71.69,66.01,33593.0
+501,Bunbury,WA,2021,70.06,65.47,33577.0
+501,Bunbury,WA,2022,69.06,64.86,33441.0
+501,Bunbury,WA,2023,68.38,64.33,33885.0
+501,Bunbury,WA,2024,67.67,63.75,34272.0
+501,Bunbury,WA,2025,67.08,63.19,34463.0
+502,Mandurah,WA,2008,62.16,66.18,11921.0
+502,Mandurah,WA,2009,60.79,66.03,12428.0
+502,Mandurah,WA,2010,60.0,65.81,12603.0
+502,Mandurah,WA,2011,58.88,65.63,13314.0
+502,Mandurah,WA,2012,62.8,65.53,15249.0
+502,Mandurah,WA,2013,63.06,65.48,16010.0
+502,Mandurah,WA,2014,62.56,65.52,16427.0
+502,Mandurah,WA,2015,63.17,65.54,17050.0
+502,Mandurah,WA,2016,63.67,65.75,17075.0
+502,Mandurah,WA,2017,64.06,65.97,17371.0
+502,Mandurah,WA,2018,63.85,66.09,17503.0
+502,Mandurah,WA,2019,63.98,66.1,17841.0
+502,Mandurah,WA,2020,64.33,66.01,18250.0
+502,Mandurah,WA,2021,63.94,65.47,18594.0
+502,Mandurah,WA,2022,63.71,64.86,18697.0
+502,Mandurah,WA,2023,63.91,64.33,19050.0
+502,Mandurah,WA,2024,64.0,63.75,19521.0
+502,Mandurah,WA,2025,63.85,63.19,20090.0
+503,Perth - Inner,WA,2008,44.77,66.18,26505.0
+503,Perth - Inner,WA,2009,44.53,66.03,27066.0
+503,Perth - Inner,WA,2010,45.47,65.81,27685.0
+503,Perth - Inner,WA,2011,46.58,65.63,28720.0
+503,Perth - Inner,WA,2012,47.22,65.53,29399.0
+503,Perth - Inner,WA,2013,47.87,65.48,30010.0
+503,Perth - Inner,WA,2014,48.64,65.52,30632.0
+503,Perth - Inner,WA,2015,49.22,65.54,31667.0
+503,Perth - Inner,WA,2016,50.0,65.75,31791.0
+503,Perth - Inner,WA,2017,51.24,65.97,32088.0
+503,Perth - Inner,WA,2018,51.66,66.09,32651.0
+503,Perth - Inner,WA,2019,52.61,66.1,32831.0
+503,Perth - Inner,WA,2020,54.2,66.01,33508.0
+503,Perth - Inner,WA,2021,54.21,65.47,34607.0
+503,Perth - Inner,WA,2022,54.49,64.86,35194.0
+503,Perth - Inner,WA,2023,54.95,64.33,36119.0
+503,Perth - Inner,WA,2024,55.2,63.75,36600.0
+503,Perth - Inner,WA,2025,55.31,63.19,36741.0
+504,Perth - North East,WA,2008,69.08,66.18,35145.0
+504,Perth - North East,WA,2009,68.01,66.03,35575.0
+504,Perth - North East,WA,2010,67.14,65.81,35666.0
+504,Perth - North East,WA,2011,66.66,65.63,35966.0
+504,Perth - North East,WA,2012,66.8,65.53,36877.0
+504,Perth - North East,WA,2013,66.49,65.48,37749.0
+504,Perth - North East,WA,2014,66.88,65.52,38580.0
+504,Perth - North East,WA,2015,67.2,65.54,40198.0
+504,Perth - North East,WA,2016,67.56,65.75,40722.0
+504,Perth - North East,WA,2017,68.09,65.97,41207.0
+504,Perth - North East,WA,2018,68.25,66.09,41628.0
+504,Perth - North East,WA,2019,68.73,66.1,42300.0
+504,Perth - North East,WA,2020,69.25,66.01,42902.0
+504,Perth - North East,WA,2021,68.98,65.47,43785.0
+504,Perth - North East,WA,2022,68.34,64.86,44160.0
+504,Perth - North East,WA,2023,68.15,64.33,45395.0
+504,Perth - North East,WA,2024,67.05,63.75,46921.0
+504,Perth - North East,WA,2025,66.69,63.19,47938.0
+505,Perth - North West,WA,2008,62.02,66.18,78809.0
+505,Perth - North West,WA,2009,61.99,66.03,81006.0
+505,Perth - North West,WA,2010,61.9,65.81,82168.0
+505,Perth - North West,WA,2011,61.8,65.63,83785.0
+505,Perth - North West,WA,2012,62.51,65.53,86660.0
+505,Perth - North West,WA,2013,62.78,65.48,88635.0
+505,Perth - North West,WA,2014,63.37,65.52,90628.0
+505,Perth - North West,WA,2015,63.36,65.54,93352.0
+505,Perth - North West,WA,2016,63.86,65.75,94287.0
+505,Perth - North West,WA,2017,64.48,65.97,95627.0
+505,Perth - North West,WA,2018,65.01,66.09,97941.0
+505,Perth - North West,WA,2019,65.07,66.1,99375.0
+505,Perth - North West,WA,2020,65.41,66.01,101033.0
+505,Perth - North West,WA,2021,65.15,65.47,102346.0
+505,Perth - North West,WA,2022,64.73,64.86,102616.0
+505,Perth - North West,WA,2023,64.53,64.33,104240.0
+505,Perth - North West,WA,2024,64.43,63.75,105907.0
+505,Perth - North West,WA,2025,64.11,63.19,107278.0
+506,Perth - South East,WA,2008,66.55,66.18,63977.0
+506,Perth - South East,WA,2009,66.77,66.03,65716.0
+506,Perth - South East,WA,2010,66.26,65.81,66785.0
+506,Perth - South East,WA,2011,66.73,65.63,69161.0
+506,Perth - South East,WA,2012,67.64,65.53,71853.0
+506,Perth - South East,WA,2013,67.92,65.48,74168.0
+506,Perth - South East,WA,2014,68.0,65.52,75768.0
+506,Perth - South East,WA,2015,67.99,65.54,78716.0
+506,Perth - South East,WA,2016,68.33,65.75,79765.0
+506,Perth - South East,WA,2017,69.11,65.97,81500.0
+506,Perth - South East,WA,2018,69.78,66.09,83010.0
+506,Perth - South East,WA,2019,69.92,66.1,84870.0
+506,Perth - South East,WA,2020,69.98,66.01,87106.0
+506,Perth - South East,WA,2021,69.45,65.47,88827.0
+506,Perth - South East,WA,2022,68.84,64.86,90459.0
+506,Perth - South East,WA,2023,68.32,64.33,93287.0
+506,Perth - South East,WA,2024,67.49,63.75,96029.0
+506,Perth - South East,WA,2025,67.18,63.19,98051.0
+507,Perth - South West,WA,2008,73.13,66.18,53731.0
+507,Perth - South West,WA,2009,72.73,66.03,54956.0
+507,Perth - South West,WA,2010,72.77,65.81,56444.0
+507,Perth - South West,WA,2011,73.01,65.63,58005.0
+507,Perth - South West,WA,2012,73.6,65.53,60589.0
+507,Perth - South West,WA,2013,72.76,65.48,64086.0
+507,Perth - South West,WA,2014,72.95,65.52,65715.0
+507,Perth - South West,WA,2015,72.76,65.54,68826.0
+507,Perth - South West,WA,2016,72.57,65.75,70542.0
+507,Perth - South West,WA,2017,72.74,65.97,72305.0
+507,Perth - South West,WA,2018,73.21,66.09,75032.0
+507,Perth - South West,WA,2019,73.26,66.1,75890.0
+507,Perth - South West,WA,2020,73.13,66.01,77380.0
+507,Perth - South West,WA,2021,72.84,65.47,78234.0
+507,Perth - South West,WA,2022,71.94,64.86,79155.0
+507,Perth - South West,WA,2023,71.7,64.33,80852.0
+507,Perth - South West,WA,2024,71.59,63.75,82526.0
+507,Perth - South West,WA,2025,71.2,63.19,83813.0
+509,Western Australia - Wheat Belt,WA,2008,84.44,66.18,21571.0
+509,Western Australia - Wheat Belt,WA,2009,83.16,66.03,21758.0
+509,Western Australia - Wheat Belt,WA,2010,82.39,65.81,21772.0
+509,Western Australia - Wheat Belt,WA,2011,81.1,65.63,21754.0
+509,Western Australia - Wheat Belt,WA,2012,81.82,65.53,22195.0
+509,Western Australia - Wheat Belt,WA,2013,81.95,65.48,22587.0
+509,Western Australia - Wheat Belt,WA,2014,81.84,65.52,22399.0
+509,Western Australia - Wheat Belt,WA,2015,82.1,65.54,22140.0
+509,Western Australia - Wheat Belt,WA,2016,81.79,65.75,21933.0
+509,Western Australia - Wheat Belt,WA,2017,81.4,65.97,21734.0
+509,Western Australia - Wheat Belt,WA,2018,80.71,66.09,21454.0
+509,Western Australia - Wheat Belt,WA,2019,79.22,66.1,21365.0
+509,Western Australia - Wheat Belt,WA,2020,78.33,66.01,21208.0
+509,Western Australia - Wheat Belt,WA,2021,77.96,65.47,21182.0
+509,Western Australia - Wheat Belt,WA,2022,77.14,64.86,21220.0
+509,Western Australia - Wheat Belt,WA,2023,77.13,64.33,21110.0
+509,Western Australia - Wheat Belt,WA,2024,77.07,63.75,21229.0
+509,Western Australia - Wheat Belt,WA,2025,76.82,63.19,21314.0
+510,Western Australia - Outback (North),WA,2008,81.37,66.18,15466.0
+510,Western Australia - Outback (North),WA,2009,81.27,66.03,15556.0
+510,Western Australia - Outback (North),WA,2010,81.47,65.81,15703.0
+510,Western Australia - Outback (North),WA,2011,81.99,65.63,16026.0
+510,Western Australia - Outback (North),WA,2012,81.82,65.53,16220.0
+510,Western Australia - Outback (North),WA,2013,82.09,65.48,16518.0
+510,Western Australia - Outback (North),WA,2014,82.35,65.52,16944.0
+510,Western Australia - Outback (North),WA,2015,82.47,65.54,16884.0
+510,Western Australia - Outback (North),WA,2016,83.37,65.75,16889.0
+510,Western Australia - Outback (North),WA,2017,84.1,65.97,17096.0
+510,Western Australia - Outback (North),WA,2018,84.65,66.09,17236.0
+510,Western Australia - Outback (North),WA,2019,85.12,66.1,17504.0
+510,Western Australia - Outback (North),WA,2020,85.39,66.01,17571.0
+510,Western Australia - Outback (North),WA,2021,84.67,65.47,17708.0
+510,Western Australia - Outback (North),WA,2022,84.37,64.86,17373.0
+510,Western Australia - Outback (North),WA,2023,84.41,64.33,17359.0
+510,Western Australia - Outback (North),WA,2024,84.45,63.75,17480.0
+510,Western Australia - Outback (North),WA,2025,84.22,63.19,18038.0
+511,Western Australia - Outback (South),WA,2008,74.59,66.18,22631.0
+511,Western Australia - Outback (South),WA,2009,73.56,66.03,22343.0
+511,Western Australia - Outback (South),WA,2010,73.19,65.81,21957.0
+511,Western Australia - Outback (South),WA,2011,73.48,65.63,22067.0
+511,Western Australia - Outback (South),WA,2012,73.24,65.53,22382.0
+511,Western Australia - Outback (South),WA,2013,73.53,65.48,23255.0
+511,Western Australia - Outback (South),WA,2014,73.34,65.52,23058.0
+511,Western Australia - Outback (South),WA,2015,73.1,65.54,23106.0
+511,Western Australia - Outback (South),WA,2016,72.91,65.75,22385.0
+511,Western Australia - Outback (South),WA,2017,73.07,65.97,21996.0
+511,Western Australia - Outback (South),WA,2018,72.6,66.09,21426.0
+511,Western Australia - Outback (South),WA,2019,72.65,66.1,21031.0
+511,Western Australia - Outback (South),WA,2020,72.73,66.01,20970.0
+511,Western Australia - Outback (South),WA,2021,72.28,65.47,21008.0
+511,Western Australia - Outback (South),WA,2022,71.89,64.86,21074.0
+511,Western Australia - Outback (South),WA,2023,71.71,64.33,21166.0
+511,Western Australia - Outback (South),WA,2024,70.8,63.75,21486.0
+511,Western Australia - Outback (South),WA,2025,70.22,63.19,21588.0
+601,Hobart,TAS,2008,60.51,66.18,31919.0
+601,Hobart,TAS,2009,60.34,66.03,31997.0
+601,Hobart,TAS,2010,60.8,65.81,32868.0
+601,Hobart,TAS,2011,64.07,65.63,36016.0
+601,Hobart,TAS,2012,62.98,65.53,36453.0
+601,Hobart,TAS,2013,64.12,65.48,36928.0
+601,Hobart,TAS,2014,64.69,65.52,37805.0
+601,Hobart,TAS,2015,64.48,65.54,37826.0
+601,Hobart,TAS,2016,64.47,65.75,38251.0
+601,Hobart,TAS,2017,64.46,65.97,38659.0
+601,Hobart,TAS,2018,64.45,66.09,38864.0
+601,Hobart,TAS,2019,64.32,66.1,39446.0
+601,Hobart,TAS,2020,63.77,66.01,39521.0
+601,Hobart,TAS,2021,62.94,65.47,39543.0
+601,Hobart,TAS,2022,63.18,64.86,40680.0
+601,Hobart,TAS,2023,62.19,64.33,40443.0
+601,Hobart,TAS,2024,61.54,63.75,40468.0
+601,Hobart,TAS,2025,60.49,63.19,40228.0
+602,Launceston and North East,TAS,2008,76.11,66.18,23104.0
+602,Launceston and North East,TAS,2009,75.55,66.03,22844.0
+602,Launceston and North East,TAS,2010,75.34,65.81,22678.0
+602,Launceston and North East,TAS,2011,76.07,65.63,23683.0
+602,Launceston and North East,TAS,2012,76.0,65.53,23343.0
+602,Launceston and North East,TAS,2013,75.94,65.48,23243.0
+602,Launceston and North East,TAS,2014,76.16,65.52,23540.0
+602,Launceston and North East,TAS,2015,75.83,65.54,23337.0
+602,Launceston and North East,TAS,2016,75.56,65.75,23324.0
+602,Launceston and North East,TAS,2017,75.24,65.97,23163.0
+602,Launceston and North East,TAS,2018,75.23,66.09,23221.0
+602,Launceston and North East,TAS,2019,75.22,66.1,23299.0
+602,Launceston and North East,TAS,2020,74.54,66.01,23440.0
+602,Launceston and North East,TAS,2021,73.89,65.47,23314.0
+602,Launceston and North East,TAS,2022,73.25,64.86,23174.0
+602,Launceston and North East,TAS,2023,72.77,64.33,23073.0
+602,Launceston and North East,TAS,2024,72.47,63.75,22905.0
+602,Launceston and North East,TAS,2025,72.01,63.19,22716.0
+603,South East,TAS,2008,89.23,66.18,4159.0
+603,South East,TAS,2009,89.18,66.03,4151.0
+603,South East,TAS,2010,89.04,65.81,4068.0
+603,South East,TAS,2011,89.36,65.63,4068.0
+603,South East,TAS,2012,88.75,65.53,3892.0
+603,South East,TAS,2013,87.98,65.48,3917.0
+603,South East,TAS,2014,88.09,65.52,3854.0
+603,South East,TAS,2015,88.51,65.54,3865.0
+603,South East,TAS,2016,88.85,65.75,3795.0
+603,South East,TAS,2017,88.18,65.97,3848.0
+603,South East,TAS,2018,88.16,66.09,3818.0
+603,South East,TAS,2019,86.87,66.1,3824.0
+603,South East,TAS,2020,85.79,66.01,3779.0
+603,South East,TAS,2021,86.14,65.47,3767.0
+603,South East,TAS,2022,86.96,64.86,3673.0
+603,South East,TAS,2023,86.84,64.33,3578.0
+603,South East,TAS,2024,87.21,63.75,3527.0
+603,South East,TAS,2025,87.01,63.19,3519.0
+604,West and North West,TAS,2008,72.48,66.18,16369.0
+604,West and North West,TAS,2009,72.52,66.03,16181.0
+604,West and North West,TAS,2010,71.92,65.81,16234.0
+604,West and North West,TAS,2011,75.02,65.63,18492.0
+604,West and North West,TAS,2012,74.88,65.53,18237.0
+604,West and North West,TAS,2013,75.11,65.48,18586.0
+604,West and North West,TAS,2014,75.75,65.52,19282.0
+604,West and North West,TAS,2015,75.59,65.54,18918.0
+604,West and North West,TAS,2016,75.82,65.75,18745.0
+604,West and North West,TAS,2017,76.44,65.97,18626.0
+604,West and North West,TAS,2018,77.29,66.09,18684.0
+604,West and North West,TAS,2019,76.82,66.1,18492.0
+604,West and North West,TAS,2020,76.99,66.01,18483.0
+604,West and North West,TAS,2021,76.04,65.47,18378.0
+604,West and North West,TAS,2022,75.32,64.86,18156.0
+604,West and North West,TAS,2023,74.01,64.33,18025.0
+604,West and North West,TAS,2024,72.36,63.75,17810.0
+604,West and North West,TAS,2025,71.19,63.19,17641.0
+701,Darwin,NT,2008,74.04,66.18,19801.0
+701,Darwin,NT,2009,73.28,66.03,19830.0
+701,Darwin,NT,2010,72.05,65.81,20138.0
+701,Darwin,NT,2011,72.47,65.63,20195.0
+701,Darwin,NT,2012,72.46,65.53,20629.0
+701,Darwin,NT,2013,71.06,65.48,21084.0
+701,Darwin,NT,2014,70.71,65.52,21213.0
+701,Darwin,NT,2015,69.62,65.54,21442.0
+701,Darwin,NT,2016,68.88,65.75,22366.0
+701,Darwin,NT,2017,70.71,65.97,22786.0
+701,Darwin,NT,2018,72.35,66.09,23704.0
+701,Darwin,NT,2019,72.72,66.1,23840.0
+701,Darwin,NT,2020,73.42,66.01,24239.0
+701,Darwin,NT,2021,73.1,65.47,24311.0
+701,Darwin,NT,2022,72.15,64.86,24229.0
+701,Darwin,NT,2023,71.48,64.33,24449.0
+701,Darwin,NT,2024,70.64,63.75,24552.0
+701,Darwin,NT,2025,69.91,63.19,24567.0
+702,Northern Territory - Outback,NT,2008,75.61,66.18,17523.0
+702,Northern Territory - Outback,NT,2009,75.48,66.03,16859.0
+702,Northern Territory - Outback,NT,2010,75.84,65.81,17728.0
+702,Northern Territory - Outback,NT,2011,75.85,65.63,17738.0
+702,Northern Territory - Outback,NT,2012,75.46,65.53,17785.0
+702,Northern Territory - Outback,NT,2013,74.67,65.48,17884.0
+702,Northern Territory - Outback,NT,2014,74.73,65.52,18091.0
+702,Northern Territory - Outback,NT,2015,73.47,65.54,17722.0
+702,Northern Territory - Outback,NT,2016,73.59,65.75,17737.0
+702,Northern Territory - Outback,NT,2017,74.75,65.97,17839.0
+702,Northern Territory - Outback,NT,2018,74.26,66.09,16987.0
+702,Northern Territory - Outback,NT,2019,75.27,66.1,17013.0
+702,Northern Territory - Outback,NT,2020,76.34,66.01,16722.0
+702,Northern Territory - Outback,NT,2021,76.03,65.47,16386.0
+702,Northern Territory - Outback,NT,2022,75.63,64.86,16026.0
+702,Northern Territory - Outback,NT,2023,76.02,64.33,15590.0
+702,Northern Territory - Outback,NT,2024,74.95,63.75,15648.0
+702,Northern Territory - Outback,NT,2025,75.14,63.19,15569.0
+801,Australian Capital Territory,ACT,2008,56.91,66.18,58638.0
+801,Australian Capital Territory,ACT,2009,57.06,66.03,59582.0
+801,Australian Capital Territory,ACT,2010,56.9,65.81,60083.0
+801,Australian Capital Territory,ACT,2011,56.82,65.63,60883.0
+801,Australian Capital Territory,ACT,2012,57.27,65.53,62153.0
+801,Australian Capital Territory,ACT,2013,57.46,65.48,63381.0
+801,Australian Capital Territory,ACT,2014,57.8,65.52,64552.0
+801,Australian Capital Territory,ACT,2015,58.61,65.54,66076.0
+801,Australian Capital Territory,ACT,2016,59.55,65.75,67623.0
+801,Australian Capital Territory,ACT,2017,60.34,65.97,69347.0
+801,Australian Capital Territory,ACT,2018,60.92,66.09,70973.0
+801,Australian Capital Territory,ACT,2019,61.14,66.1,72424.0
+801,Australian Capital Territory,ACT,2020,61.49,66.01,74201.0
+801,Australian Capital Territory,ACT,2021,61.29,65.47,75338.0
+801,Australian Capital Territory,ACT,2022,60.94,64.86,75931.0
+801,Australian Capital Territory,ACT,2023,60.31,64.33,76560.0
+801,Australian Capital Territory,ACT,2024,59.7,63.75,76984.0
+801,Australian Capital Territory,ACT,2025,59.33,63.19,77842.0

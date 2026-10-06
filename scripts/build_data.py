@@ -128,12 +128,33 @@ both["change_pp"] = (both.gov_share_2025 - both.gov_share_2020).round(2)
 both["gov_pct_change"] = ((both.Government_2025 / both.Government_2020 - 1) * 100).round(1)
 both["total_pct_change"] = ((both.Total_2025 / both.Total_2020 - 1) * 100).round(1)
 both = both.reset_index()
+# 901 is Other Territories: Christmas Island, the Cocos Islands, Norfolk Island and
+# Jervis Bay. It is scattered across two oceans, so it is dropped from the map data.
+both = both[both["Statistical Area 4"].astype(int) != 901]
 both["sa4_code"] = both["Statistical Area 4"].astype(int).astype(str)
 out = both.rename(columns={"Statistical Area 4 Name": "sa4_name", "State": "state",
                            "Total_2025": "students_2025", "Government_2025": "gov_students_2025"})
 save(out[["sa4_code", "sa4_name", "state", "gov_share_2020", "gov_share_2025",
           "change_pp", "gov_pct_change", "total_pct_change",
           "students_2025", "gov_students_2025"]].round(2), "sa4_change.csv")
+
+# ----------------------------------------------------------------------------
+# 3b. SA4 by year: the series behind the map's year slider, and behind the
+#     detail chart that appears when a region is clicked. The national share is
+#     carried on every row so the detail chart can draw its comparison line
+#     without a second data source.
+# ----------------------------------------------------------------------------
+sa4y = gov_share(panel.dropna(subset=["Statistical Area 4"]),
+                 ["Statistical Area 4", "Statistical Area 4 Name", "State", "Calendar Year"])
+sa4y = sa4y[sa4y["Statistical Area 4"].astype(int) != 901]
+nat_share = nat.set_index("year")["gov_share"]
+sa4y = sa4y.rename(columns={"Statistical Area 4 Name": "sa4_name", "State": "state",
+                            "Calendar Year": "year", "Total": "students"})
+sa4y["sa4_code"] = sa4y["Statistical Area 4"].astype(int).astype(str)
+sa4y["national_share"] = sa4y["year"].map(nat_share)
+save(sa4y[["sa4_code", "sa4_name", "state", "year", "gov_share",
+           "national_share", "students"]]
+     .sort_values(["sa4_code", "year"]).round(2), "sa4_by_year.csv")
 
 # ----------------------------------------------------------------------------
 # 4. Remoteness: the city / country gradient

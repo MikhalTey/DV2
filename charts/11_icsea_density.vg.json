@@ -74,7 +74,7 @@
   },
   "spacing": 8,
   "spec": {
-    "width": "container",
+    "width": 880,
     "height": 66,
     "layer": [
       {
