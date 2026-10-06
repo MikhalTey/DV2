@@ -1,13 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Ridgeline plot of the ICSEA distribution of every Australian school in 2025, one band per sector. Shows how far apart the three sectors sit and how long the independent sector's upper tail runs. The per-sector median is attached to each row before the density is estimated, so it survives into the facet and marks the right band.",
-  "title": {
-    "text": "The three sectors draw from different places",
-    "subtitle": [
-      "Every school in 2025, spread across the ICSEA range. Taller means more schools at that score.",
-      "The vertical line marks each sector's middle school. Source: ACARA School Profile 2025."
-    ]
-  },
   "data": {
     "url": "data/processed/icsea_distribution.csv",
     "format": {
@@ -121,8 +114,8 @@
               ],
               "range": [
                 "#2a78d6",
-                "#eb6834",
-                "#1baf7a"
+                "#d2561f",
+                "#12916a"
               ]
             },
             "legend": null

@@ -1,13 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Small multiples of the government share of enrolments in each state and territory, 2008 to 2025, on a shared axis. Shows that 2020 is a genuine turning point in all eight jurisdictions rather than an artefact of the national average.",
-  "title": {
-    "text": "This is not an average hiding eight different stories",
-    "subtitle": [
-      "Share of students in a government school, 2008 to 2025. The grey line marks 2020.",
-      "Every panel uses the same scale. Source: ACARA School Profile 2008-2025."
-    ]
-  },
   "data": {
     "url": "data/processed/state_sector_trend.csv",
     "format": {

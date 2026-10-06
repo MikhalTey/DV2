@@ -1,13 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Connected dot plot of the government share of enrolments in 2020 and 2025 across the five ABS remoteness classes. The gap between the two dots is the size of the shift.",
-  "title": {
-    "text": "The further out you go, the less choice there is",
-    "subtitle": [
-      "Share of students in a government school, 2020 and 2025, by how remote the school is.",
-      "The biggest shift is not in the capitals. Sources: ACARA School Profile; ABS remoteness areas."
-    ]
-  },
   "width": "container",
   "height": 210,
   "data": {
@@ -99,8 +92,8 @@
               "2025"
             ],
             "range": [
-              "#9ec5f4",
-              "#184f95"
+              "#a9a69c",
+              "#2a78d6"
             ]
           },
           "legend": {

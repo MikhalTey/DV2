@@ -1,29 +1,56 @@
 # Shared chart settings
 
-Every spec in this folder repeats the same `config` block and the same sector colour
-scale, so each file opens and runs on its own.
+Every spec in this folder repeats the same sector colour scale so each file opens and
+runs on its own. Fonts, mark defaults and axis chrome come from `theme.json`, which the
+page applies to all twelve.
 
-## Sector colours
+Chart headlines, standfirsts and source lines are **not** in these specs. They are page
+HTML, so they wrap to the figure they sit in, can be selected and searched, and are set
+in the same faces as the rest of the page. Hand-wrapped subtitle lines baked into a spec
+ran off the edge of the two narrower figures.
 
-| Sector | Hex | Why |
+## Colour: one hue, one meaning
+
+| Role | Hex | Where it appears |
 |---|---|---|
-| Government | `#2a78d6` | Categorical slot 1 |
-| Catholic | `#eb6834` | Categorical slot 2 |
-| Independent | `#1baf7a` | Categorical slot 3 |
+| Government | `#2a78d6` | sector charts, and the government-share ramp on all three maps |
+| Catholic | `#d2561f` | sector charts |
+| Independent | `#12916a` | sector charts |
+| A fall | `#a8322c` | charts 3 and 5, and the page's own down figures |
+| A rise | `#7b3fa0` | charts 3 and 5 |
 
-These three were checked with a colour-vision-deficiency validator on the all-pairs
-test, which is the harder one needed for maps and scatterplots. Worst pair separation
-is Delta E 9.2 under deuteranopia, above the 8 threshold. Independent green sits at
-2.74:1 against the page, below the 3:1 mark, so every chart using it carries a legend
-and the line charts carry labels on the lines themselves. Colour never has to work alone.
+Blue used to carry four different meanings on the page at once: the government sector,
+a rise, a high government share, and the year 2025. A reader who learned "blue means
+government" in chart 2 then met a chart where blue meant growth, which in that chart was
+mostly non-government. Blue is now the government sector and nothing else, which also
+lets the sequential map ramps share it honestly.
+
+The fall/rise pair is deliberately not a sector hue. Red already means a fall elsewhere
+on the page, and violet appears nowhere else, so neither can be mistaken for a sector in
+the figure above.
+
+Two sets have to survive a colour-vision check, because these are the only two that ever
+appear inside one chart:
+
+- **Sector trio.** Worst pair Delta E 10.7 under deuteranopia, 25.6 at normal vision.
+  All three now clear 3:1 against the page background, so colour is no longer propped
+  up by labels alone. Catholic and Independent were darkened a step to get there.
+- **Fall and rise.** Delta E 19.2 under protanopia, 19.4 at normal vision.
+
+Across figures the two sets stay apart as well: violet against each sector hue is
+17.1, 26.1 and 28.0 at normal vision, all above the 15 floor.
+
+Every chart with two or more series still carries a legend, and the line and density
+charts label their lines directly. Colour never has to work alone.
 
 ## Diverging scale, used for any signed change
 
-Three red steps, a neutral grey for no real change, three blue steps.
+Seven steps: four reds for a fall, the page surface at no change, two violets for a rise.
 
-`#9c2c2b` `#e34948` `#f0a9a8` · `#f0efec` · `#b7d3f6` `#5598e7` `#184f95`
+`#8c2823` `#ab3f36` `#c9776d` `#e3b4ab` · `#efe9df` · `#b9a7d4` `#7b3fa0`
 
-Breaks at -6, -3, -1, +1, +3, +6.
+The domain is asymmetric (-6.5 to +2.5) because the data is: falls run three times
+deeper than rises, and a symmetric scale would have wasted half the ramp.
 
 ## Ink and chrome
 

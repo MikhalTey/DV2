@@ -1,13 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Proportional symbol map of every school open in 2025 that was not open in 2020, sized by enrolment and coloured by sector. Albers equal-area conic projection.",
-  "title": {
-    "text": "Where the new schools were built",
-    "subtitle": [
-      "The 260 schools operating in 2025 that were not open in 2020. Circle area is the 2025 enrolment.",
-      "Use the menu below to show one sector at a time. Source: ACARA School Profile and School Location."
-    ]
-  },
   "width": "container",
   "height": 600,
   "projection": {
@@ -73,9 +66,9 @@
       ],
       "mark": {
         "type": "circle",
-        "opacity": 0.72,
+        "opacity": 0.62,
         "stroke": "#eeebe3",
-        "strokeWidth": 0.6
+        "strokeWidth": 1.2
       },
       "encoding": {
         "longitude": {
@@ -98,9 +91,10 @@
             ]
           },
           "legend": {
-            "orient": "none",
-            "legendX": 468,
-            "legendY": 18,
+            "orient": "top",
+            "direction": "horizontal",
+            "offset": 6,
+            "titleLimit": 460,
             "symbolFillColor": "#b8bdc4",
             "symbolStrokeColor": "#8a9098",
             "format": ",.0f"
@@ -118,14 +112,15 @@
             ],
             "range": [
               "#2a78d6",
-              "#eb6834",
-              "#1baf7a"
+              "#d2561f",
+              "#12916a"
             ]
           },
           "legend": {
-            "orient": "none",
-            "legendX": 12,
-            "legendY": 330,
+            "orient": "top",
+            "direction": "horizontal",
+            "offset": 6,
+            "titleLimit": 460,
             "symbolType": "circle",
             "symbolSize": 110
           }

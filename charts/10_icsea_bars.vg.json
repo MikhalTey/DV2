@@ -1,15 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Change in student numbers between 2020 and 2025, grouped by the socio-educational advantage of the school community and by sector. Counted in students rather than percent, because some of these groups are small and a percentage would overstate them.",
-  "title": {
-    "text": "Government schools held both ends and lost the middle",
-    "subtitle": [
-      "Change in students, 2020 to 2025, by the school community's ICSEA score. ICSEA is ACARA's measure of",
-      "how advantaged a school's families are, with 1000 as the national average.",
-      "Counted in students, not percent, so small groups are not made to look bigger than they are.",
-      "Source: ACARA School Profile 2008-2025."
-    ]
-  },
   "width": "container",
   "height": 300,
   "data": {
@@ -87,8 +78,8 @@
             ],
             "range": [
               "#2a78d6",
-              "#eb6834",
-              "#1baf7a"
+              "#d2561f",
+              "#12916a"
             ]
           },
           "legend": {

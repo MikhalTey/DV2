@@ -16,15 +16,8 @@
   ],
   "vconcat": [
     {
-      "title": {
-        "text": "Drag the year. Watch the colour drain out of the coast.",
-        "subtitle": [
-          "Share of local students in a government school. Click any region to see its own history below.",
-          "Sources: ACARA School Profile and School Location; ABS Statistical Areas Level 4, 2021."
-        ]
-      },
       "width": 880,
-      "height": 820,
+      "height": 600,
       "projection": {
         "type": "albers",
         "rotate": [
@@ -119,11 +112,11 @@
               "scale": {
                 "type": "threshold",
                 "domain": [
-                  50,
-                  60,
-                  70,
-                  80,
-                  90
+                  55,
+                  62,
+                  67,
+                  72,
+                  78
                 ],
                 "range": [
                   "#cde2fb",
@@ -135,11 +128,10 @@
                 ]
               },
               "legend": {
-                "orient": "none",
+                "orient": "top",
                 "direction": "horizontal",
-                "legendX": 10,
-                "legendY": 778,
-                "titleLimit": 420,
+                "offset": 6,
+                "titleLimit": 460,
                 "symbolType": "square",
                 "symbolSize": 120,
                 "format": "d"
@@ -217,10 +209,19 @@
     {
       "title": {
         "text": "The region you picked, against the country",
-        "subtitle": "Government share of students, 2008 to 2025. The grey line is Australia as a whole."
+        "subtitle": "Government share of students, 2008 to 2025. The grey line is Australia as a whole.",
+        "anchor": "start",
+        "font": "Archivo, Helvetica Neue, Arial, sans-serif",
+        "fontSize": 14,
+        "fontWeight": 700,
+        "color": "#16150f",
+        "subtitleFont": "Source Serif 4, Georgia, serif",
+        "subtitleFontSize": 13,
+        "subtitleColor": "#6b6860",
+        "offset": 14
       },
       "width": 880,
-      "height": 230,
+      "height": 200,
       "data": {
         "url": "data/processed/sa4_by_year.csv",
         "format": {

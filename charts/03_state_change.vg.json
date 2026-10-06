@@ -1,14 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Change in the number of government school students in each state and territory between 2020 and 2025, in headcount rather than share. The grey marker shows how the state's whole school population moved over the same period, so the gap between the two is the part that is a sector shift rather than population growth.",
-  "title": {
-    "text": "New South Wales lost a city's worth of government students",
-    "subtitle": [
-      "Change in government school students, 2020 to 2025. The grey tick shows the change in all",
-      "students in that state, so the distance between the bar and the tick is the sector shift.",
-      "Source: ACARA School Profile 2008-2025."
-    ]
-  },
   "width": "container",
   "height": 300,
   "data": {
@@ -58,7 +50,7 @@
     "x": {
       "field": "gov_change",
       "type": "quantitative",
-      "title": "Change in government school students, 2020 to 2025",
+      "title": null,
       "scale": {
         "domain": [
           -52000,
@@ -66,8 +58,10 @@
         ]
       },
       "axis": {
-        "tickCount": 5,
-        "format": "+,.0f"
+        "labels": false,
+        "ticks": false,
+        "domain": false,
+        "grid": false
       }
     }
   },
@@ -82,9 +76,9 @@
         "color": {
           "condition": {
             "test": "datum.gov_change < 0",
-            "value": "#e34948"
+            "value": "#a8322c"
           },
-          "value": "#2a78d6"
+          "value": "#7b3fa0"
         },
         "tooltip": [
           {

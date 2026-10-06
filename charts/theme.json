@@ -8,10 +8,10 @@
   "axis": {
     "labelFont": "IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace",
     "labelColor": "#8a877e",
-    "labelFontSize": 10.5,
+    "labelFontSize": 12,
     "titleFont": "Archivo, Helvetica Neue, Arial, sans-serif",
     "titleColor": "#5c5950",
-    "titleFontSize": 10.5,
+    "titleFontSize": 12,
     "titleFontWeight": 600,
     "gridColor": "#ddd8cb",
     "gridWidth": 1,
@@ -25,32 +25,19 @@
   "legend": {
     "labelFont": "Archivo, Helvetica Neue, Arial, sans-serif",
     "labelColor": "#5c5950",
-    "labelFontSize": 11,
+    "labelFontSize": 12.5,
     "titleFont": "Archivo, Helvetica Neue, Arial, sans-serif",
     "titleColor": "#8a877e",
-    "titleFontSize": 9.5,
+    "titleFontSize": 10.5,
     "titleFontWeight": 700,
     "symbolType": "square",
     "symbolSize": 90,
     "rowPadding": 4
   },
-  "title": {
-    "font": "Archivo, Helvetica Neue, Arial, sans-serif",
-    "color": "#16150f",
-    "fontSize": 17,
-    "fontWeight": 700,
-    "anchor": "start",
-    "subtitleFont": "Source Serif 4, Georgia, serif",
-    "subtitleColor": "#6b6860",
-    "subtitleFontSize": 13,
-    "subtitleFontWeight": 400,
-    "subtitleLineHeight": 18,
-    "offset": 12
-  },
   "header": {
     "labelFont": "Archivo, Helvetica Neue, Arial, sans-serif",
     "labelColor": "#16150f",
-    "labelFontSize": 12,
+    "labelFontSize": 13,
     "labelFontWeight": 600,
     "titleFont": "Archivo, Helvetica Neue, Arial, sans-serif",
     "titleColor": "#5c5950",
@@ -59,14 +46,14 @@
   "range": {
     "category": [
       "#2a78d6",
-      "#eb6834",
-      "#1baf7a"
+      "#d2561f",
+      "#12916a"
     ]
   },
   "text": {
     "font": "IBM Plex Mono, ui-monospace, Menlo, monospace",
     "color": "#5c5950",
-    "fontSize": 10.5
+    "fontSize": 11.5
   },
   "rule": {
     "color": "#c2bcac"

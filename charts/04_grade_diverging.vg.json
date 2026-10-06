@@ -1,14 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Percentage change in enrolments between 2020 and 2025 at each year level, one panel per sector. Government loses its youngest year levels and gains its oldest; the other two sectors gain everywhere.",
-  "title": {
-    "text": "Fewer small children, but only in government schools",
-    "subtitle": [
-      "Change in enrolments at each year level, 2020 to 2025. Australia's birth rate fell, so the",
-      "youngest year levels are smaller everywhere. Only the government sector actually shrank.",
-      "Source: ACARA Enrolments by Grade 2008-2025."
-    ]
-  },
   "data": {
     "url": "data/processed/grade_change.csv",
     "format": {
@@ -22,24 +14,25 @@
     }
   },
   "facet": {
-    "column": {
-      "field": "sector",
-      "type": "nominal",
-      "title": null,
-      "sort": [
-        "Government",
-        "Catholic",
-        "Independent"
-      ],
-      "header": {
-        "labelFontSize": 12.5,
-        "labelFontWeight": 600,
-        "labelColor": "#0b0b0b",
-        "labelPadding": 6
-      }
+    "field": "sector",
+    "type": "nominal",
+    "title": null,
+    "sort": [
+      "Government",
+      "Catholic",
+      "Independent"
+    ],
+    "header": {
+      "labelFontSize": 12.5,
+      "labelFontWeight": 600,
+      "labelColor": "#0b0b0b",
+      "labelPadding": 6
     }
   },
-  "spacing": 26,
+  "spacing": {
+    "row": 30,
+    "column": 26
+  },
   "spec": {
     "width": 248,
     "height": 330,
@@ -68,7 +61,7 @@
           "x": {
             "field": "pct_change",
             "type": "quantitative",
-            "title": "Change in students, 2020 to 2025 (%)",
+            "title": null,
             "scale": {
               "domain": [
                 -12,
@@ -91,8 +84,8 @@
               ],
               "range": [
                 "#2a78d6",
-                "#eb6834",
-                "#1baf7a"
+                "#d2561f",
+                "#12916a"
               ]
             },
             "legend": null
@@ -134,13 +127,33 @@
       {
         "transform": [
           {
+            "joinaggregate": [
+              {
+                "op": "min",
+                "field": "pct_change",
+                "as": "lo"
+              },
+              {
+                "op": "max",
+                "field": "pct_change",
+                "as": "hi"
+              }
+            ],
+            "groupby": [
+              "sector"
+            ]
+          },
+          {
+            "filter": "datum.pct_change === datum.lo || datum.pct_change === datum.hi"
+          },
+          {
             "filter": "datum.pct_change < 0"
           }
         ],
         "mark": {
           "type": "text",
-          "fontSize": 9.5,
-          "fontWeight": 500,
+          "fontSize": 11,
+          "fontWeight": 600,
           "align": "right",
           "dx": -4
         },
@@ -170,13 +183,33 @@
       {
         "transform": [
           {
+            "joinaggregate": [
+              {
+                "op": "min",
+                "field": "pct_change",
+                "as": "lo"
+              },
+              {
+                "op": "max",
+                "field": "pct_change",
+                "as": "hi"
+              }
+            ],
+            "groupby": [
+              "sector"
+            ]
+          },
+          {
+            "filter": "datum.pct_change === datum.lo || datum.pct_change === datum.hi"
+          },
+          {
             "filter": "datum.pct_change >= 0"
           }
         ],
         "mark": {
           "type": "text",
-          "fontSize": 9.5,
-          "fontWeight": 500,
+          "fontSize": 11,
+          "fontWeight": 600,
           "align": "left",
           "dx": 4
         },
@@ -217,5 +250,6 @@
         }
       }
     ]
-  }
+  },
+  "columns": 3
 }

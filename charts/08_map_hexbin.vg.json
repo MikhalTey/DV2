@@ -1,14 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Hexagonal binning map. Every school is snapped to a hexagon of equal ground area, and the hexagon is shaded by the share of its students in government schools. Unlike the choropleth, each cell covers the same amount of land, so dense city areas are not compressed into slivers.",
-  "title": {
-    "text": "Choice exists where people are packed in",
-    "subtitle": [
-      "Australia divided into equal-sized hexagons. Shading is the share of local students in a",
-      "government school in 2025; hexagons with fewer than three schools are left out.",
-      "Source: ACARA School Profile and School Location, 2025."
-    ]
-  },
   "width": "container",
   "height": 470,
   "projection": {
@@ -75,10 +67,9 @@
             ]
           },
           "legend": {
-            "orient": "none",
+            "orient": "top",
             "direction": "horizontal",
-            "legendX": 10,
-            "legendY": 398,
+            "offset": 6,
             "titleLimit": 420,
             "symbolType": "square",
             "symbolSize": 120,

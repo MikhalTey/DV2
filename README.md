@@ -58,6 +58,7 @@ DV2/
   maps/au_sa4_states.topo.json  88 regions and 8 state outlines, sharing one topology
   maps/school_hexbins.geojson   equal-area hexagons holding the local sector mix
   scripts/build_data.py       turns data/raw into data/processed
+  scripts/build_grade_share.py  government share per year level per year, for chart 5
   scripts/build_hexbin.py     turns the school points into the hexagon layer
   chart-plan.md               what each chart is, the interactions, and how to sketch the page
   submission-text.md          the Moodle description: domain, why, who, what, how
@@ -76,6 +77,7 @@ DV2/
 | `sa4_by_year.csv` | 1,584 | Per SA4 per year 2008-2025: government share, the national share for that year, and student count. Backs the map's year slider and the region detail chart |
 | `remoteness_trend.csv` | 270 | Remoteness area, year, sector, enrolments and share |
 | `grade_change.csv` | 39 | Year level and sector, enrolments 2020 and 2025, percent change |
+| `grade_share_by_year.csv` | 221 | Year level by year 2009-2025, government share and its change in percentage points against that year level's own 2009 share |
 | `icsea_change.csv` | 12 | ICSEA band and sector, enrolments 2020 and 2025, percent change |
 | `icsea_distribution.csv` | 9,620 | One row per school in 2025: sector and ICSEA |
 | `new_schools_since_2020.csv` | 260 | Schools open in 2025 but not 2020, with coordinates |

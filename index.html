@@ -30,12 +30,11 @@
     --body:"Source Serif 4", Georgia, "Times New Roman", serif;
     --mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-    /* Four widths, the way a graphics desk does it: prose stays narrow and
-       readable, figures step up, maps take the whole screen. */
-    --w-text:660px;
-    --w-fig:940px;
-    --w-wide:1240px;
-    --w-full:1620px;
+    /* Two widths sharing one left edge. Everything on the page sits in the
+       same box; prose is capped at a readable measure inside it. Four separately
+       centred widths made the left margin jump about as you scrolled. */
+    --w-text:680px;
+    --w-fig:1180px;
     --pad:28px;
   }
   *{box-sizing:border-box}
@@ -45,11 +44,13 @@
     font-family:var(--body); font-size:20px; line-height:1.58;
     -webkit-font-smoothing:antialiased; overflow-x:hidden;
   }
-  .col{width:100%; margin:0 auto; padding:0 var(--pad)}
-  .col-text{max-width:calc(var(--w-text) + var(--pad)*2)}
-  .col-fig {max-width:calc(var(--w-fig)  + var(--pad)*2)}
-  .col-wide{max-width:calc(var(--w-wide) + var(--pad)*2)}
-  .col-full{max-width:calc(var(--w-full) + var(--pad)*2)}
+  .col{
+    width:100%; max-width:calc(var(--w-fig) + var(--pad)*2);
+    margin:0 auto; padding:0 var(--pad);
+  }
+  /* Running text is capped at a comfortable measure but stays flush to the same
+     left edge as the figures, so the spine of the page never moves. */
+  .sec-head > *, .note, .pull, .standfirst, .byline{max-width:var(--w-text)}
 
   /* ===================== motion ===================== */
   /* The masthead is never animated. A page that fades in from nothing reads as
@@ -140,7 +141,33 @@
     margin:0;
   }
   .fig-label .muted{color:var(--ink-3)}
+  /* The chart headline, standfirst and source used to be baked into the Vega
+     spec. Hand-wrapped subtitle lines then ran off the edge of the narrower
+     figures. As page text they wrap, they can be selected and searched, and
+     they are set in the same faces as everything else. */
+  .fig-title{
+    font-family:var(--display); font-weight:700;
+    font-size:clamp(19px,2.1vw,24px); line-height:1.2; letter-spacing:-.018em;
+    color:var(--ink); margin:0 0 9px; max-width:var(--w-text); text-wrap:balance;
+  }
+  .fig-sub{
+    font-family:var(--body); font-size:17px; line-height:1.45;
+    color:var(--ink-2); margin:0 0 26px; max-width:var(--w-text);
+  }
+  .fig-src{
+    font-family:var(--mono); font-size:10px; letter-spacing:.11em;
+    text-transform:uppercase; color:var(--ink-3); margin:14px 0 0;
+  }
   .vis{width:100%; overflow-x:auto}
+  .swipe{
+    display:none; font-family:var(--display); font-size:11.5px; color:var(--ink-3);
+    margin:9px 0 0; letter-spacing:.01em;
+  }
+  .fig.scrolls .swipe{display:block}
+  /* vega-embed stamps its own class on whatever element it is handed, and that
+     class is inline-block. An inline-block box with no content yet measures
+     zero, so a "container" width came back as 0 and every chart drew empty. */
+  .vis .chart-inner{display:block; width:100%}
   .vis canvas, .vis svg{max-width:100%; display:block}
   .note{
     font-size:16.5px; line-height:1.55; color:var(--ink-2);
@@ -149,7 +176,12 @@
   }
   .note b{color:var(--ink); font-weight:600}
   .pair{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start}
-  .pair .fig{margin-bottom:0}
+  .pair .fig{margin:0; width:100%}
+  /* Grid and flex items default to min-width:auto, so a chart wider than its
+     track pushes the track open instead of scrolling inside it. That is what
+     made the whole page scroll sideways on a phone. */
+  .pair > *, .fig, .col{min-width:0}
+  .vis{max-width:100%}
 
   /* ===================== controls, inline with the figure label ===== */
   .ctl-row{display:flex; align-items:center; flex-wrap:wrap; gap:10px 18px}
@@ -183,7 +215,7 @@
   .pull{
     font-family:var(--display); font-weight:700;
     font-size:clamp(26px,3.6vw,44px); line-height:1.1; letter-spacing:-.028em;
-    color:var(--ink); max-width:17ch; margin:0 auto 96px;
+    color:var(--ink); max-width:min(17ch, var(--w-text)); margin:0 0 96px;
     padding:0; text-wrap:balance;
   }
   .pull::before{
@@ -210,6 +242,24 @@
   .defs dt{font-family:var(--display); font-weight:600; color:var(--ink); font-size:14px; margin-top:14px}
   .defs dd{margin:3px 0 0}
 
+  /* ===================== reading progress ===================== */
+  /* The page is long. A hairline of progress and the name of the current part
+     are the whole of the navigation: enough to know where you are, not enough
+     to compete with the story. */
+  .progress{position:fixed; top:0; left:0; right:0; height:3px; z-index:60; background:transparent}
+  .progress span{display:block; height:100%; width:0; background:var(--fall)}
+  .nowat{
+    position:fixed; top:15px; right:20px; z-index:60;
+    font-family:var(--mono); font-size:10px; font-weight:500;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2);
+    background:rgba(238,235,227,.88); -webkit-backdrop-filter:blur(7px); backdrop-filter:blur(7px);
+    padding:7px 12px; border:1px solid var(--rule); border-radius:2px;
+    opacity:0; transform:translateY(-7px); pointer-events:none;
+    transition:opacity .25s ease-out, transform .25s ease-out;
+  }
+  .nowat.on{opacity:1; transform:none}
+  @media (prefers-reduced-motion:reduce){ .nowat{transition:none} }
+
   @media (max-width:900px){
     body{font-size:18px}
     .pair{grid-template-columns:1fr; gap:0}
@@ -219,13 +269,26 @@
     .cols{grid-template-columns:1fr; gap:0}
     .hero{padding-top:48px}
     .fig{margin-bottom:64px}
+    .nowat{display:none}
+  }
+
+  /* Below this width a chart cannot be made to fit and stay readable. Squeezing
+     it into 320px shrank the axis text to about three pixels. The chart keeps a
+     legible size and the figure scrolls sideways instead. */
+  @media (max-width:760px){
+    .vis{overflow-x:auto; -webkit-overflow-scrolling:touch}
+    .fig-title{font-size:20px}
+    .fig-sub{font-size:16px; margin-bottom:18px}
   }
 </style>
 </head>
 <body>
 
+<div class="progress" aria-hidden="true"><span></span></div>
+<p class="nowat" id="nowat" aria-hidden="true"></p>
+
 <header class="hero">
-  <div class="col col-wide">
+  <div class="col">
     <p class="eyebrow">Australian school enrolments &nbsp;/&nbsp; 2008&ndash;2025</p>
     <h1>The quiet exit from government schools</h1>
     <p class="standfirst">
@@ -261,7 +324,7 @@
 
 <!-- ======================= PART ONE ======================= -->
 <section>
-  <div class="col col-text sec-head">
+  <div class="col sec-head">
     <span class="sec-num">Part one &nbsp;/&nbsp; What happened</span>
     <h2>A twelve-year flat line, then a break</h2>
     <p>
@@ -273,7 +336,7 @@
     </p>
   </div>
 
-  <figure class="fig col col-wide" id="fig-02">
+  <figure class="fig col" id="fig-02">
     <div class="fig-head">
       <p class="fig-label">Figure 1 &nbsp;<span class="muted">Growth by sector, 2008 = 100</span></p>
       <div class="ctl-row">
@@ -281,32 +344,40 @@
         <div class="ctl" id="ctl-v02"></div>
       </div>
     </div>
+    <h3 class="fig-title">Same starting line, very different journeys</h3>
+    <p class="fig-sub">Students in each sector, with 2008 set to 100.</p>
     <div class="vis" id="v02"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
       Independent schools ended 48% larger than they started. Government schools grew 17% over
       seventeen years, and <b>all of that growth happened before 2020</b>. Since then the line has
       bent downwards, which no other sector did.
     </figcaption>
+    <p class="fig-src">Source: ACARA School Profile 2008&ndash;2025</p>
   </figure>
 
-  <p class="pull col col-text">The system kept growing the whole time. That is what made the turn so easy to miss.</p>
+  <div class="col"><p class="pull">The system kept growing the whole time. That is what made the turn so easy to miss.</p></div>
 
-  <figure class="fig col col-fig" id="fig-01">
+  <figure class="fig col" id="fig-01">
     <div class="fig-head">
       <p class="fig-label">Figure 2 &nbsp;<span class="muted">Students by sector</span></p>
     </div>
+    <h3 class="fig-title">The school system never stopped growing</h3>
+    <p class="fig-sub">Students enrolled in Australian schools, by sector.</p>
     <div class="vis" id="v01"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
       Stacked up, the three sectors look like a steady system: the total climbs every year and
       gained about 158,000 students between 2020 and 2025. Stacked totals hide what happens
       underneath, because a band can keep its place while shrinking relative to the whole.
     </figcaption>
+    <p class="fig-src">Source: ACARA School Profile 2008&ndash;2025</p>
   </figure>
 </section>
 
 <!-- ======================= PART TWO ======================= -->
 <section>
-  <div class="col col-text sec-head">
+  <div class="col sec-head">
     <span class="sec-num">Part two &nbsp;/&nbsp; The obvious objection</span>
     <h2>Is this just fewer children being born?</h2>
     <p>
@@ -318,35 +389,46 @@
     <p>That is not what the data shows.</p>
   </div>
 
-  <figure class="fig col col-wide" id="fig-04">
+  <figure class="fig col" id="fig-04">
     <div class="fig-head">
       <p class="fig-label">Figure 3 &nbsp;<span class="muted">Change by year level, 2020 to 2025</span></p>
     </div>
+    <h3 class="fig-title">Fewer small children, but only in government schools</h3>
+    <p class="fig-sub">Change in enrolments at each year level, 2020 to 2025. Australia's birth rate fell, so the youngest year levels are smaller everywhere. Only the government sector actually shrank. Each panel labels its largest fall and its largest rise.</p>
     <div class="vis" id="v04"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
       Government schools lost 8% of their Year 1 students and gained 12% of their Year 12 students.
       That pattern is exactly what a shrinking birth cohort moving up through a system looks like.
       But the other two sectors grew at <b>every single year level, including the youngest ones</b>.
       The children are fewer, and a smaller share of them are being enrolled in government schools.
     </figcaption>
+    <p class="fig-src">Source: ACARA Enrolments by Grade 2008&ndash;2025</p>
   </figure>
 
-  <figure class="fig col col-full" id="fig-05">
+  <figure class="fig col" id="fig-05">
     <div class="fig-head">
-      <p class="fig-label">Figure 4 &nbsp;<span class="muted">The same change, as a grid</span></p>
+      <p class="fig-label">Figure 4 &nbsp;<span class="muted">Government share by year level, 2009 to 2025</span></p>
     </div>
+    <h3 class="fig-title">The primary school turn is new. The high school one is not.</h3>
+    <p class="fig-sub">Government share of enrolments at each year level, measured against that year level's own 2009 share. Red is below 2009, violet is above. 2008 is left out because only government schools reported by year level that year.</p>
     <div class="vis" id="v05"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
-      All of the losses sit in one block: the government row, from Foundation through Year 4, plus
-      Years 7 and 8 where families often move schools anyway.
+      Read it left to right. The secondary drift is old news: Years 7 to 12 have been pulling away
+      from the government sector since about 2012, and Year 7 is now 6.3 points below where it
+      started. Foundation to Year 6 did the opposite, <b>gaining</b> share right through the 2010s,
+      and only turned after 2020. By 2025 every single year level sits below its 2009 level, which
+      a five-year window cannot show.
     </figcaption>
+    <p class="fig-src">Source: ACARA Enrolments by Grade 2008&ndash;2025</p>
   </figure>
 </section>
 
 <!-- ======================= PART THREE : tinted band ======================= -->
 <div class="band">
 <section>
-  <div class="col col-text sec-head">
+  <div class="col sec-head">
     <span class="sec-num">Part three &nbsp;/&nbsp; Where</span>
     <h2>Not a capital city story</h2>
     <p>
@@ -356,20 +438,24 @@
     </p>
   </div>
 
-  <figure class="fig col col-fig" id="fig-03">
+  <figure class="fig col" id="fig-03">
     <div class="fig-head">
       <p class="fig-label">Figure 5 &nbsp;<span class="muted">Change in government students, by state</span></p>
     </div>
+    <h3 class="fig-title">New South Wales lost a city's worth of government students</h3>
+    <p class="fig-sub">Change in government school students, 2020 to 2025. Bars are labelled directly. The grey tick shows the change in all students in that state, so the distance between the bar and the tick is the part that is a sector shift rather than population growth.</p>
     <div class="vis" id="v03"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
       Counted in students rather than percentages, New South Wales lost 36,470 government students
       in five years while its total student population grew. Victoria and Western Australia went
       the other way. The grey tick shows where each government system would have landed if it had
       simply grown at the same rate as its state's whole student population.
     </figcaption>
+    <p class="fig-src">Source: ACARA School Profile 2008&ndash;2025</p>
   </figure>
 
-  <figure class="fig col col-wide" id="fig-06">
+  <figure class="fig col" id="fig-06">
     <div class="fig-head">
       <p class="fig-label">Figure 6 &nbsp;<span class="muted">Government share by region, any year</span></p>
       <div class="ctl-row">
@@ -380,7 +466,10 @@
         <p class="howto">Click any region on the map</p>
       </div>
     </div>
+    <h3 class="fig-title">Drag the year. Watch the colour drain out of the coast.</h3>
+    <p class="fig-sub">Share of local students in a government school. Click any region to see its own history underneath, drawn against the national line.</p>
     <div class="vis" id="v06"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
       Run it from 2008 and the colour drains out of the populated coast after 2020. The deepest
       falls are in places like Richmond&nbsp;&ndash;&nbsp;Tweed on the New South Wales north coast,
@@ -388,30 +477,39 @@
       not inner cities. Of the 88 regions, 83 fell, and the only five that went the other way are
       all inner-city.
     </figcaption>
+    <p class="fig-src">Source: ACARA School Profile and School Location; ABS Statistical Areas Level 4, 2021</p>
   </figure>
 
-  <div class="col col-wide pair">
+  <div class="col pair">
     <figure class="fig" id="fig-08">
       <div class="fig-head"><p class="fig-label">Figure 7 &nbsp;<span class="muted">Equal-area cells</span></p></div>
-      <div class="vis" id="v08"></div>
+      <h3 class="fig-title">Choice exists where people are packed in</h3>
+    <p class="fig-sub">Australia divided into equal-sized hexagons. Shading is the share of local students in a government school in 2025. Hexagons holding fewer than three schools are left out.</p>
+    <div class="vis" id="v08"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
       <figcaption class="note">
         Regions are wildly different sizes, so the map above flatters the empty inland. Splitting
         the country into equal-sized cells instead shows the real pattern: deep blue almost
         everywhere a long way from a city, much paler along the populated coast.
       </figcaption>
+    <p class="fig-src">Source: ACARA School Profile and School Location, 2025</p>
     </figure>
     <figure class="fig" id="fig-09">
       <div class="fig-head"><p class="fig-label">Figure 8 &nbsp;<span class="muted">By remoteness</span></p></div>
-      <div class="vis" id="v09"></div>
+      <h3 class="fig-title">The further out you go, the less choice there is</h3>
+    <p class="fig-sub">Share of students in a government school in 2020 and 2025, by how remote the school is. The biggest shift is not in the capitals.</p>
+    <div class="vis" id="v09"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
       <figcaption class="note">
         The same gradient as numbers. Very remote Australia is 88% government and barely moved,
         because there is usually nothing else within reach. The sharpest fall was <b>not</b> in the
         major cities but in inner regional Australia, down 4.6 points in five years.
       </figcaption>
+    <p class="fig-src">Source: ACARA School Profile; ABS remoteness areas</p>
     </figure>
   </div>
 
-  <figure class="fig col col-fig" id="fig-07">
+  <figure class="fig col" id="fig-07">
     <div class="fig-head">
       <p class="fig-label">Figure 9 &nbsp;<span class="muted">Schools opened since 2020</span></p>
       <div class="ctl-row">
@@ -419,19 +517,23 @@
         <div class="ctl" id="ctl-v07"></div>
       </div>
     </div>
+    <h3 class="fig-title">Where the new schools were built</h3>
+    <p class="fig-sub">The 260 schools operating in 2025 that were not open in 2020. Circle area is the 2025 enrolment. Use the menu above to show one sector at a time.</p>
     <div class="vis" id="v07"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
       260 schools opened between 2020 and 2025. Governments built 131 of them, but independent
       bodies built 104 and they cluster on the growth fringes of Melbourne, Sydney, Brisbane and
       Perth, and along the same regional coast where the government share fell fastest.
     </figcaption>
+    <p class="fig-src">Source: ACARA School Profile and School Location</p>
   </figure>
 </section>
 </div>
 
 <!-- ======================= PART FOUR ======================= -->
 <section>
-  <div class="col col-text sec-head">
+  <div class="col sec-head">
     <span class="sec-num">Part four &nbsp;/&nbsp; Who</span>
     <h2>The middle gets thinner</h2>
     <p>
@@ -441,35 +543,43 @@
     </p>
   </div>
 
-  <figure class="fig col col-fig" id="fig-10">
+  <figure class="fig col" id="fig-10">
     <div class="fig-head">
       <p class="fig-label">Figure 10 &nbsp;<span class="muted">Change by advantage band</span></p>
     </div>
+    <h3 class="fig-title">Government schools held both ends and lost the middle</h3>
+    <p class="fig-sub">Change in students, 2020 to 2025, by the school community's ICSEA score. ICSEA is ACARA's measure of how advantaged a school's families are, with 1000 as the national average. Counted in students rather than percent, so small groups are not made to look bigger than they are.</p>
     <div class="vis" id="v10"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
       Government schools grew at both ends of the range and lost heavily through the middle, about
       91,000 students across the two middle bands. These are ordinary suburbs and regional towns
       where a Catholic or low-fee independent school is a realistic option and the fees are within
       reach.
     </figcaption>
+    <p class="fig-src">Source: ACARA School Profile 2008&ndash;2025</p>
   </figure>
 
-  <figure class="fig col col-wide" id="fig-11">
+  <figure class="fig col" id="fig-11">
     <div class="fig-head">
       <p class="fig-label">Figure 11 &nbsp;<span class="muted">Where each sector's schools sit</span></p>
     </div>
+    <h3 class="fig-title">The three sectors draw from different places</h3>
+    <p class="fig-sub">Every school in 2025, spread across the ICSEA range. Taller means more schools at that score. The vertical line marks each sector's middle school.</p>
     <div class="vis" id="v11"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
       The typical government school scores 984, the typical Catholic school 1046, the typical
       independent school 1067. Government schools also cover far more of the disadvantaged end,
       which is the part of the system that is still growing.
     </figcaption>
+    <p class="fig-src">Source: ACARA School Profile 2025</p>
   </figure>
 </section>
 
 <!-- ======================= PART FIVE ======================= -->
 <section>
-  <div class="col col-text sec-head">
+  <div class="col sec-head">
     <span class="sec-num">Part five &nbsp;/&nbsp; One last check</span>
     <h2>Eight jurisdictions, one turning point</h2>
     <p>
@@ -479,25 +589,29 @@
     </p>
   </div>
 
-  <figure class="fig col col-full" id="fig-12">
+  <figure class="fig col" id="fig-12">
     <div class="fig-head">
       <p class="fig-label">Figure 12 &nbsp;<span class="muted">Government share, by state</span></p>
     </div>
+    <h3 class="fig-title">This is not an average hiding eight different stories</h3>
+    <p class="fig-sub">Share of students in a government school, 2008 to 2025. The grey line marks 2020. Every panel uses the same scale.</p>
     <div class="vis" id="v12"></div>
+    <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
       Every panel bends downward after 2020, including the Australian Capital Territory, which had
       been moving the other way for a decade. The size of the turn varies a lot. The direction does
       not.
     </figcaption>
+    <p class="fig-src">Source: ACARA School Profile 2008&ndash;2025</p>
   </figure>
 
-  <p class="pull col col-text">A system can grow and hollow out at the same time.</p>
+  <div class="col"><p class="pull">A system can grow and hollow out at the same time.</p></div>
 </section>
 
 </main>
 
 <footer>
-  <div class="col col-wide">
+  <div class="col">
     <div class="cols">
       <div>
         <h3>Where the data comes from</h3>
@@ -589,7 +703,7 @@
 </footer>
 
 <script>
-const BUILD = "2026-10-07a";
+const BUILD = "2026-10-07b";
 const v = url => url + "?v=" + BUILD;
 
 // [chart target, spec, control-bar target]
@@ -613,19 +727,25 @@ const CHARTS = [
 // the whole thing ends up wider than the box it sits in. Their panel width is
 // computed from the measured container instead, which keeps them responsive.
 const PANELLED = {
-  "#v04": { cols: 3, spacing: 26, gutter: 96 },
-  "#v12": { cols: 8, spacing: 16, gutter: 70 },
+  "#v04": { cols: 3, narrow: 1, spacing: 26, gutter: 96 },
+  "#v12": { cols: 4, narrow: 2, spacing: 20, gutter: 70 },
   "#v11": { cols: 1, spacing: 0,  gutter: 44 },
   "#v06": { cols: 1, spacing: 0,  gutter: 44, concat: true }
 };
 
-function sizePanels(spec, el) {
+/* Eight panels in one row came out 90px wide on a laptop and unreadable on a
+   phone. The panel count now follows the measured box, and the faceted specs
+   wrap instead of staying on one line. */
+function sizePanels(spec, el, box) {
   const cfg = PANELLED[el];
   if (!cfg) return spec;
-  const box = document.querySelector(el).getBoundingClientRect().width;
-  const w = Math.max(220, Math.floor((box - cfg.gutter - cfg.spacing * (cfg.cols - 1)) / cfg.cols));
+  const cols = (box < 620 && cfg.narrow) ? cfg.narrow : cfg.cols;
+  const w = Math.max(200, Math.floor((box - cfg.gutter - cfg.spacing * (cols - 1)) / cols));
   if (cfg.concat) spec.vconcat.forEach(child => { child.width = w; });
-  else spec.spec.width = w;
+  else {
+    spec.spec.width = w;
+    if (spec.columns !== undefined) spec.columns = cols;
+  }
   return spec;
 }
 
@@ -696,16 +816,43 @@ const specCache = {};
 async function drawAll() {
   const theme = specCache.theme ||
     (specCache.theme = await (await fetch(v("charts/theme.json"))).json());
-  const base = { actions: false, config: theme, renderer: "canvas" };
+  // SVG, not canvas: the text stays crisp at any zoom or pixel density, it can
+  // be selected and found by the browser, and it prints properly.
+  const base = { actions: false, config: theme, renderer: "svg" };
+  // A chart full of axis labels needs a minimum width to stay readable and is
+  // better scrolled than shrunk. A map is nearly all shape, so it scales down
+  // to the screen without losing anything, and a map you have to scroll to see
+  // the far side of is worse than a small one.
+  const narrow = innerWidth < 760;
+  const MAPS = new Set(["#v06", "#v07", "#v08"]);
 
   await Promise.allSettled(CHARTS.map(async ([el, url, ctl]) => {
     try {
       const raw = specCache[url] || (specCache[url] = await (await fetch(v(url))).json());
+      const host = document.querySelector(el);
+      host.innerHTML = "";
+      // On a phone the chart is drawn at a readable width inside a sideways
+      // scroller rather than being squashed down to the width of the screen.
+      const target = document.createElement("div");
+      target.className = "chart-inner";
+      if (narrow && !MAPS.has(el)) target.style.minWidth = "620px";
+      host.appendChild(target);
+      const box = target.getBoundingClientRect().width;
       // structuredClone keeps the cached copy clean, since sizePanels mutates
-      const spec = sizePanels(structuredClone(raw), el);
+      const spec = sizePanels(structuredClone(raw), el, box);
+      // A map drawn at full height but a third of the width is mostly empty
+      // page. Heights come down with the width so the shape keeps its frame.
+      if (narrow && MAPS.has(el)) {
+        const k = Math.max(0.42, box / 940);
+        const shrink = o => { if (typeof o.height === "number") o.height = Math.round(o.height * k); };
+        shrink(spec);
+        (spec.vconcat || []).forEach(shrink);
+      }
       const opts = ctl ? { ...base, bind: document.querySelector(ctl) } : base;
-      const res = await vegaEmbed(el, spec, opts);
+      const res = await vegaEmbed(target, spec, opts);
       views[el] = res.view;
+      // only promise a sideways swipe where there is actually one to make
+      host.closest(".fig").classList.toggle("scrolls", host.scrollWidth > host.clientWidth + 2);
     } catch (err) {
       console.error("chart failed:", url, err);
       document.querySelector(el).innerHTML =
@@ -714,9 +861,49 @@ async function drawAll() {
   }));
 }
 
+/* A hairline of progress, and the name of the part you are in. */
+function initProgress() {
+  const bar = document.querySelector(".progress span");
+  const chip = document.getElementById("nowat");
+  if (!bar || !chip) return;
+  const parts = [...document.querySelectorAll("section")]
+    .map(sec => ({ sec, name: (sec.querySelector(".sec-num") || {}).textContent }))
+    .filter(p => p.name);
+  let queued = false;
+  const paint = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.width = (max > 0 ? Math.min(1, Math.max(0, scrollY / max)) * 100 : 0) + "%";
+    let here = null;
+    for (const p of parts) {
+      if (p.sec.getBoundingClientRect().top <= innerHeight * 0.3) here = p;
+    }
+    if (here) {
+      const label = here.name.replace(/\s+/g, " ").trim();
+      if (chip.textContent !== label) chip.textContent = label;
+      chip.classList.add("on");
+    } else {
+      chip.classList.remove("on");
+    }
+  };
+  // requestAnimationFrame is paused in a hidden tab. Guarding on a flag that is
+  // only cleared inside the callback meant that switching away mid-scroll left
+  // the flag set and the bar frozen for good, so the timeout races it clear.
+  const request = () => {
+    if (queued) return;
+    queued = true;
+    const run = () => { if (queued) { queued = false; paint(); } };
+    requestAnimationFrame(run);
+    setTimeout(run, 120);
+  };
+  addEventListener("scroll", request, { passive: true });
+  addEventListener("resize", request, { passive: true });
+  paint();
+}
+
 (async function () {
   initReveal();
   initCounters();
+  initProgress();
 
   // Panel widths are measured from the page, so the measurement has to happen
   // after the webfonts have loaded and a frame has been painted. Measuring too

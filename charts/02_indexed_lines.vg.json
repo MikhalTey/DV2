@@ -1,12 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Each sector indexed to its own 2008 size, so the three growth paths can be compared on one axis despite very different starting sizes. Choosing a sector fades the other two, which lets the reader pull one line out of the group without losing the context around it.",
-  "title": {
-    "text": "Same starting line, very different journeys",
-    "subtitle": [
-      "Students in each sector, with 2008 set to 100. Source: ACARA School Profile 2008-2025."
-    ]
-  },
   "width": "container",
   "height": 320,
   "data": {
@@ -68,8 +62,8 @@
         ],
         "range": [
           "#2a78d6",
-          "#eb6834",
-          "#1baf7a"
+          "#d2561f",
+          "#12916a"
         ]
       },
       "legend": {

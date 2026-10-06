@@ -1,11 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Stacked area of Australian school enrolments by sector, 2008 to 2025.",
-  "title": {
-    "text": "The school system never stopped growing",
-    "subtitle": "Students enrolled in Australian schools, by sector. Source: ACARA School Profile 2008-2025.",
-    "subtitlePadding": 4
-  },
   "width": "container",
   "height": 300,
   "data": {
@@ -72,8 +67,8 @@
             ],
             "range": [
               "#2a78d6",
-              "#eb6834",
-              "#1baf7a"
+              "#d2561f",
+              "#12916a"
             ]
           },
           "legend": {

@@ -55,7 +55,7 @@ twelve identical cards. Part three breaks out onto a full-bleed tinted band.
 | 2 | Same data, 2008 = 100 | **Index chart** | Advanced | `02_indexed_lines` |
 | 3 | Change in government students by state | Bar with target marker | Basic | `03_state_change` |
 | 4 | Change by year level, one panel per sector | **Diverging bar, small multiples** | Advanced | `04_grade_diverging` |
-| 5 | Same numbers as a grid | **Heatmap** | Advanced | `05_grade_heatmap` |
+| 5 | Government share by year level, every year 2009-2025 | **Heatmap** | Advanced | `05_grade_heatmap` |
 | 6a | Government share by region, any year | **MAP 1 — choropleth** | Advanced | `06_map_region_explorer` |
 | 6b | The clicked region vs the nation | Line chart | Basic | same file |
 | 7 | The 260 schools opened since 2020 | **MAP 2 — proportional symbol** | Advanced | `07_map_new_schools` |
@@ -67,6 +67,12 @@ twelve identical cards. Part three breaks out onto a full-bleed tinted band.
 
 6a and 6b live in one spec file because a Vega-Lite selection can only reach views inside the
 same specification. They are two figures and read as two on the page.
+
+Chart 5 used to restate chart 4's numbers in a grid, which gave the page two figures carrying one
+finding. It now runs the government share of every year level across the whole period against each
+year level's own 2009 share, so it answers *when* the shift started and *which* year levels moved
+first. 2008 is excluded: in the Enrolments by Grade file that year carries government schools only,
+which puts the government share at 98% across the board.
 
 Advanced idioms: index chart, diverging small multiples, heatmap, choropleth, symbol map,
 hexbin map, connected dot plot, ridgeline, small multiples. Nine.
@@ -126,3 +132,21 @@ python scripts/build_hexbin.py   # school points -> maps/school_hexbins.geojson
 ```
 
 Every chart pulls its colours and fonts from `charts/theme.json`, so a palette change is one edit.
+
+One colour, one meaning, across the whole page:
+
+| Colour | Means | Where |
+|---|---|---|
+| `#2a78d6` blue | Government | sector charts, and the government-share ramps on all three maps |
+| `#d2561f` orange | Catholic | sector charts |
+| `#12916a` green | Independent | sector charts |
+| `#a8322c` red | a fall | charts 3 and 5, and the page's own down figures |
+| `#7b3fa0` violet | a rise | charts 3 and 5 |
+
+Blue previously did four jobs at once: the government sector, a rise, a high government share and
+the year 2025. Blue is now the government sector and nothing else. The sector trio and the
+fall/rise pair were each checked for colour-vision separation and for contrast against the page
+background; both pass, and no pair sits below the 15 normal-vision threshold.
+
+Chart headlines, standfirsts and source lines are page HTML rather than Vega `title` blocks. Baked
+into the spec, the hand-wrapped subtitle lines ran off the edge of the two narrower figures.

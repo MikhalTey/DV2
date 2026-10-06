@@ -1,26 +1,37 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "The same year-level change data as a heatmap, which makes the solid block of government losses in the youngest year levels easy to see in one glance.",
-  "title": {
-    "text": "The losses sit in one corner",
-    "subtitle": "Change in enrolments, 2020 to 2025. Red is a fall, blue is a rise. Source: ACARA Enrolments by Grade."
-  },
+  "description": "Government share of enrolments at each year level, every year from 2009 to 2025, shown as change in percentage points against that year level's own 2009 share. The grid answers when the shift started and which year levels moved first, rather than restating the five-year change shown in the previous figure.",
   "width": "container",
-  "height": 190,
+  "height": 392,
   "data": {
-    "url": "data/processed/grade_change.csv",
+    "url": "data/processed/grade_share_by_year.csv",
     "format": {
       "type": "csv",
       "parse": {
         "grade_order": "number",
-        "enrolments_2020": "number",
-        "enrolments_2025": "number",
-        "pct_change": "number"
+        "year": "number",
+        "gov_students": "number",
+        "total_students": "number",
+        "gov_share": "number",
+        "share_base": "number",
+        "pp_change": "number"
       }
     }
   },
   "encoding": {
     "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 11,
+        "domain": false,
+        "ticks": false,
+        "labelPadding": 8
+      }
+    },
+    "y": {
       "field": "grade",
       "type": "nominal",
       "title": null,
@@ -29,27 +40,12 @@
         "op": "min"
       },
       "axis": {
-        "labelAngle": -40,
-        "labelFontSize": 10.5,
-        "domain": false,
-        "ticks": false
-      }
-    },
-    "y": {
-      "field": "sector",
-      "type": "nominal",
-      "title": null,
-      "sort": [
-        "Government",
-        "Catholic",
-        "Independent"
-      ],
-      "axis": {
         "labelFontSize": 11.5,
-        "labelFontWeight": 600,
-        "labelColor": "#0b0b0b",
+        "labelFontWeight": 500,
+        "labelColor": "#16150f",
         "domain": false,
-        "ticks": false
+        "ticks": false,
+        "labelPadding": 10
       }
     }
   },
@@ -57,89 +53,140 @@
     {
       "mark": {
         "type": "rect",
-        "cornerRadius": 2,
         "stroke": "#eeebe3",
         "strokeWidth": 2
       },
       "encoding": {
         "color": {
-          "field": "pct_change",
+          "field": "pp_change",
           "type": "quantitative",
-          "title": "Change in students (%)",
+          "title": "Change in government share since 2009 (percentage points)",
           "scale": {
-            "type": "threshold",
+            "type": "linear",
             "domain": [
-              -6,
-              -3,
+              -6.5,
+              -4.5,
+              -2.5,
               -1,
+              0,
               1,
-              3,
-              6
+              2.5
             ],
             "range": [
-              "#9c2c2b",
-              "#e34948",
-              "#f0a9a8",
-              "#e1ddd2",
-              "#b7d3f6",
-              "#5598e7",
-              "#184f95"
-            ]
+              "#8c2823",
+              "#ab3f36",
+              "#c9776d",
+              "#e3b4ab",
+              "#efe9df",
+              "#b9a7d4",
+              "#7b3fa0"
+            ],
+            "clamp": true
           },
           "legend": {
             "orient": "top",
             "direction": "horizontal",
-            "offset": 6,
-            "symbolType": "square",
-            "symbolSize": 110
+            "type": "gradient",
+            "gradientLength": 230,
+            "gradientThickness": 11,
+            "values": [
+              -6,
+              -4,
+              -2,
+              0,
+              2
+            ],
+            "format": "+d",
+            "titleLimit": 420,
+            "offset": 6
           }
         },
         "tooltip": [
-          {
-            "field": "sector",
-            "title": "Sector"
-          },
           {
             "field": "grade",
             "title": "Year level"
           },
           {
-            "field": "enrolments_2020",
-            "title": "Students 2020",
-            "format": ",.0f"
+            "field": "year",
+            "title": "Year",
+            "format": "d"
           },
           {
-            "field": "enrolments_2025",
-            "title": "Students 2025",
-            "format": ",.0f"
+            "field": "gov_share",
+            "title": "In a government school (%)",
+            "format": ".1f"
           },
           {
-            "field": "pct_change",
-            "title": "Change",
+            "field": "share_base",
+            "title": "Same year level in 2009 (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "pp_change",
+            "title": "Change since 2009 (pts)",
             "format": "+.1f"
+          },
+          {
+            "field": "gov_students",
+            "title": "Government students",
+            "format": ",.0f"
+          },
+          {
+            "field": "total_students",
+            "title": "All students",
+            "format": ",.0f"
           }
         ]
       }
     },
     {
-      "description": "Every cell carries its number, so the colour scale never has to be decoded.",
+      "description": "2020, where every row turns. Drawn on the left edge of the 2020 column.",
+      "transform": [
+        {
+          "filter": "datum.year === 2020 && datum.grade_order === 0"
+        }
+      ],
       "mark": {
-        "type": "text",
-        "fontSize": 10,
-        "fontWeight": 600
+        "type": "rule",
+        "color": "#16150f",
+        "strokeWidth": 1.5,
+        "y": -8,
+        "y2": 392
       },
       "encoding": {
-        "text": {
-          "field": "pct_change",
-          "type": "quantitative",
-          "format": "+.0f"
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "bandPosition": 0
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2020 && datum.grade_order === 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -12,
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#16150f"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "bandPosition": 0
         },
-        "color": {
-          "condition": {
-            "test": "datum.pct_change < -6 || datum.pct_change >= 6",
-            "value": "#eeebe3"
-          },
-          "value": "#52514e"
+        "y": {
+          "value": 0
+        },
+        "text": {
+          "value": "2020"
         }
       }
     }
