@@ -187,6 +187,24 @@ hovering to be read. There is no scrollytelling: the brief asks for presentation
 exploration and forbids controls that swap major sections, so scroll-driven chart swapping would
 work against both.
 
+**Typography and layout.** The type is set the way a newsroom graphics desk sets it, after
+looking at how The Pudding and Reuters Graphics actually build these pieces rather than guessing.
+Both put body copy in a large serif, reserve a grotesk for headlines, captions and chart
+furniture, and keep a monospaced face for figures. So: Archivo at weight 800 for display, set
+large with tight tracking and a line height just under one; Source Serif 4 at 20px for reading;
+IBM Plex Mono for the headline figures, the section markers and every axis label, where equal
+digit widths make numbers line up. The page sits on a warm cream rather than white, and body text
+is a soft grey rather than black, both of which take the glare out of a long read. Width is varied
+deliberately: feature charts run the full column, supporting charts sit in a narrower centred
+column, and the geographic section breaks onto a full-bleed tinted band with two maps side by side.
+
+**Motion.** Three kinds, none of them decoration for its own sake. Sections and charts ease in as
+they are scrolled to, which paces the reading. The four headline figures count up the first time
+they come into view, which draws the eye to the numbers the piece is built on. And the year
+control on the region map has a play button that steps the map through 2008 to 2025 on its own:
+that one is made of data rather than styling, and it is the clearest way to show a change that
+happens over time. All three are disabled when the reader's system asks for reduced motion.
+
 **Special features.**
 
 - The hexagonal binning layer is custom built. There is no Vega-Lite hexbin transform for

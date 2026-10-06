@@ -88,7 +88,7 @@ Four, each doing different work. All follow patterns from the unit's own teachin
 
 | Where | What it does | Pattern |
 |---|---|---|
-| Chart 6 | A **year slider** runs 2008 to 2025. Drag it and the colour drains out of the coast after 2020. | Bound range param, dynamic query |
+| Chart 6 | A **year slider** runs 2008 to 2025, with a **play button** that steps through it on its own. Drag or press play and the colour drains out of the coast after 2020. | Bound range param plus a signal driven from the page |
 | Chart 6 | **Click any region** and its own eighteen-year line is drawn beneath, against the national line. | Point selection driving a second view (overview and detail) |
 | Chart 2 | **Pick a sector** to fade the other two. | Bound select driving a conditional opacity |
 | Chart 7 | A **menu** shows one sector of new schools at a time. | Bound select param |
@@ -105,13 +105,16 @@ controls that swap major sections, so scroll-driven chart swapping would fight b
 
 1. Sketch the masthead first: kicker, two-line headline, standfirst, then a row of four boxes.
 2. Each part gets a heading, two or three lines of body text, then its charts.
-3. **Show the width changes.** That is the point of the layout: feature charts run the full
+3. **Draw the masthead large.** The headline is Archivo 800 at up to 88px over three lines, with
+   a monospaced eyebrow above it and a serif standfirst below. The four figures sit in a row of
+   boxes with a rule above and below.
+4. **Show the width changes.** That is the point of the layout: feature charts run the full
    column, supporting charts sit in a narrower centred column, and part three is a tinted band
    running edge to edge with two charts side by side inside it.
-4. Draw the three **control bars**: a tinted strip above charts 2, 6 and 7 holding a short prompt
-   and the control itself. Charts 2 and 7 get a menu, chart 6 gets a slider. Also mark that the
-   map on chart 6 is clickable.
-5. Sketch the two-column footer at the bottom.
+5. Draw the three **control bars**: a tinted strip above charts 2, 6 and 7 holding a short prompt
+   and the control itself. Charts 2 and 7 get a menu, chart 6 gets a play button and a slider.
+   Also mark that the map on chart 6 is clickable.
+6. Sketch the two-column footer at the bottom.
 
 ---
 
