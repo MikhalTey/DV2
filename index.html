@@ -62,23 +62,29 @@
   }
 
   /* ===================== masthead ===================== */
-  .hero{padding:72px 0 0; border-bottom:1px solid var(--rule-strong)}
+  .hero{padding:40px 0 0; border-bottom:1px solid var(--rule-strong)}
+  /* Headline left, standfirst bottom right. A single column left half the band
+     empty beside a 96px headline; two columns fill it in far less height. */
+  .hero-grid{
+    display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+    column-gap:60px; align-items:end; margin-bottom:28px;
+  }
   .eyebrow{
     font-family:var(--mono); font-size:11.5px; font-weight:500;
-    letter-spacing:.2em; text-transform:uppercase; color:var(--fall); margin:0 0 26px;
+    letter-spacing:.2em; text-transform:uppercase; color:var(--fall); margin:0 0 16px;
   }
   h1{
     font-family:var(--display); font-weight:800;
-    font-size:clamp(42px,7.6vw,96px); line-height:.95; letter-spacing:-.035em;
-    color:var(--ink); margin:0 0 30px; max-width:13ch; text-wrap:balance;
+    font-size:clamp(34px,4.6vw,60px); line-height:1.02; letter-spacing:-.032em;
+    color:var(--ink); margin:0; max-width:15ch; text-wrap:balance;
   }
   .standfirst{
-    font-size:clamp(19px,2.1vw,25px); line-height:1.48;
-    color:var(--ink-2); max-width:34ch; margin:0 0 40px;
+    font-size:clamp(17px,1.5vw,20px); line-height:1.5;
+    color:var(--ink-2); max-width:44ch; margin:0 0 5px;
   }
   .byline{
     font-family:var(--display); font-size:12.5px; color:var(--ink-3);
-    border-top:1px solid var(--rule); padding-top:16px; margin:0 0 58px;
+    border-top:1px solid var(--rule); padding-top:13px; margin:0 0 30px;
   }
   .byline strong{color:var(--ink-2); font-weight:600}
 
@@ -87,30 +93,41 @@
     display:grid; grid-template-columns:repeat(4,1fr);
     border-top:1px solid var(--rule-strong); margin-bottom:0;
   }
-  .stat{padding:26px 30px 30px; border-right:1px solid var(--rule)}
+  .stat{padding:20px 28px 22px; border-right:1px solid var(--rule)}
   .stat:first-child{padding-left:0}
   .stat:last-child{border-right:0; padding-right:0}
   .stat .n{
-    font-family:var(--mono); font-size:clamp(26px,3.4vw,42px); font-weight:500;
+    font-family:var(--mono); font-size:clamp(23px,2.5vw,33px); font-weight:500;
     line-height:1; letter-spacing:-.035em; color:var(--ink);
-    display:block; margin-bottom:14px; font-variant-numeric:tabular-nums;
+    display:block; margin-bottom:9px; font-variant-numeric:tabular-nums;
   }
   .stat .n.down{color:var(--fall)}
   .stat .n.up{color:#13724f}
-  .stat .l{font-family:var(--display); font-size:12px; line-height:1.45; color:var(--ink-3)}
+  /* An inline span still gets its line boxes from the block it sits in, so the
+     body line-height was spacing these labels at 31px. */
+  .stat .l{display:block; font-family:var(--display); font-size:12px; line-height:1.4; color:var(--ink-3)}
 
   /* ===================== sections ===================== */
-  section{padding:88px 0 0}
-  .sec-head{margin-bottom:52px}
+  section{padding:56px 0 0}
+  /* The intro text was capped at 680px inside a 1180px box, so every section
+     opened with a column of empty page down its right-hand side. Heading in
+     one column, intro in the other: same words, half the height, no void. */
+  .sec-head{
+    display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    column-gap:60px; align-items:start; margin-bottom:34px;
+  }
+  .sec-head .sec-num{grid-column:1 / -1}
+  .sec-head h2{grid-column:1}
+  .sec-head p{grid-column:2}
   .sec-num{
     font-family:var(--mono); font-size:11px; font-weight:500;
     letter-spacing:.18em; text-transform:uppercase; color:var(--ink-3);
-    display:block; margin-bottom:18px;
+    display:block; margin-bottom:14px;
   }
   h2{
     font-family:var(--display); font-weight:700;
-    font-size:clamp(28px,4.2vw,48px); line-height:1.04; letter-spacing:-.028em;
-    color:var(--ink); margin:0 0 22px; text-wrap:balance;
+    font-size:clamp(26px,3.1vw,40px); line-height:1.06; letter-spacing:-.028em;
+    color:var(--ink); margin:0; text-wrap:balance;
   }
   .sec-head p{margin:0 0 18px}
   .sec-head p:last-child{margin-bottom:0}
@@ -118,7 +135,7 @@
 
   /* ===================== tinted band ===================== */
   .band{
-    background:var(--band); margin-top:96px; padding-bottom:40px;
+    background:var(--band); margin-top:60px; padding-bottom:16px;
     border-top:1px solid #dcd7ca; border-bottom:1px solid #dcd7ca;
   }
   .band .sec-num{color:var(--ink-3)}
@@ -129,11 +146,11 @@
   /* ===================== figures : no cards ===================== */
   /* Charts sit directly on the page the way a newsroom sets them: a rule, a
      label, the chart, a caption. No box, no panel, no drop shadow. */
-  .fig{margin:0 auto 96px}
+  .fig{margin:0 auto 58px}
   .fig-head{
     display:flex; align-items:baseline; justify-content:space-between;
     flex-wrap:wrap; gap:14px 28px;
-    border-top:2px solid var(--rule-strong); padding-top:12px; margin-bottom:24px;
+    border-top:2px solid var(--rule-strong); padding-top:10px; margin-bottom:16px;
   }
   .fig-label{
     font-family:var(--mono); font-size:11px; font-weight:500;
@@ -147,18 +164,30 @@
      they are set in the same faces as everything else. */
   .fig-title{
     font-family:var(--display); font-weight:700;
-    font-size:clamp(19px,2.1vw,24px); line-height:1.2; letter-spacing:-.018em;
-    color:var(--ink); margin:0 0 9px; max-width:var(--w-text); text-wrap:balance;
+    font-size:clamp(19px,1.9vw,23px); line-height:1.2; letter-spacing:-.018em;
+    color:var(--ink); margin:0; max-width:var(--w-text); text-wrap:balance;
   }
   .fig-sub{
-    font-family:var(--body); font-size:17px; line-height:1.45;
-    color:var(--ink-2); margin:0 0 26px; max-width:var(--w-text);
+    font-family:var(--body); font-size:16.5px; line-height:1.45;
+    color:var(--ink-2); margin:0; max-width:var(--w-text);
   }
+  /* Chart headline and its standfirst sit side by side above the chart, for the
+     same reason the section heads do. Collapses to one column in a half-width
+     figure, where two columns would be about twenty characters wide. */
+  .fig-intro{
+    display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+    column-gap:52px; align-items:start; margin:0 0 20px;
+  }
+  .pair .fig-intro, .fig-intro.stack{grid-template-columns:1fr; gap:8px 0}
   .fig-src{
     font-family:var(--mono); font-size:10px; letter-spacing:.11em;
     text-transform:uppercase; color:var(--ink-3); margin:14px 0 0;
   }
   .vis{width:100%; overflow-x:auto}
+  /* A map fitted to its height keeps its own aspect ratio, so a full-width
+     box around it is just empty page either side. The box is capped at
+     roughly what the shape uses. */
+  .vis.tofit{max-width:1000px; margin-left:auto; margin-right:auto}
   .swipe{
     display:none; font-family:var(--display); font-size:11.5px; color:var(--ink-3);
     margin:9px 0 0; letter-spacing:.01em;
@@ -171,11 +200,11 @@
   .vis canvas, .vis svg{max-width:100%; display:block}
   .note{
     font-size:16.5px; line-height:1.55; color:var(--ink-2);
-    border-top:1px solid var(--rule); margin-top:22px; padding-top:16px;
+    border-top:1px solid var(--rule); margin-top:18px; padding-top:14px;
     max-width:var(--w-text);
   }
   .note b{color:var(--ink); font-weight:600}
-  .pair{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start}
+  .pair{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start}
   .pair .fig{margin:0; width:100%}
   /* Grid and flex items default to min-width:auto, so a chart wider than its
      track pushes the track open instead of scrolling inside it. That is what
@@ -215,18 +244,18 @@
   .pull{
     font-family:var(--display); font-weight:700;
     font-size:clamp(26px,3.6vw,44px); line-height:1.1; letter-spacing:-.028em;
-    color:var(--ink); max-width:min(17ch, var(--w-text)); margin:0 0 96px;
+    color:var(--ink); max-width:min(22ch, var(--w-text)); margin:0 0 58px;
     padding:0; text-wrap:balance;
   }
   .pull::before{
     content:""; display:block; width:64px; height:4px;
-    background:var(--fall); margin-bottom:26px;
+    background:var(--fall); margin-bottom:20px;
   }
 
   /* ===================== footer ===================== */
   footer{
-    margin-top:40px; border-top:2px solid var(--rule-strong);
-    background:var(--page); padding:56px 0 88px;
+    margin-top:28px; border-top:2px solid var(--rule-strong);
+    background:var(--page); padding:46px 0 64px;
   }
   footer h3{
     font-family:var(--mono); font-size:11px; font-weight:500; color:var(--ink);
@@ -267,8 +296,12 @@
     .stat{padding:20px 18px 24px}
     .stat:first-child, .stat:last-child{padding-left:18px; padding-right:18px}
     .cols{grid-template-columns:1fr; gap:0}
-    .hero{padding-top:48px}
-    .fig{margin-bottom:64px}
+    .hero{padding-top:36px}
+    .hero-grid{grid-template-columns:1fr; gap:22px 0; align-items:start; margin-bottom:22px}
+    .sec-head{grid-template-columns:1fr; column-gap:0}
+    .sec-head h2{margin-bottom:16px}
+    .fig-intro{grid-template-columns:1fr; gap:8px 0}
+    .fig{margin-bottom:48px}
     .nowat{display:none}
   }
 
@@ -290,11 +323,13 @@
 <header class="hero">
   <div class="col">
     <p class="eyebrow">Australian school enrolments &nbsp;/&nbsp; 2008&ndash;2025</p>
-    <h1>The quiet exit from government schools</h1>
-    <p class="standfirst">
-      Australia's school system has never stopped growing. But in 2020 something changed that
-      the headline number hides.
-    </p>
+    <div class="hero-grid">
+      <h1>The quiet exit from government schools</h1>
+      <p class="standfirst">
+        Australia's school system has never stopped growing. But in 2020 something changed that
+        the headline number hides.
+      </p>
+    </div>
     <p class="byline">
       By <strong>Mikhal Angelo Tey</strong> &nbsp;&middot;&nbsp; October 2026 &nbsp;&middot;&nbsp;
       Australian Curriculum, Assessment and Reporting Authority &amp; Australian Bureau of Statistics
@@ -344,8 +379,10 @@
         <div class="ctl" id="ctl-v02"></div>
       </div>
     </div>
-    <h3 class="fig-title">Same starting line, very different journeys</h3>
-    <p class="fig-sub">Students in each sector, with 2008 set to 100.</p>
+    <div class="fig-intro">
+      <h3 class="fig-title">Same starting line, very different journeys</h3>
+      <p class="fig-sub">Students in each sector, with 2008 set to 100.</p>
+    </div>
     <div class="vis" id="v02"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
@@ -362,8 +399,10 @@
     <div class="fig-head">
       <p class="fig-label">Figure 2 &nbsp;<span class="muted">Students by sector</span></p>
     </div>
-    <h3 class="fig-title">The school system never stopped growing</h3>
-    <p class="fig-sub">Students enrolled in Australian schools, by sector.</p>
+    <div class="fig-intro">
+      <h3 class="fig-title">The school system never stopped growing</h3>
+      <p class="fig-sub">Students enrolled in Australian schools, by sector.</p>
+    </div>
     <div class="vis" id="v01"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
@@ -393,8 +432,10 @@
     <div class="fig-head">
       <p class="fig-label">Figure 3 &nbsp;<span class="muted">Change by year level, 2020 to 2025</span></p>
     </div>
-    <h3 class="fig-title">Fewer small children, but only in government schools</h3>
-    <p class="fig-sub">Change in enrolments at each year level, 2020 to 2025. Australia's birth rate fell, so the youngest year levels are smaller everywhere. Only the government sector actually shrank. Each panel labels its largest fall and its largest rise.</p>
+    <div class="fig-intro">
+      <h3 class="fig-title">Fewer small children, but only in government schools</h3>
+      <p class="fig-sub">Change in enrolments at each year level, 2020 to 2025. Australia's birth rate fell, so the youngest year levels are smaller everywhere. Only the government sector actually shrank. Each panel labels its largest fall and its largest rise.</p>
+    </div>
     <div class="vis" id="v04"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
@@ -410,8 +451,10 @@
     <div class="fig-head">
       <p class="fig-label">Figure 4 &nbsp;<span class="muted">Government share by year level, 2009 to 2025</span></p>
     </div>
-    <h3 class="fig-title">The primary school turn is new. The high school one is not.</h3>
-    <p class="fig-sub">Government share of enrolments at each year level, measured against that year level's own 2009 share. Red is below 2009, violet is above. 2008 is left out because only government schools reported by year level that year.</p>
+    <div class="fig-intro">
+      <h3 class="fig-title">The primary school turn is new. The high school one is not.</h3>
+      <p class="fig-sub">Government share of enrolments at each year level, measured against that year level's own 2009 share. Red is below 2009, violet is above. 2008 is left out because only government schools reported by year level that year.</p>
+    </div>
     <div class="vis" id="v05"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
@@ -442,15 +485,19 @@
     <div class="fig-head">
       <p class="fig-label">Figure 5 &nbsp;<span class="muted">Change in government students, by state</span></p>
     </div>
-    <h3 class="fig-title">New South Wales lost a city's worth of government students</h3>
-    <p class="fig-sub">Change in government school students, 2020 to 2025. Bars are labelled directly. The grey tick shows the change in all students in that state, so the distance between the bar and the tick is the part that is a sector shift rather than population growth.</p>
+    <div class="fig-intro">
+      <h3 class="fig-title">New South Wales lost a city's worth of government students</h3>
+      <p class="fig-sub">Change in government school students, 2020 to 2025. The coloured bar is what actually happened. The dark grey marker is where that state would have landed if its government schools had simply grown at the same rate as its total student population. The dashed line between the two is the gap, and that gap is families changing sector rather than the population changing size.</p>
+    </div>
     <div class="vis" id="v03"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
       Counted in students rather than percentages, New South Wales lost 36,470 government students
       in five years while its total student population grew. Victoria and Western Australia went
-      the other way. The grey tick shows where each government system would have landed if it had
-      simply grown at the same rate as its state's whole student population.
+      the other way, but both still fell short of the marker: they grew, just not as fast as their
+      own student populations. Queensland has the widest gap of all after New South Wales, losing
+      6,516 government students while its overall student growth should have added 23,853 to the
+      government system.
     </figcaption>
     <p class="fig-src">Source: ACARA School Profile 2008&ndash;2025</p>
   </figure>
@@ -466,8 +513,10 @@
         <p class="howto">Click any region on the map</p>
       </div>
     </div>
-    <h3 class="fig-title">Drag the year. Watch the colour drain out of the coast.</h3>
-    <p class="fig-sub">Share of local students in a government school. Click any region to see its own history underneath, drawn against the national line.</p>
+    <div class="fig-intro">
+      <h3 class="fig-title">Drag the year. Watch the colour drain out of the coast.</h3>
+      <p class="fig-sub">Share of local students in a government school. Click any region to see its own history underneath, drawn against the national line.</p>
+    </div>
     <div class="vis" id="v06"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
@@ -483,8 +532,10 @@
   <div class="col pair">
     <figure class="fig" id="fig-08">
       <div class="fig-head"><p class="fig-label">Figure 7 &nbsp;<span class="muted">Equal-area cells</span></p></div>
-      <h3 class="fig-title">Choice exists where people are packed in</h3>
-    <p class="fig-sub">Australia divided into equal-sized hexagons. Shading is the share of local students in a government school in 2025. Hexagons holding fewer than three schools are left out.</p>
+      <div class="fig-intro">
+        <h3 class="fig-title">Choice exists where people are packed in</h3>
+        <p class="fig-sub">Australia divided into equal-sized hexagons. Shading is the share of local students in a government school in 2025. Hexagons holding fewer than three schools are left out.</p>
+      </div>
     <div class="vis" id="v08"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
       <figcaption class="note">
@@ -496,8 +547,10 @@
     </figure>
     <figure class="fig" id="fig-09">
       <div class="fig-head"><p class="fig-label">Figure 8 &nbsp;<span class="muted">By remoteness</span></p></div>
-      <h3 class="fig-title">The further out you go, the less choice there is</h3>
-    <p class="fig-sub">Share of students in a government school in 2020 and 2025, by how remote the school is. The biggest shift is not in the capitals.</p>
+      <div class="fig-intro">
+        <h3 class="fig-title">The further out you go, the less choice there is</h3>
+        <p class="fig-sub">Share of students in a government school in 2020 and 2025, by how remote the school is. The biggest shift is not in the capitals.</p>
+      </div>
     <div class="vis" id="v09"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
       <figcaption class="note">
@@ -513,18 +566,22 @@
     <div class="fig-head">
       <p class="fig-label">Figure 9 &nbsp;<span class="muted">Schools opened since 2020</span></p>
       <div class="ctl-row">
-        <p class="howto">Show one sector</p>
+        <p class="howto">Zoom to a city, or show one sector</p>
         <div class="ctl" id="ctl-v07"></div>
       </div>
     </div>
-    <h3 class="fig-title">Where the new schools were built</h3>
-    <p class="fig-sub">The 260 schools operating in 2025 that were not open in 2020. Circle area is the 2025 enrolment. Use the menu above to show one sector at a time.</p>
-    <div class="vis" id="v07"></div>
+    <div class="fig-intro">
+      <h3 class="fig-title">Where the new schools were built</h3>
+      <p class="fig-sub">The 260 schools operating in 2025 that were not open in 2020. Circle area is the 2025 enrolment. Four out of every five were built around five cities, so at national scale they sit on top of each other. Zoom to a city to pull them apart, and show one sector at a time to thin them out further.</p>
+    </div>
+    <div class="vis tofit" id="v07"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
       260 schools opened between 2020 and 2025. Governments built 131 of them, but independent
       bodies built 104 and they cluster on the growth fringes of Melbourne, Sydney, Brisbane and
-      Perth, and along the same regional coast where the government share fell fastest.
+      Perth, and along the same regional coast where the government share fell fastest. Melbourne
+      alone took 90 of the 260. Zoom into it and the new schools trace the outer growth corridors
+      almost exactly.
     </figcaption>
     <p class="fig-src">Source: ACARA School Profile and School Location</p>
   </figure>
@@ -547,8 +604,10 @@
     <div class="fig-head">
       <p class="fig-label">Figure 10 &nbsp;<span class="muted">Change by advantage band</span></p>
     </div>
-    <h3 class="fig-title">Government schools held both ends and lost the middle</h3>
-    <p class="fig-sub">Change in students, 2020 to 2025, by the school community's ICSEA score. ICSEA is ACARA's measure of how advantaged a school's families are, with 1000 as the national average. Counted in students rather than percent, so small groups are not made to look bigger than they are.</p>
+    <div class="fig-intro">
+      <h3 class="fig-title">Government schools held both ends and lost the middle</h3>
+      <p class="fig-sub">Change in students, 2020 to 2025, by the school community's ICSEA score. ICSEA is ACARA's measure of how advantaged a school's families are, with 1000 as the national average. Counted in students rather than percent, so small groups are not made to look bigger than they are.</p>
+    </div>
     <div class="vis" id="v10"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
@@ -564,8 +623,10 @@
     <div class="fig-head">
       <p class="fig-label">Figure 11 &nbsp;<span class="muted">Where each sector's schools sit</span></p>
     </div>
-    <h3 class="fig-title">The three sectors draw from different places</h3>
-    <p class="fig-sub">Every school in 2025, spread across the ICSEA range. Taller means more schools at that score. The vertical line marks each sector's middle school.</p>
+    <div class="fig-intro">
+      <h3 class="fig-title">The three sectors draw from different places</h3>
+      <p class="fig-sub">Every school in 2025, spread across the ICSEA range. Taller means more schools at that score. The vertical line marks each sector's middle school.</p>
+    </div>
     <div class="vis" id="v11"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
@@ -593,8 +654,10 @@
     <div class="fig-head">
       <p class="fig-label">Figure 12 &nbsp;<span class="muted">Government share, by state</span></p>
     </div>
-    <h3 class="fig-title">This is not an average hiding eight different stories</h3>
-    <p class="fig-sub">Share of students in a government school, 2008 to 2025. The grey line marks 2020. Every panel uses the same scale.</p>
+    <div class="fig-intro">
+      <h3 class="fig-title">This is not an average hiding eight different stories</h3>
+      <p class="fig-sub">Share of students in a government school, 2008 to 2025. The grey line marks 2020. Every panel uses the same scale.</p>
+    </div>
     <div class="vis" id="v12"></div>
     <p class="swipe">Swipe the chart sideways to see all of it.</p>
     <figcaption class="note">
@@ -676,7 +739,7 @@
 </footer>
 
 <script>
-const BUILD = "2026-10-07b";
+const BUILD = "2026-10-12b";
 const v = url => url + "?v=" + BUILD;
 
 // [chart target, spec, control-bar target]

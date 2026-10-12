@@ -1,8 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Change in the number of government school students in each state and territory between 2020 and 2025, in headcount rather than share. The grey marker shows how the state's whole school population moved over the same period, so the gap between the two is the part that is a sector shift rather than population growth.",
+  "description": "Change in the number of government school students in each state and territory between 2020 and 2025, in headcount rather than share. The dark grey marker shows where that state's government system would have landed had it grown at the same rate as the state's whole student population, and the dashed line draws the gap between the two, which is the part of the move that is a sector shift rather than population growth.",
   "width": "container",
-  "height": 300,
+  "height": 320,
+  "padding": {
+    "top": 26,
+    "left": 4,
+    "right": 4,
+    "bottom": 4
+  },
   "data": {
     "url": "data/processed/state_change.csv",
     "format": {
@@ -26,6 +32,10 @@
     {
       "calculate": "datum.gov_enrolments_2020 * datum.total_pct_change / 100",
       "as": "expected_change"
+    },
+    {
+      "calculate": "datum.gov_change - datum.expected_change",
+      "as": "shortfall"
     }
   ],
   "encoding": {
@@ -53,8 +63,8 @@
       "title": null,
       "scale": {
         "domain": [
-          -52000,
-          52000
+          -44000,
+          44000
         ]
       },
       "axis": {
@@ -66,6 +76,27 @@
     }
   },
   "layer": [
+    {
+      "description": "The gap itself, drawn as a dashed line from what happened to what population growth alone would have given. Sits under the bar, so only the shortfall shows.",
+      "mark": {
+        "type": "rule",
+        "color": "#8f8b80",
+        "strokeWidth": 1.4,
+        "strokeDash": [
+          3,
+          3
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "gov_change",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "expected_change"
+        }
+      }
+    },
     {
       "mark": {
         "type": "bar",
@@ -102,6 +133,18 @@
             "format": "+,.0f"
           },
           {
+            "field": "expected_change",
+            "type": "quantitative",
+            "title": "Change if it grew with the state",
+            "format": "+,.0f"
+          },
+          {
+            "field": "shortfall",
+            "type": "quantitative",
+            "title": "Gap",
+            "format": "+,.0f"
+          },
+          {
             "field": "gov_pct_change",
             "title": "Government students, change",
             "format": "+.1f"
@@ -123,10 +166,9 @@
       "description": "Where government enrolments would have landed had they simply tracked the state's overall student growth.",
       "mark": {
         "type": "tick",
-        "thickness": 2,
-        "size": 24,
-        "color": "#52514e",
-        "opacity": 0.85
+        "thickness": 2.5,
+        "size": 30,
+        "color": "#3f3d38"
       },
       "encoding": {
         "x": {
@@ -148,6 +190,12 @@
             "field": "gov_change",
             "type": "quantitative",
             "title": "What actually happened",
+            "format": "+,.0f"
+          },
+          {
+            "field": "shortfall",
+            "type": "quantitative",
+            "title": "Gap",
             "format": "+,.0f"
           }
         ]
@@ -184,7 +232,7 @@
     {
       "transform": [
         {
-          "filter": "datum.gov_change >= 0"
+          "filter": "datum.gov_change >= 0 && (datum.expected_change - datum.gov_change) >= 7000"
         }
       ],
       "mark": {
@@ -207,7 +255,37 @@
         "color": {
           "value": "#52514e"
         }
-      }
+      },
+      "description": "Value label for a growing state, set outside the bar. The reference marker is far enough away to leave room."
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.gov_change >= 0 && (datum.expected_change - datum.gov_change) < 7000"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10.5,
+        "fontWeight": 600,
+        "align": "right",
+        "dx": -9
+      },
+      "encoding": {
+        "x": {
+          "field": "gov_change",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "gov_change",
+          "type": "quantitative",
+          "format": "+,.0f"
+        },
+        "color": {
+          "value": "#52514e"
+        }
+      },
+      "description": "Same label where the reference marker sits almost on top of the bar end, as it does for the ACT. Flipped to the empty side of the bar so the two do not print over each other."
     },
     {
       "description": "Zero line. Uses the inherited data so it adds no extra category to the axis.",
@@ -219,6 +297,32 @@
       "encoding": {
         "x": {
           "datum": 0
+        }
+      }
+    },
+    {
+      "description": "Names the grey marker once, on the top row, so the reader does not have to work out what it is from the caption.",
+      "transform": [
+        {
+          "filter": "datum.state === 'NSW'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 7,
+        "dy": -19,
+        "fontSize": 10.5,
+        "fontWeight": 600,
+        "font": "Archivo, Helvetica Neue, Arial, sans-serif",
+        "color": "#3f3d38",
+        "text": "↓ Where it would be if it grew with the state"
+      },
+      "encoding": {
+        "x": {
+          "field": "expected_change",
+          "type": "quantitative"
         }
       }
     }

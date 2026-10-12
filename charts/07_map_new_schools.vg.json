@@ -1,20 +1,33 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Proportional symbol map of every school open in 2025 that was not open in 2020, sized by enrolment and coloured by sector. Albers equal-area conic projection.",
+  "description": "Proportional symbol map of every school open in 2025 that was not open in 2020, sized by enrolment and coloured by sector. Albers equal-area conic projection. Four fifths of these schools were built in five metropolitan areas, so on a national view they collapse into five blobs. Three things pull them apart: the symbols are rings with a pale fill rather than solid discs, the small ones are drawn over the large ones, and the two menus zoom the projection to one city and cut the map to one sector.",
   "width": "container",
-  "height": 600,
-  "projection": {
-    "type": "albers",
-    "rotate": [
-      -134,
-      0
-    ],
-    "parallels": [
-      -18,
-      -36
-    ]
-  },
+  "height": 760,
   "params": [
+    {
+      "name": "place",
+      "value": "All Australia",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All Australia",
+          "Sydney",
+          "Melbourne",
+          "Brisbane and the south-east Queensland coast",
+          "Perth",
+          "Adelaide"
+        ],
+        "labels": [
+          "All Australia",
+          "Sydney",
+          "Melbourne",
+          "Brisbane & SE Qld",
+          "Perth",
+          "Adelaide"
+        ],
+        "name": "Zoom to:  "
+      }
+    },
     {
       "name": "sector_pick",
       "value": "All sectors",
@@ -26,10 +39,45 @@
           "Catholic",
           "Independent"
         ],
-        "name": "Show sector:  "
+        "name": "Sector:  "
       }
+    },
+    {
+      "description": "The national view is this projection's own Albers fit: 1.65912 scale units per pixel of height, with the continent centred on (0.0343, 0.97788) in unscaled projection units. Every city view is the same projection twenty times larger, re-centred. Driving it off the height signal rather than a constant keeps it right when the page redraws the map smaller on a phone.",
+      "name": "mapZoom",
+      "expr": "place === 'All Australia' ? 1 : 20"
+    },
+    {
+      "name": "mapU",
+      "expr": "place === 'Sydney' ? 0.25846 : place === 'Melbourne' ? 0.16677 : place === 'Brisbane and the south-east Queensland coast' ? 0.30371 : place === 'Perth' ? -0.25063 : place === 'Adelaide' ? 0.07975 : 0.0343"
+    },
+    {
+      "name": "mapV",
+      "expr": "place === 'Sydney' ? 1.118 : place === 'Melbourne' ? 1.17952 : place === 'Brisbane and the south-east Queensland coast' ? 1.01064 : place === 'Perth' ? 1.08719 : place === 'Adelaide' ? 1.12111 : 0.97788"
+    },
+    {
+      "name": "mapScale",
+      "expr": "mapZoom * min(1.65912 * height, 1.44119 * width)",
+      "description": "d3's fit for this projection, written out: 1.65912 scale units per pixel of height when the box is wide, 1.44119 per pixel of width when it is tall, whichever binds first. Matching the fit exactly is what lets the national view stay identical while the city views reuse the same numbers twenty times over."
     }
   ],
+  "projection": {
+    "type": "albers",
+    "rotate": [
+      -134,
+      0
+    ],
+    "parallels": [
+      -18,
+      -36
+    ],
+    "scale": {
+      "expr": "mapScale"
+    },
+    "translate": {
+      "expr": "[width / 2 - mapScale * mapU, height / 2 - mapScale * mapV]"
+    }
+  },
   "layer": [
     {
       "data": {
@@ -41,9 +89,30 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#e1ddd2",
+        "fill": "#e3dfd4",
         "stroke": "#eeebe3",
-        "strokeWidth": 1
+        "strokeWidth": 1,
+        "clip": true
+      }
+    },
+    {
+      "description": "Region outlines, drawn only once the map is zoomed in. At national scale they are noise; over a city they are the only thing that says which part of it you are looking at.",
+      "data": {
+        "url": "maps/au_sa4_states.topo.json",
+        "format": {
+          "type": "topojson",
+          "feature": "sa4"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#c6bfae",
+        "strokeWidth": 0.9,
+        "clip": true,
+        "opacity": {
+          "expr": "place === 'All Australia' ? 0 : 1"
+        }
       }
     },
     {
@@ -64,11 +133,23 @@
           "filter": "sector_pick === 'All sectors' || datum.sector === sector_pick"
         }
       ],
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "mouseover",
+            "clear": "mouseout",
+            "fields": [
+              "sector"
+            ]
+          }
+        }
+      ],
       "mark": {
         "type": "circle",
-        "opacity": 0.62,
-        "stroke": "#eeebe3",
-        "strokeWidth": 1.2
+        "strokeWidth": 1.3,
+        "clip": true
       },
       "encoding": {
         "longitude": {
@@ -79,25 +160,43 @@
           "field": "lat",
           "type": "quantitative"
         },
+        "order": {
+          "field": "enrolments",
+          "type": "quantitative",
+          "sort": "descending"
+        },
         "size": {
           "field": "enrolments",
           "type": "quantitative",
           "title": "Students, 2025",
           "scale": {
             "type": "sqrt",
+            "domain": [
+              0,
+              1750
+            ],
             "range": [
-              14,
-              620
+              22,
+              430
             ]
           },
           "legend": {
-            "orient": "top",
+            "orient": "bottom-left",
             "direction": "horizontal",
-            "offset": 6,
+            "offset": 2,
             "titleLimit": 460,
-            "symbolFillColor": "#b8bdc4",
-            "symbolStrokeColor": "#8a9098",
-            "format": ",.0f"
+            "values": [
+              100,
+              500,
+              1000,
+              1700
+            ],
+            "symbolType": "circle",
+            "symbolFillColor": "#d9d4c7",
+            "symbolStrokeColor": "#8a877e",
+            "symbolStrokeWidth": 1.2,
+            "format": ",.0f",
+            "titleOrient": "left"
           }
         },
         "color": {
@@ -122,8 +221,41 @@
             "offset": 6,
             "titleLimit": 460,
             "symbolType": "circle",
-            "symbolSize": 110
+            "symbolSize": 120,
+            "symbolOpacity": 1,
+            "symbolStrokeWidth": 0
           }
+        },
+        "stroke": {
+          "field": "sector",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Government",
+              "Catholic",
+              "Independent"
+            ],
+            "range": [
+              "#2a78d6",
+              "#d2561f",
+              "#12916a"
+            ]
+          },
+          "legend": null
+        },
+        "fillOpacity": {
+          "condition": {
+            "param": "hover",
+            "value": 0.55
+          },
+          "value": 0.18
+        },
+        "strokeOpacity": {
+          "condition": {
+            "param": "hover",
+            "value": 1
+          },
+          "value": 0.85
         },
         "tooltip": [
           {

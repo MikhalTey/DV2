@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Connected dot plot of the government share of enrolments in 2020 and 2025 across the five ABS remoteness classes. The gap between the two dots is the size of the shift.",
   "width": "container",
-  "height": 210,
+  "height": 470,
   "data": {
     "url": "data/processed/remoteness_trend.csv",
     "format": {
