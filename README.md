@@ -2,7 +2,7 @@
 
 FIT3179 Data Visualisation 2, Semester 2 2026. Topic 7.
 
-**Author:** Mikhalangelo
+**Author:** Mikhal Angelo Tey
 **Built:** September 2026
 **Question:** Government school enrolments peaked in 2020 and have fallen every year since, while the school system as a whole kept growing. Where is that happening, and who is leaving?
 
